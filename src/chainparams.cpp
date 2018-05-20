@@ -125,7 +125,7 @@ public:
         consensus.BIP66Height = 811879; // 7aceee012833fa8952f8835d8b1b3ae233cd6ab08fdb27a771d2bd7bdc491894
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); 
         consensus.nPowTargetTimespan = 3.5 * 24 * 60 * 60; // 3.5 days
-        consensus.nPowTargetSpacing = 1;//0 * 60;
+        consensus.nPowTargetSpacing = 10 * 60;
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 6048; // 75% of 8064
@@ -149,7 +149,7 @@ public:
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000200020");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x57edc88dae7ea0362077152462e44dcf0f62028ada3d6842ed13b218e3b9d0eb"); //1353397
+        consensus.defaultAssumeValid = uint256S("0x2aadef944294f92caed3112265d34502c33a1582a512fa9855e28a20476646e5"); //1353397
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -192,7 +192,7 @@ public:
         //CHANGE CHECKPOINT
         checkpointData = {
             {
-                {  1, uint256S("0x57edc88dae7ea0362077152462e44dcf0f62028ada3d6842ed13b218e3b9d0eb")},
+                {  1, uint256S("0x2aadef944294f92caed3112265d34502c33a1582a512fa9855e28a20476646e5")},
 //                {  1500, uint256S("0x841a2965955dd288cfa707a755d05a54e45f8bd476835ec9af4402a2b59a2967")},
 //                {  4032, uint256S("0x9ce90e427198fc0ef05e5905ce3503725b80e26afd35a987965fd7e3d9cf0846")},
 //                {  8064, uint256S("0xeb984353fc5190f210651f150c40b8a4bab9eeeff0b729fcb3987da694430d70")},
