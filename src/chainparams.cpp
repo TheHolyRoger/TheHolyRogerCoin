@@ -145,11 +145,11 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1517356801; // January 31st, 2018
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000100010001");
-//        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000200020");
+//        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000100010001");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000500050");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x2aadef944294f92caed3112265d34502c33a1582a512fa9855e28a20476646e5"); //1353397
+        consensus.defaultAssumeValid = uint256S("0x24287d8657601857e9cebb1dd71814a8dadb6a1f3e9211539467c89af4b92800"); //1353397
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -169,7 +169,7 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0x7906c16e453a151a6df170744208d1b85aa9a6f7584e8fb0337a971ab56727f6"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.emplace_back("localhost");
+//        vSeeds.emplace_back("localhost");
 //        vSeeds.emplace_back("dnsseed.thrasher.io");
 //        vSeeds.emplace_back("dnsseed.litecointools.com");
 //        vSeeds.emplace_back("dnsseed.litecoinpool.org");
@@ -192,7 +192,9 @@ public:
         //CHANGE CHECKPOINT
         checkpointData = {
             {
-//                {  1, uint256S("0x2aadef944294f92caed3112265d34502c33a1582a512fa9855e28a20476646e5")},
+                {  2, uint256S("0x2c712dcb849bdbdfdd78abde5579288f944e788b3573c08faad6bd1dc36ed39c")},
+                {  4, uint256S("0x3a512050aa4736a8ab79cee5c7ad72017d3841e872b3d5be40a87307f2db0f31")},
+                {  5, uint256S("0xe4d27b82815289421386fd511c411a372cbeb523ba508fcc0fb2f6a14d8574fe")},
 //                {  1500, uint256S("0x841a2965955dd288cfa707a755d05a54e45f8bd476835ec9af4402a2b59a2967")},
 //                {  4032, uint256S("0x9ce90e427198fc0ef05e5905ce3503725b80e26afd35a987965fd7e3d9cf0846")},
 //                {  8064, uint256S("0xeb984353fc5190f210651f150c40b8a4bab9eeeff0b729fcb3987da694430d70")},
