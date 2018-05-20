@@ -88,10 +88,23 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
     3110.0 hash/s, estimate: 383.6 hgenesis hash found!
     nonce: 2086645249
     genesis hash: 24287d8657601857e9cebb1dd71814a8dadb6a1f3e9211539467c89af4b92800
+    
+    
+    04ffff001d01043c552e532e2053757370656e6473204e65772054617269666673206f6e204368696e612c2053746f6b696e6720576869746520466c6167204665617273
+    algorithm: scrypt
+    merkle hash: 85ad70cc805836bc5d40ad1cce12b6757236e69517a24b2ff75029c94b7be30f
+    pszTimestamp: U.S. Suspends New Tariffs on China Stoking White Flag Fears
+    pubkey: 040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9
+    time: 1526857844
+    bits: 0x1e0ffff0
+    Searching for genesis hash..
+    genesis hash found!
+    nonce: 2085974208
+    genesis hash: 84428841adaca33cb6837ee5bd45500eadbfd249fdca6cc82f76f636a66deeb6
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "Goldman C.E.O. Blankfein Is Likely to Step Down in December";
+    const char* pszTimestamp = "U.S. Suspends New Tariffs on China Stoking White Flag Fears";
     const CScript genesisOutputScript = CScript() << ParseHex("040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
@@ -132,25 +145,21 @@ public:
         consensus.nRuleChangeActivationThreshold = 6048; // 75% of 8064
         consensus.nMinerConfirmationWindow = 8064; // nPowTargetTimespan / nPowTargetSpacing * 4
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
-
-        // Deployment of BIP68, BIP112, and BIP113.
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 0;
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1485561600; // January 28, 2017
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1517356801; // January 31st, 2018
-
-        // Deployment of SegWit (BIP141, BIP143, and BIP147)
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 0;
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1485561600; // January 28, 2017
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1517356801; // January 31st, 2018
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = Consensus::BIP9Deployment::ALWAYS_ACTIVE;
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
 
         // The best chain should have at least this much work.
-//        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000100010001");
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000008900890");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000001500150");
+//        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000008900890");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x24287d8657601857e9cebb1dd71814a8dadb6a1f3e9211539467c89af4b92800"); //1353397
+        consensus.defaultAssumeValid = uint256S("0x84428841adaca33cb6837ee5bd45500eadbfd249fdca6cc82f76f636a66deeb6"); //1353397
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -164,10 +173,10 @@ public:
         nDefaultPort = 9663;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1526783403, 2086645249, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1526857844, 2085974208, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x24287d8657601857e9cebb1dd71814a8dadb6a1f3e9211539467c89af4b92800"));
-        assert(genesis.hashMerkleRoot == uint256S("0x7906c16e453a151a6df170744208d1b85aa9a6f7584e8fb0337a971ab56727f6"));
+        assert(consensus.hashGenesisBlock == uint256S("0x84428841adaca33cb6837ee5bd45500eadbfd249fdca6cc82f76f636a66deeb6"));
+        assert(genesis.hashMerkleRoot == uint256S("0x85ad70cc805836bc5d40ad1cce12b6757236e69517a24b2ff75029c94b7be30f"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
 //        vSeeds.emplace_back("localhost");
@@ -193,10 +202,11 @@ public:
         //CHANGE CHECKPOINT
         checkpointData = {
             {
-                {  2, uint256S("0x2c712dcb849bdbdfdd78abde5579288f944e788b3573c08faad6bd1dc36ed39c")},
-                {  4, uint256S("0x3a512050aa4736a8ab79cee5c7ad72017d3841e872b3d5be40a87307f2db0f31")},
-                {  5, uint256S("0xe4d27b82815289421386fd511c411a372cbeb523ba508fcc0fb2f6a14d8574fe")},
-                {  136, uint256S("0xf97d30daeafb701876f1915598b4639b08d2c313f5082b7c77a31d45a0bc3523")},
+                {  1, uint256S("0x6aad3bfaf0b45e752d18c6b183c4f68d439161e25935774310315547e41dee67")},
+                {  2, uint256S("0xa878883f7977adcd089c70453f986cbd6804dd6716f6b9f4860f4ee42c88a47f")},
+                {  3, uint256S("0xeda17b97d5346381f044d964c7d7b6793fd0a07ccdf30b086814a51e0ba708c8")},
+                {  9, uint256S("0xfa346867b25e21e37612ccf57bfc36ea26472f4295289cd91a5c22534023b3f9")},
+                {  20, uint256S("0x5b3ed14c7d9ef1e6de92fc377d8959ac82f31c76d0bed2ee1a90562c07f00f27")},
 //                {  1500, uint256S("0x841a2965955dd288cfa707a755d05a54e45f8bd476835ec9af4402a2b59a2967")},
 //                {  4032, uint256S("0x9ce90e427198fc0ef05e5905ce3503725b80e26afd35a987965fd7e3d9cf0846")},
 //                {  8064, uint256S("0xeb984353fc5190f210651f150c40b8a4bab9eeeff0b729fcb3987da694430d70")},
@@ -277,10 +287,10 @@ public:
         nDefaultPort = 19665;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1526786156, 806771, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1526859038, 2905618, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x8e37fbf9a820b9b7fd55b1e5ebfbd8370134523c5c09714c04dc26afdf2f65eb"));
-        assert(genesis.hashMerkleRoot == uint256S("0x7906c16e453a151a6df170744208d1b85aa9a6f7584e8fb0337a971ab56727f6"));
+        assert(consensus.hashGenesisBlock == uint256S("0x57a0fd4132e1b3e543a8d37fbffa49b94bc8ddc6101c3832b0b525a5ca7d5a92"));
+        assert(genesis.hashMerkleRoot == uint256S("0x85ad70cc805836bc5d40ad1cce12b6757236e69517a24b2ff75029c94b7be30f"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -368,7 +378,7 @@ public:
         genesis = CreateGenesisBlock(1526786424, 622871, 0x207fffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x20ea091b357390f5f02d0eef45d178696e764edc8d54e847fc83af8bd31a1cd7"));
-        assert(genesis.hashMerkleRoot == uint256S("0x7906c16e453a151a6df170744208d1b85aa9a6f7584e8fb0337a971ab56727f6"));
+        assert(genesis.hashMerkleRoot == uint256S("0x85ad70cc805836bc5d40ad1cce12b6757236e69517a24b2ff75029c94b7be30f"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
