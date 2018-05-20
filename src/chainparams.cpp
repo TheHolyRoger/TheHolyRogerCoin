@@ -192,7 +192,7 @@ public:
         //CHANGE CHECKPOINT
         checkpointData = {
             {
-                {  1, uint256S("0x2aadef944294f92caed3112265d34502c33a1582a512fa9855e28a20476646e5")},
+//                {  1, uint256S("0x2aadef944294f92caed3112265d34502c33a1582a512fa9855e28a20476646e5")},
 //                {  1500, uint256S("0x841a2965955dd288cfa707a755d05a54e45f8bd476835ec9af4402a2b59a2967")},
 //                {  4032, uint256S("0x9ce90e427198fc0ef05e5905ce3503725b80e26afd35a987965fd7e3d9cf0846")},
 //                {  8064, uint256S("0xeb984353fc5190f210651f150c40b8a4bab9eeeff0b729fcb3987da694430d70")},
