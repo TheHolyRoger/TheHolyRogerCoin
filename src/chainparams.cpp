@@ -190,8 +190,8 @@ public:
         fMineBlocksOnDemand = false;
         //CHANGE CHECKPOINT
         checkpointData = {
-//            {
-//                {  0, uint256("0x")},
+            {
+                {  0, uint256("0x24287d8657601857e9cebb1dd71814a8dadb6a1f3e9211539467c89af4b92800")},
 //                {  1500, uint256S("0x841a2965955dd288cfa707a755d05a54e45f8bd476835ec9af4402a2b59a2967")},
 //                {  4032, uint256S("0x9ce90e427198fc0ef05e5905ce3503725b80e26afd35a987965fd7e3d9cf0846")},
 //                {  8064, uint256S("0xeb984353fc5190f210651f150c40b8a4bab9eeeff0b729fcb3987da694430d70")},
@@ -208,7 +208,7 @@ public:
 //                {456000, uint256S("0xbf34f71cc6366cd487930d06be22f897e34ca6a40501ac7d401be32456372004")},
 //                {638902, uint256S("0x15238656e8ec63d28de29a8c75fcf3a5819afc953dcd9cc45cecc53baec74f38")},
 //                {721000, uint256S("0x198a7b4de1df9478e2463bd99d75b714eab235a2e63e741641dc8a759a9840e5")},
-//            }
+            }
         };
 
         chainTxData = ChainTxData{
@@ -298,10 +298,10 @@ public:
         fMineBlocksOnDemand = false;
 
         checkpointData = (CCheckpointData) {
-//            {
-//                {  0, uint256("0x")},
+            {
+                {  0, uint256("0x8e37fbf9a820b9b7fd55b1e5ebfbd8370134523c5c09714c04dc26afdf2f65eb")},
 //                {2056, uint256S("17748a31ba97afdc9a4f86837a39d287e3e7c7290a08a1d816c5969c78a83289")},
-//            }
+            }
         };
 
         chainTxData = ChainTxData{
