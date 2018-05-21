@@ -155,7 +155,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000004d004d0");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000009100910");
 //        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000100010");
 
         // By default assume that the signatures in ancestors of this block are valid.
@@ -208,7 +208,7 @@ public:
                 {  20, uint256S("0x5b3ed14c7d9ef1e6de92fc377d8959ac82f31c76d0bed2ee1a90562c07f00f27")},
                 {  76, uint256S("0x1f8a5d413c405c2bb3f126dbe79ed02b5ab7238501ad38992168bf918c1ef1c6")},
                 {  113, uint256S("0x179dfcff8853a58d2471135fdf98db4ca6078d1c275abb13ecba4ab984ef6587")},
-//                {  8064, uint256S("0xeb984353fc5190f210651f150c40b8a4bab9eeeff0b729fcb3987da694430d70")},
+                {  148, uint256S("0xb9a2b2f6bb0b5cbb050628559818d948f18500d70ee71beb17ea90632b73624d")},
 //                { 16128, uint256S("0x602edf1859b7f9a6af809f1d9b0e6cb66fdc1d4d9dcd7a4bec03e12a1ccd153d")},
 //                { 23420, uint256S("0xd80fdf9ca81afd0bd2b2a90ac3a9fe547da58f2530ec874e978fce0b5101b507")},
 //                { 50000, uint256S("0x69dc37eb029b68f075a5012dcc0419c127672adb4f3a32882b2b3e71d07a20a6")},
