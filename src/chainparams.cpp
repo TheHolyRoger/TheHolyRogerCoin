@@ -88,9 +88,9 @@ public:
         consensus.nSubsidyHalvingInterval = 840000;
         consensus.BIP16Height = 0; // 73474adb2b764dcf94f4a633e0ff47234d69e3780a220531a766296f4a407412 - October 1, 2012
         consensus.BIP34Height = 76;
-        consensus.BIP34Hash = uint256S("73474adb2b764dcf94f4a633e0ff47234d69e3780a220531a766296f4a407412");
-        consensus.BIP65Height = 76; // 73474adb2b764dcf94f4a633e0ff47234d69e3780a220531a766296f4a407412
-        consensus.BIP66Height = 76; // 73474adb2b764dcf94f4a633e0ff47234d69e3780a220531a766296f4a407412
+        consensus.BIP34Hash = uint256S("678f04de7ac4f992071d75557dfed5da6cb716938c52fcb965d019392d3eced9");
+        consensus.BIP65Height = 76; // 678f04de7ac4f992071d75557dfed5da6cb716938c52fcb965d019392d3eced9
+        consensus.BIP66Height = 76; // 678f04de7ac4f992071d75557dfed5da6cb716938c52fcb965d019392d3eced9
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); 
         consensus.nPowTargetTimespan = 3.5 * 24 * 60 * 60; // 3.5 days
 //        consensus.nPowTargetTimespan = 1 * 60; // 3.5 days
@@ -157,11 +157,11 @@ public:
         //CHANGE CHECKPOINT
         checkpointData = {
             {
-//                {  1, uint256S("0x6aad3bfaf0b45e752d18c6b183c4f68d439161e25935774310315547e41dee67")},
-//                {  2, uint256S("0xa878883f7977adcd089c70453f986cbd6804dd6716f6b9f4860f4ee42c88a47f")},
-//                {  9, uint256S("0xfa346867b25e21e37612ccf57bfc36ea26472f4295289cd91a5c22534023b3f9")},
-//                {  20, uint256S("0x5b3ed14c7d9ef1e6de92fc377d8959ac82f31c76d0bed2ee1a90562c07f00f27")},
-//                {  76, uint256S("0x1f8a5d413c405c2bb3f126dbe79ed02b5ab7238501ad38992168bf918c1ef1c6")},
+                {  1, uint256S("0xf1158b813f0bb2b02f49ae0368a827c52a41d6805bb100b70edc2025b25055d5")},
+                {  30, uint256S("001fda5291b3c4e2255bd73a6526fa520849b8f3cdb0c9b2bd6631f6a5482e5ca")},
+                {  50, uint256S("0x4b73d9eeb72d5b5e2782b5648f6923004108984396b0d237841450dff8498c6b")},
+                {  76, uint256S("0x678f04de7ac4f992071d75557dfed5da6cb716938c52fcb965d019392d3eced9")},
+                {  79, uint256S("0xce9da9b6ac28ff038d4e93227f9f92f00ae7d4f462c4afa1e4e3f680be3f3a86")},
 //                {  113, uint256S("0x179dfcff8853a58d2471135fdf98db4ca6078d1c275abb13ecba4ab984ef6587")},
 //                {  148, uint256S("0xb9a2b2f6bb0b5cbb050628559818d948f18500d70ee71beb17ea90632b73624d")},
 //                { 1505, uint256S("0x383a27290cbe5358d5c8d0d39c5d9c754890284d767bb141bdbfd74c7d102119")},
