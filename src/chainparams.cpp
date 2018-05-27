@@ -32,36 +32,6 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
     genesis.vtx.push_back(MakeTransactionRef(std::move(txNew)));
     genesis.hashPrevBlock.SetNull();
     genesis.hashMerkleRoot = BlockMerkleRoot(genesis);
-//    if (true)
-//    {
-//        printf("Searching for genesis block...\n");
-//        // This will figure out a valid hash and Nonce if you're
-//        // creating a different genesis block:
-//        uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
-//        uint256 thash;
-//        char scratchpad[SCRYPT_SCRATCHPAD_SIZE];
-//
-//        loop
-//        {
-//            scrypt_1024_1_1_256_sp_sse2(BEGIN(genesis.nVersion), BEGIN(thash), scratchpad);
-//            if (thash <= hashTarget)
-//                break;
-//            if ((genesis.nNonce & 0xFFF) == 0)
-//            {
-//                printf("nonce %08X: hash = %s (target = %s)\n", genesis.nNonce, thash.ToString().c_str(), hashTarget.ToString().c_str());
-//            }
-//            ++genesis.nNonce;
-//            if (genesis.nNonce == 0)
-//            {
-//                printf("NONCE WRAPPED, incrementing time\n");
-//                ++genesis.nTime;
-//            }
-//        }
-//        printf("genesis.nTime = %u \n", genesis.nTime);
-//        printf("genesis.nNonce = %u \n", genesis.nNonce);
-//        printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-//
-//        }
     return genesis;
 }
 
@@ -75,37 +45,22 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  *     CTxIn(COutPoint(000000, -1), coinbase 04ffff001d0104455468652054696d65732030332f4a616e2f32303039204368616e63656c6c6f72206f6e206272696e6b206f66207365636f6e64206261696c6f757420666f722062616e6b73)
  *     CTxOut(nValue=50.00000000, scriptPubKey=0x5F1DF16B2B704C8A578D0B)
  *   vMerkleTree: 4a5e1e
- * python2.7 genesis.py -a scrypt -z "Goldman C.E.O. Blankfein Is Likely to Step Down in December" -p "040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9" -n 2084524493
- 
-    04ffff001d01043b476f6c646d616e20432e452e4f2e20426c616e6b6665696e204973204c696b656c7920746f205374657020446f776e20696e20446563656d626572
-    algorithm: scrypt
-    merkle hash: 7906c16e453a151a6df170744208d1b85aa9a6f7584e8fb0337a971ab56727f6
-    pszTimestamp: Goldman C.E.O. Blankfein Is Likely to Step Down in December
-    pubkey: 040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9
-    time: 1526783403
-    bits: 0x1e0ffff0
-    Searching for genesis hash..
-    3110.0 hash/s, estimate: 383.6 hgenesis hash found!
-    nonce: 2086645249
-    genesis hash: 24287d8657601857e9cebb1dd71814a8dadb6a1f3e9211539467c89af4b92800
-    
-    
-    04ffff001d01043c552e532e2053757370656e6473204e65772054617269666673206f6e204368696e612c2053746f6b696e6720576869746520466c6167204665617273
-    algorithm: scrypt
-    merkle hash: 85ad70cc805836bc5d40ad1cce12b6757236e69517a24b2ff75029c94b7be30f
-    pszTimestamp: U.S. Suspends New Tariffs on China Stoking White Flag Fears
-    pubkey: 040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9
-    time: 1526857844
-    bits: 0x1e0ffff0
-    Searching for genesis hash..
-    genesis hash found!
-    nonce: 2085974208
-    genesis hash: 84428841adaca33cb6837ee5bd45500eadbfd249fdca6cc82f76f636a66deeb6
+ * python2 ./genesis.py -a scrypt -z "The Telegraph 27/May/2018 Kim Jong-un commits to Trump summit and denuclearisation" -p "04B99291FD5963B92F914F3ADB533605ECE67A9F4A4120CED4D8CB2E68C74AD5150D4EB228AE2103A693D4A4088A49A0526AE873D8EFD8CB84CF86246F9B8CF948" -n 2084524493
+  04ffff001d01044c525468652054656c6567726170682032372f4d61792f32303138204b696d204a6f6e672d756e20636f6d6d69747320746f205472756d702073756d6d697420616e642064656e75636c65617269736174696f6e
+  algorithm: scrypt
+  merkle hash: 7295c791d735679ec7578c74881458876ac8e696d6683311b482862306879544
+  pszTimestamp: The Telegraph 27/May/2018 Kim Jong-un commits to Trump summit and denuclearisation
+  pubkey: 04B99291FD5963B92F914F3ADB533605ECE67A9F4A4120CED4D8CB2E68C74AD5150D4EB228AE2103A693D4A4088A49A0526AE873D8EFD8CB84CF86246F9B8CF948
+  time: 1527430983
+  bits: 0x1e0ffff0
+  Searching for genesis hash..
+  nonce: 2085075971
+  genesis hash: efdcf5b2eece13c846fad57cef0eb5cbc07076dc90cf125a1b78625bda84b99f
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "U.S. Suspends New Tariffs on China Stoking White Flag Fears";
-    const CScript genesisOutputScript = CScript() << ParseHex("040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9") << OP_CHECKSIG;
+    const char* pszTimestamp = "The Telegraph 27/May/2018 Kim Jong-un commits to Trump summit and denuclearisation";
+    const CScript genesisOutputScript = CScript() << ParseHex("04B99291FD5963B92F914F3ADB533605ECE67A9F4A4120CED4D8CB2E68C74AD5150D4EB228AE2103A693D4A4088A49A0526AE873D8EFD8CB84CF86246F9B8CF948") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
 
@@ -133,9 +88,9 @@ public:
         consensus.nSubsidyHalvingInterval = 840000;
         consensus.BIP16Height = 0; // 73474adb2b764dcf94f4a633e0ff47234d69e3780a220531a766296f4a407412 - October 1, 2012
         consensus.BIP34Height = 76;
-        consensus.BIP34Hash = uint256S("73474adb2b764dcf94f4a633e0ff47234d69e3780a220531a766296f4a407412");
-        consensus.BIP65Height = 76; // 73474adb2b764dcf94f4a633e0ff47234d69e3780a220531a766296f4a407412
-        consensus.BIP66Height = 76; // 73474adb2b764dcf94f4a633e0ff47234d69e3780a220531a766296f4a407412
+        consensus.BIP34Hash = uint256S("678f04de7ac4f992071d75557dfed5da6cb716938c52fcb965d019392d3eced9");
+        consensus.BIP65Height = 76; // 678f04de7ac4f992071d75557dfed5da6cb716938c52fcb965d019392d3eced9
+        consensus.BIP66Height = 76; // 678f04de7ac4f992071d75557dfed5da6cb716938c52fcb965d019392d3eced9
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); 
         consensus.nPowTargetTimespan = 3.5 * 24 * 60 * 60; // 3.5 days
 //        consensus.nPowTargetTimespan = 1 * 60; // 3.5 days
@@ -148,18 +103,18 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 0;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 0;
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = Consensus::BIP9Deployment::ALWAYS_ACTIVE;
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = Consensus::BIP9Deployment::ALWAYS_ACTIVE;
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000000002a982a980");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000052b052b0");
 //        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000100010");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x84428841adaca33cb6837ee5bd45500eadbfd249fdca6cc82f76f636a66deeb6"); //1353397
+        consensus.defaultAssumeValid = uint256S("0x7381d4c38ecce25b563b71a7abd9980f1acae8b362b0e2c171ace23a04c45f51"); //1304 (fix bad sigs before this block)
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -173,10 +128,10 @@ public:
         nDefaultPort = 9663;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1526857844, 2085974208, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1527430983, 2085075971, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x84428841adaca33cb6837ee5bd45500eadbfd249fdca6cc82f76f636a66deeb6"));
-        assert(genesis.hashMerkleRoot == uint256S("0x85ad70cc805836bc5d40ad1cce12b6757236e69517a24b2ff75029c94b7be30f"));
+        assert(consensus.hashGenesisBlock == uint256S("0xefdcf5b2eece13c846fad57cef0eb5cbc07076dc90cf125a1b78625bda84b99f"));
+        assert(genesis.hashMerkleRoot == uint256S("0x7295c791d735679ec7578c74881458876ac8e696d6683311b482862306879544"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
 //        vSeeds.emplace_back("localhost");
@@ -202,14 +157,14 @@ public:
         //CHANGE CHECKPOINT
         checkpointData = {
             {
-                {  1, uint256S("0x6aad3bfaf0b45e752d18c6b183c4f68d439161e25935774310315547e41dee67")},
-                {  2, uint256S("0xa878883f7977adcd089c70453f986cbd6804dd6716f6b9f4860f4ee42c88a47f")},
-                {  9, uint256S("0xfa346867b25e21e37612ccf57bfc36ea26472f4295289cd91a5c22534023b3f9")},
-                {  20, uint256S("0x5b3ed14c7d9ef1e6de92fc377d8959ac82f31c76d0bed2ee1a90562c07f00f27")},
-                {  76, uint256S("0x1f8a5d413c405c2bb3f126dbe79ed02b5ab7238501ad38992168bf918c1ef1c6")},
-                {  113, uint256S("0x179dfcff8853a58d2471135fdf98db4ca6078d1c275abb13ecba4ab984ef6587")},
-                {  148, uint256S("0xb9a2b2f6bb0b5cbb050628559818d948f18500d70ee71beb17ea90632b73624d")},
-                { 1505, uint256S("0x383a27290cbe5358d5c8d0d39c5d9c754890284d767bb141bdbfd74c7d102119")},
+                {  1, uint256S("0xf1158b813f0bb2b02f49ae0368a827c52a41d6805bb100b70edc2025b25055d5")},
+                {  30, uint256S("001fda5291b3c4e2255bd73a6526fa520849b8f3cdb0c9b2bd6631f6a5482e5ca")},
+                {  50, uint256S("0x4b73d9eeb72d5b5e2782b5648f6923004108984396b0d237841450dff8498c6b")},
+                {  76, uint256S("0x678f04de7ac4f992071d75557dfed5da6cb716938c52fcb965d019392d3eced9")},
+                {  79, uint256S("0xce9da9b6ac28ff038d4e93227f9f92f00ae7d4f462c4afa1e4e3f680be3f3a86")},
+                {  1318, uint256S("0x193d1c5b26f953ec8b174b9b2e885f76aada2ee64835b2ad39fcd984e911d908")},
+//                {  148, uint256S("0xb9a2b2f6bb0b5cbb050628559818d948f18500d70ee71beb17ea90632b73624d")},
+//                { 1505, uint256S("0x383a27290cbe5358d5c8d0d39c5d9c754890284d767bb141bdbfd74c7d102119")},
 //                { 23420, uint256S("0xd80fdf9ca81afd0bd2b2a90ac3a9fe547da58f2530ec874e978fce0b5101b507")},
 //                { 50000, uint256S("0x69dc37eb029b68f075a5012dcc0419c127672adb4f3a32882b2b3e71d07a20a6")},
 //                { 80000, uint256S("0x4fcb7c02f676a300503f49c764a89955a8f920b46a8cbecb4867182ecdb2e90a")},
@@ -274,10 +229,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1526867723; // January 31st, 2018
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000007d006a402163e");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000100010");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0xa0afbded94d4be233e191525dc2d467af5c7eab3143c852c3cd549831022aad6"); //343833
+        consensus.defaultAssumeValid = uint256S("0x6ce8bfdfb510688eac56bb79b0df193ae8e5f76490697269ff45072680867101"); //343833
 
         pchMessageStart[0] = 0xff;
         pchMessageStart[1] = 0xd5;
@@ -286,10 +241,10 @@ public:
         nDefaultPort = 19665;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1526859038, 2905618, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1527431244, 3280353, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x57a0fd4132e1b3e543a8d37fbffa49b94bc8ddc6101c3832b0b525a5ca7d5a92"));
-        assert(genesis.hashMerkleRoot == uint256S("0x85ad70cc805836bc5d40ad1cce12b6757236e69517a24b2ff75029c94b7be30f"));
+        assert(consensus.hashGenesisBlock == uint256S("0x6ce8bfdfb510688eac56bb79b0df193ae8e5f76490697269ff45072680867101"));
+        assert(genesis.hashMerkleRoot == uint256S("0x7295c791d735679ec7578c74881458876ac8e696d6683311b482862306879544"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -377,7 +332,7 @@ public:
         genesis = CreateGenesisBlock(1526786424, 622871, 0x207fffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x20ea091b357390f5f02d0eef45d178696e764edc8d54e847fc83af8bd31a1cd7"));
-        assert(genesis.hashMerkleRoot == uint256S("0x85ad70cc805836bc5d40ad1cce12b6757236e69517a24b2ff75029c94b7be30f"));
+        assert(genesis.hashMerkleRoot == uint256S("0x7295c791d735679ec7578c74881458876ac8e696d6683311b482862306879544"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
