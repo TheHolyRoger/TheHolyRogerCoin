@@ -32,36 +32,6 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
     genesis.vtx.push_back(MakeTransactionRef(std::move(txNew)));
     genesis.hashPrevBlock.SetNull();
     genesis.hashMerkleRoot = BlockMerkleRoot(genesis);
-//    if (true)
-//    {
-//        printf("Searching for genesis block...\n");
-//        // This will figure out a valid hash and Nonce if you're
-//        // creating a different genesis block:
-//        uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
-//        uint256 thash;
-//        char scratchpad[SCRYPT_SCRATCHPAD_SIZE];
-//
-//        loop
-//        {
-//            scrypt_1024_1_1_256_sp_sse2(BEGIN(genesis.nVersion), BEGIN(thash), scratchpad);
-//            if (thash <= hashTarget)
-//                break;
-//            if ((genesis.nNonce & 0xFFF) == 0)
-//            {
-//                printf("nonce %08X: hash = %s (target = %s)\n", genesis.nNonce, thash.ToString().c_str(), hashTarget.ToString().c_str());
-//            }
-//            ++genesis.nNonce;
-//            if (genesis.nNonce == 0)
-//            {
-//                printf("NONCE WRAPPED, incrementing time\n");
-//                ++genesis.nTime;
-//            }
-//        }
-//        printf("genesis.nTime = %u \n", genesis.nTime);
-//        printf("genesis.nNonce = %u \n", genesis.nNonce);
-//        printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-//
-//        }
     return genesis;
 }
 
