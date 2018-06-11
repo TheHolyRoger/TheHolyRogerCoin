@@ -33,7 +33,7 @@ If you're using the automated script (found in [contrib/gitian-build.sh](/contri
 Check out the source code in the following directory hierarchy.
 
     cd /path/to/your/toplevel/build
-    git clone https://github.com/TheHolyRoger/gitian.sigs.roger.git
+    git clone https://github.com/TheHolyRoger/gitian.sigs.theholyroger.git
     git clone https://github.com/TheHolyRoger/theholyroger-detached-sigs
     git clone https://github.com/devrandom/gitian-builder.git
     git clone https://github.com/TheHolyRoger/TheHolyRogerCoin.git
@@ -68,9 +68,9 @@ Setup Gitian descriptors:
     git checkout v${VERSION}
     popd
 
-Ensure your gitian.sigs.roger are up-to-date if you wish to gverify your builds against other Gitian signatures.
+Ensure your gitian.sigs.theholyroger are up-to-date if you wish to gverify your builds against other Gitian signatures.
 
-    pushd ./gitian.sigs.roger
+    pushd ./gitian.sigs.theholyroger
     git pull
     popd
 
@@ -112,16 +112,16 @@ The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
     pushd ./gitian-builder
     ./bin/gbuild --num-make 2 --memory 3000 --commit =v${VERSION} ..//contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs.roger/ ..//contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs.theholyroger/ ..//contrib/gitian-descriptors/gitian-linux.yml
     mv build/out/theholyroger-*.tar.gz build/out/src/theholyroger-*.tar.gz ../
 
     ./bin/gbuild --num-make 2 --memory 3000 --commit =v${VERSION} ..//contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs.roger/ ..//contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs.theholyroger/ ..//contrib/gitian-descriptors/gitian-win.yml
     mv build/out/theholyroger-*-win-unsigned.tar.gz inputs/theholyroger-win-unsigned.tar.gz
     mv build/out/theholyroger-*.zip build/out/theholyroger-*.exe ../
 
     ./bin/gbuild --num-make 2 --memory 3000 --commit =v${VERSION} ..//contrib/gitian-descriptors/gitian-osx.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs.roger/ ..//contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs.theholyroger/ ..//contrib/gitian-descriptors/gitian-osx.yml
     mv build/out/theholyroger-*-osx-unsigned.tar.gz inputs/theholyroger-osx-unsigned.tar.gz
     mv build/out/theholyroger-*.tar.gz build/out/theholyroger-*.dmg ../
     popd
@@ -132,7 +132,7 @@ Build output expected:
   2. linux 32-bit and 64-bit dist tarballs (`theholyroger-${VERSION}-linux[32|64].tar.gz`)
   3. windows 32-bit and 64-bit unsigned installers and dist zips (`theholyroger-${VERSION}-win[32|64]-setup-unsigned.exe`, `theholyroger-${VERSION}-win[32|64].zip`)
   4. OS X unsigned installer and dist tarball (`theholyroger-${VERSION}-osx-unsigned.dmg`, `theholyroger-${VERSION}-osx64.tar.gz`)
-  5. Gitian signatures (in `gitian.sigs.roger/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/`)
+  5. Gitian signatures (in `gitian.sigs.theholyroger/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/`)
 
 ### Verify other gitian builders signatures to your own. (Optional)
 
@@ -144,21 +144,21 @@ Add other gitian builders keys to your gpg keyring, and/or refresh keys.
 Verify the signatures
 
     pushd ./gitian-builder
-    ./bin/gverify -v -d ../gitian.sigs.roger/ -r ${VERSION}-linux ..//contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gverify -v -d ../gitian.sigs.roger/ -r ${VERSION}-win-unsigned ..//contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gverify -v -d ../gitian.sigs.roger/ -r ${VERSION}-osx-unsigned ..//contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-linux ..//contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-win-unsigned ..//contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-osx-unsigned ..//contrib/gitian-descriptors/gitian-osx.yml
     popd
 
 ### Next steps:
 
-Commit your signature to gitian.sigs.roger:
+Commit your signature to gitian.sigs.theholyroger:
 
-    pushd gitian.sigs.roger
+    pushd gitian.sigs.theholyroger
     git add ${VERSION}-linux/${SIGNER}
     git add ${VERSION}-win-unsigned/${SIGNER}
     git add ${VERSION}-osx-unsigned/${SIGNER}
     git commit -a
-    git push  # Assuming you can push to the gitian.sigs.roger tree
+    git push  # Assuming you can push to the gitian.sigs.theholyroger tree
     popd
 
 Codesigner only: Create Windows/OS X detached signatures:
@@ -201,8 +201,8 @@ Create (and optionally verify) the signed OS X binary:
 
     pushd ./gitian-builder
     ./bin/gbuild -i --commit signature=v${VERSION} ..//contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs.roger/ ..//contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs.roger/ -r ${VERSION}-osx-signed ..//contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs.theholyroger/ ..//contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-osx-signed ..//contrib/gitian-descriptors/gitian-osx-signer.yml
     mv build/out/theholyroger-osx-signed.dmg ../theholyroger-${VERSION}-osx.dmg
     popd
 
@@ -210,19 +210,19 @@ Create (and optionally verify) the signed Windows binaries:
 
     pushd ./gitian-builder
     ./bin/gbuild -i --commit signature=v${VERSION} ..//contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs.roger/ ..//contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs.roger/ -r ${VERSION}-win-signed ..//contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs.theholyroger/ ..//contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-win-signed ..//contrib/gitian-descriptors/gitian-win-signer.yml
     mv build/out/theholyroger-*win64-setup.exe ../theholyroger-${VERSION}-win64-setup.exe
     mv build/out/theholyroger-*win32-setup.exe ../theholyroger-${VERSION}-win32-setup.exe
     popd
 
 Commit your signature for the signed OS X/Windows binaries:
 
-    pushd gitian.sigs.roger
+    pushd gitian.sigs.theholyroger
     git add ${VERSION}-osx-signed/${SIGNER}
     git add ${VERSION}-win-signed/${SIGNER}
     git commit -a
-    git push  # Assuming you can push to the gitian.sigs.roger tree
+    git push  # Assuming you can push to the gitian.sigs.theholyroger tree
     popd
 
 ### After 3 or more people have gitian-built and their results match:
