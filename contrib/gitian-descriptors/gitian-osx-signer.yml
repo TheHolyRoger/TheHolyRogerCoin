@@ -7,7 +7,7 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/TheHolyRoger/TheHolyRogerCoin-detached-sigs.git"
+- "url": "https://github.com/TheHolyRoger/theholyroger-detached-sigs.git"
   "dir": "signature"
 files:
 - "theholyroger-osx-unsigned.tar.gz"
