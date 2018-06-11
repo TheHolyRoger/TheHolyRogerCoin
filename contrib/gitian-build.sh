@@ -263,7 +263,7 @@ then
 	mkdir -p inputs
 	wget -N -P inputs $osslPatchUrl
 	wget -N -P inputs $osslTarUrl
-	make -C ..//depends download SOURCES_PATH=`pwd`/cache/common
+	make -C ../TheHolyRogerCoin/depends download SOURCES_PATH=`pwd`/cache/common
 
 	# Linux
 	if [[ $linux = true ]]
@@ -271,8 +271,8 @@ then
             echo ""
 	    echo "Compiling ${VERSION} Linux"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit =${COMMIT} --url =${url} ..//contrib/gitian-descriptors/gitian-linux.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs.theholyroger/ ..//contrib/gitian-descriptors/gitian-linux.yml
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit =${COMMIT} --url =${url} ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-linux.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs.theholyroger/ ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-linux.yml
 	    mv build/out/theholyroger-*.tar.gz build/out/src/theholyroger-*.tar.gz ../theholyroger-binaries/${VERSION}
 	fi
 	# Windows
@@ -281,8 +281,8 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} Windows"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit =${COMMIT} --url =${url} ..//contrib/gitian-descriptors/gitian-win.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs.theholyroger/ ..//contrib/gitian-descriptors/gitian-win.yml
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit =${COMMIT} --url =${url} ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-win.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs.theholyroger/ ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-win.yml
 	    mv build/out/theholyroger-*-win-unsigned.tar.gz inputs/theholyroger-win-unsigned.tar.gz
 	    mv build/out/theholyroger-*.zip build/out/theholyroger-*.exe ../theholyroger-binaries/${VERSION}
 	fi
@@ -292,8 +292,8 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} Mac OSX"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit =${COMMIT} --url =${url} ..//contrib/gitian-descriptors/gitian-osx.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs.theholyroger/ ..//contrib/gitian-descriptors/gitian-osx.yml
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit =${COMMIT} --url =${url} ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-osx.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs.theholyroger/ ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-osx.yml
 	    mv build/out/theholyroger-*-osx-unsigned.tar.gz inputs/theholyroger-osx-unsigned.tar.gz
 	    mv build/out/theholyroger-*.tar.gz build/out/theholyroger-*.dmg ../theholyroger-binaries/${VERSION}
 	fi
@@ -322,27 +322,27 @@ then
 	echo ""
 	echo "Verifying v${VERSION} Linux"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-linux ..//contrib/gitian-descriptors/gitian-linux.yml
+	./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-linux ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-linux.yml
 	# Windows
 	echo ""
 	echo "Verifying v${VERSION} Windows"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-win-unsigned ..//contrib/gitian-descriptors/gitian-win.yml
+	./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-win-unsigned ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-win.yml
 	# Mac OSX	
 	echo ""
 	echo "Verifying v${VERSION} Mac OSX"
 	echo ""	
-	./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-osx-unsigned ..//contrib/gitian-descriptors/gitian-osx.yml
+	./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-osx-unsigned ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-osx.yml
 	# Signed Windows
 	echo ""
 	echo "Verifying v${VERSION} Signed Windows"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-osx-signed ..//contrib/gitian-descriptors/gitian-osx-signer.yml
+	./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-osx-signed ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-osx-signer.yml
 	# Signed Mac OSX
 	echo ""
 	echo "Verifying v${VERSION} Signed Mac OSX"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-osx-signed ..//contrib/gitian-descriptors/gitian-osx-signer.yml	
+	./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-osx-signed ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-osx-signer.yml	
 	popd
 fi
 
@@ -357,8 +357,8 @@ then
 	    echo ""
 	    echo "Signing ${VERSION} Windows"
 	    echo ""
-	    ./bin/gbuild -i --commit signature=${COMMIT} ..//contrib/gitian-descriptors/gitian-win-signer.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs.theholyroger/ ..//contrib/gitian-descriptors/gitian-win-signer.yml
+	    ./bin/gbuild -i --commit signature=${COMMIT} ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-win-signer.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs.theholyroger/ ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-win-signer.yml
 	    mv build/out/theholyroger-*win64-setup.exe ../theholyroger-binaries/${VERSION}
 	    mv build/out/theholyroger-*win32-setup.exe ../theholyroger-binaries/${VERSION}
 	fi
@@ -368,8 +368,8 @@ then
 	    echo ""
 	    echo "Signing ${VERSION} Mac OSX"
 	    echo ""
-	    ./bin/gbuild -i --commit signature=${COMMIT} ..//contrib/gitian-descriptors/gitian-osx-signer.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs.theholyroger/ ..//contrib/gitian-descriptors/gitian-osx-signer.yml
+	    ./bin/gbuild -i --commit signature=${COMMIT} ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs.theholyroger/ ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-osx-signer.yml
 	    mv build/out/theholyroger-osx-signed.dmg ../theholyroger-binaries/${VERSION}/theholyroger-${VERSION}-osx.dmg
 	fi
 	popd
