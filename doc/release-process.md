@@ -34,7 +34,7 @@ Check out the source code in the following directory hierarchy.
 
     cd /path/to/your/toplevel/build
     git clone https://github.com/TheHolyRoger/gitian.sigs.roger.git
-    git clone https://github.com/TheHolyRoger/TheHolyRogerCoin-detached-sigs.git
+    git clone https://github.com/TheHolyRoger/theholyroger-detached-sigs
     git clone https://github.com/devrandom/gitian-builder.git
     git clone https://github.com/TheHolyRoger/TheHolyRogerCoin.git
 
