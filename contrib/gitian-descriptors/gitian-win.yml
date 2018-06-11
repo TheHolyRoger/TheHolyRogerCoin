@@ -23,7 +23,7 @@ packages:
 - "python"
 remotes:
 - "url": "https://github.com/TheHolyRoger/TheHolyRogerCoin.git"
-  "dir": "theholyroger"
+  "dir": "TheHolyRogerCoin"
 files: []
 script: |
   WRAP_DIR=$HOME/wrapped
