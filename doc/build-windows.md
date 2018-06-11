@@ -106,7 +106,7 @@ The next three steps are an example of how to acquire the source in an appropria
 
     cd /usr/src
     sudo git clone https://github.com/TheHolyRoger/TheHolyRogerCoin.git
-    sudo chmod -R a+rw 
+    sudo chmod -R a+rw TheHolyRogerCoin
 
 Once the source code is ready the build steps are below.
 
@@ -158,15 +158,15 @@ Installation
 After building using the Windows subsystem it can be useful to copy the compiled
 executables to a directory on the windows drive in the same directory structure
 as they appear in the release `.zip` archive. This can be done in the following
-way. This will install to `c:\workspace\`, for example:
+way. This will install to `c:\workspace\theholyroger`, for example:
 
-    make install DESTDIR=/mnt/c/workspace/
+    make install DESTDIR=/mnt/c/workspace/theholyroger
 
 Footnotes
 ---------
 
 <a name="footnote1">1</a>: There is currently a bug in the 64 bit Mingw-w64 cross compiler packaged for WSL/Ubuntu Xenial 16.04 that
-causes two of the  executables to crash shortly after start up. The bug is related to the
+causes two of the theholyroger executables to crash shortly after start up. The bug is related to the
 -fstack-protector-all g++ compiler flag which is used to mitigate buffer overflows.
 Installing the Mingw-w64 packages from the Ubuntu 17 distribution solves the issue, however, this is not
 an officially supported approach and it's only recommended if you are prepared to reinstall WSL/Ubuntu should
@@ -176,5 +176,5 @@ something break.
 compiler options to allow a choice between either posix or win32 threads. The default option is win32 threads which is the more
 efficient since it will result in binary code that links directly with the Windows kernel32.lib. Unfortunately, the headers
 required to support win32 threads conflict with some of the classes in the C++11 standard library in particular std::mutex.
-It's not possible to build the  code using the win32 version of the Mingw-w64 cross compilers (at least not without
-modifying headers in the  source code).
+It's not possible to build the theholyroger code using the win32 version of the Mingw-w64 cross compilers (at least not without
+modifying headers in the theholyroger source code).

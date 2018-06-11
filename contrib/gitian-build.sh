@@ -30,7 +30,7 @@ commitFiles=true
 read -d '' usage <<- EOF
 Usage: $scriptName [-c|u|v|b|s|B|o|h|j|m|] signer version
 
-Run this script from the directory containing the , gitian-builder, gitian.sigs.theholyroger, and theholyroger-detached-sigs.
+Run this script from the directory containing the TheHolyRogerCoin, gitian-builder, gitian.sigs.theholyroger, and theholyroger-detached-sigs.
 
 Arguments:
 signer          GPG signer to sign each build assert file
@@ -244,7 +244,7 @@ then
 fi
 
 # Set up build
-pushd ./
+pushd ./TheHolyRogerCoin
 git fetch
 git checkout ${COMMIT}
 popd
@@ -271,7 +271,7 @@ then
             echo ""
 	    echo "Compiling ${VERSION} Linux"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit =${COMMIT} --url =${url} ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-linux.yml
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit TheHolyRogerCoin=${COMMIT} --url TheHolyRogerCoin=${url} ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-linux.yml
 	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs.theholyroger/ ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-linux.yml
 	    mv build/out/theholyroger-*.tar.gz build/out/src/theholyroger-*.tar.gz ../theholyroger-binaries/${VERSION}
 	fi
@@ -281,7 +281,7 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} Windows"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit =${COMMIT} --url =${url} ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-win.yml
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit TheHolyRogerCoin=${COMMIT} --url TheHolyRogerCoin=${url} ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-win.yml
 	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs.theholyroger/ ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-win.yml
 	    mv build/out/theholyroger-*-win-unsigned.tar.gz inputs/theholyroger-win-unsigned.tar.gz
 	    mv build/out/theholyroger-*.zip build/out/theholyroger-*.exe ../theholyroger-binaries/${VERSION}
@@ -292,7 +292,7 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} Mac OSX"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit =${COMMIT} --url =${url} ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-osx.yml
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit TheHolyRogerCoin=${COMMIT} --url TheHolyRogerCoin=${url} ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-osx.yml
 	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs.theholyroger/ ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-osx.yml
 	    mv build/out/theholyroger-*-osx-unsigned.tar.gz inputs/theholyroger-osx-unsigned.tar.gz
 	    mv build/out/theholyroger-*.tar.gz build/out/theholyroger-*.dmg ../theholyroger-binaries/${VERSION}

@@ -54,7 +54,7 @@ Build The Holy Roger Core
 
 2.  Build theholyroger-core:
 
-    Configure and build the headless  binaries as well as the GUI (if Qt is found).
+    Configure and build the headless theholyroger binaries as well as the GUI (if Qt is found).
 
     You can disable the GUI build by passing `--without-gui` to configure.
 
@@ -87,9 +87,9 @@ The Holy Roger Core is now available at `./src/theholyrogerd`
 
 Before running, it's recommended you create an RPC configuration file.
 
-    echo -e "rpcuser=rpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/The Holy Roger/.conf"
+    echo -e "rpcuser=theholyrogerrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/The Holy Roger/.conf"
 
-    chmod 600 "/Users/${USER}/Library/Application Support/The Holy Roger/.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/The Holy Roger/theholyroger.conf"
 
 The first time you run theholyrogerd, it will start downloading the blockchain. This process could take several hours.
 
@@ -100,7 +100,7 @@ You can monitor the download process by looking at the debug.log file:
 Other commands:
 -------
 
-    ./src/theholyrogerd -daemon # Starts the  daemon.
+    ./src/theholyrogerd -daemon # Starts the theholyroger daemon.
     ./src/theholyroger-cli --help # Outputs a list of command-line options.
     ./src/theholyroger-cli help # Outputs a list of RPC commands when the daemon is running.
 

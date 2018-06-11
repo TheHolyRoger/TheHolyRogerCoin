@@ -6,7 +6,7 @@ Some notes on how to build The Holy Roger Core in Unix.
 
 Note
 ---------------------
-Always use absolute paths to configure and compile  and the dependencies,
+Always use absolute paths to configure and compile theholyroger and the dependencies,
 for example, when specifying the path of the dependency:
 
 	../dist/configure --enable-cxx --disable-shared --with-pic --prefix=$BDB_PREFIX
@@ -188,7 +188,7 @@ If you need to build Boost yourself:
 
 Security
 --------
-To help make your  installation more secure by making certain attacks impossible to
+To help make your theholyroger installation more secure by making certain attacks impossible to
 exploit even if a vulnerability is found, binaries are hardened by default.
 This can be disabled with:
 
@@ -212,7 +212,7 @@ Hardening enables the following features:
 
     To test that you have built PIE executable, install scanelf, part of paxutils, and use:
 
-    	scanelf -e ./
+    	scanelf -e ./theholyroger
 
     The output should contain:
 
@@ -221,13 +221,13 @@ Hardening enables the following features:
 
 * Non-executable Stack
     If the stack is executable then trivial stack based buffer overflow exploits are possible if
-    vulnerable buffers are found. By default,  should be built with a non-executable stack
+    vulnerable buffers are found. By default, theholyroger should be built with a non-executable stack
     but if one of the libraries it uses asks for an executable stack or someone makes a mistake
     and uses a compiler extension which requires an executable stack, it will silently build an
     executable without the non-executable stack protection.
 
     To verify that the stack is non-executable after compiling use:
-    `scanelf -e ./`
+    `scanelf -e ./theholyroger`
 
     the output should contain:
 	STK/REL/PTL
@@ -237,7 +237,7 @@ Hardening enables the following features:
 
 Disable-wallet mode
 --------------------
-When the intention is to run only a P2P node without a wallet,  may be compiled in
+When the intention is to run only a P2P node without a wallet, theholyroger may be compiled in
 disable-wallet mode with:
 
     ./configure --disable-wallet
@@ -260,7 +260,7 @@ This example lists the steps necessary to setup and build a command line only, n
 
     pacman -S git base-devel boost libevent python
     git clone https://github.com/TheHolyRoger/TheHolyRogerCoin.git
-    cd /
+    cd TheHolyRogerCoin/
     ./autogen.sh
     ./configure --disable-wallet --without-gui --without-miniupnpc
     make check
