@@ -301,11 +301,11 @@ then
 
         if [[ $commitFiles = true ]]
         then
-	    # Commit to gitian.sigs repo
+	    # Commit to gitian.sigs.theholyroger repo
             echo ""
             echo "Committing ${VERSION} Unsigned Sigs"
             echo ""
-            pushd gitian.sigs
+            pushd gitian.sigs.theholyroger
             git add ${VERSION}-linux/${SIGNER}
             git add ${VERSION}-win-unsigned/${SIGNER}
             git add ${VERSION}-osx-unsigned/${SIGNER}
