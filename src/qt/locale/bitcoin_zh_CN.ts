@@ -362,7 +362,7 @@
         <translation>验证消息(&amp;V)...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
+        <source>TheHolyRoger</source>
         <translation>莱特币</translation>
     </message>
     <message>
@@ -859,7 +859,7 @@
         <translation>使用自定义的数据目录：</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
+        <source>TheHolyRoger</source>
         <translation>莱特币</translation>
     </message>
     <message>

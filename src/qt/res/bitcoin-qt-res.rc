@@ -19,7 +19,7 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "The Holy Roger"
+            VALUE "CompanyName",        "TheHolyRoger"
             VALUE "FileDescription",    PACKAGE_NAME " (GUI node for The Holy Roger)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "theholyroger-qt"

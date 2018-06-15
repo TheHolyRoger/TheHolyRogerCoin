@@ -362,7 +362,7 @@
         <translation>&amp;אימות הודעה…</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
+        <source>TheHolyRoger</source>
         <translation>לייטקוין</translation>
     </message>
     <message>
@@ -867,7 +867,7 @@
         <translation>שימוש בתיקיית נתונים מותאמת אישית:</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
+        <source>TheHolyRoger</source>
         <translation>לייטקוין</translation>
     </message>
     <message>

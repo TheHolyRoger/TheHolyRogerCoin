@@ -358,7 +358,7 @@
         <translation>&amp;التحقق من الرسالة...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
+        <source>TheHolyRoger</source>
         <translation>بتكوين</translation>
     </message>
     <message>
@@ -809,7 +809,7 @@
         <translation>استخدام دليل بيانات مخصص:</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
+        <source>TheHolyRoger</source>
         <translation>بتكوين</translation>
     </message>
     <message>

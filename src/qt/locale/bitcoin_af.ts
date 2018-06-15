@@ -358,8 +358,8 @@
         <translation>&amp;Verifieer boodskap...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -823,8 +823,8 @@
         <translation>Gebruik 'n persoonlike data gids:</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>

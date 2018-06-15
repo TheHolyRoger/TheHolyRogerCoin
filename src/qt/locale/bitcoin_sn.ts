@@ -98,8 +98,8 @@
         <translation>Vhura &amp;URI</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -165,8 +165,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     </context>
 <context>

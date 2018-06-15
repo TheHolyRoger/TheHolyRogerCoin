@@ -302,8 +302,8 @@
         <translation>Onay mesajı...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -514,7 +514,7 @@
         <translation>Hoş geldiniz</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
+        <source>TheHolyRoger</source>
         <translation>The Holy Roger
 </translation>
     </message>

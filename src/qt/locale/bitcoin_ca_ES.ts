@@ -362,8 +362,8 @@
         <translation>&amp;Verifica el missatge...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -851,8 +851,8 @@
         <translation>Utilitza un directori de dades personalitzat:</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Approximately %1 GB of data will be stored in this directory.</source>

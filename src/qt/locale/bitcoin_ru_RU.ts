@@ -322,7 +322,7 @@
         <translation>&amp;Проверить сообщение...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
+        <source>TheHolyRoger</source>
         <translation>The Holy Roger Core</translation>
     </message>
     <message>
@@ -481,7 +481,7 @@
         <translation>Добро пожаловать в %1.</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
+        <source>TheHolyRoger</source>
         <translation>The Holy Roger Core</translation>
     </message>
     <message>

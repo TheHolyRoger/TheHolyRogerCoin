@@ -14,8 +14,8 @@
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     </context>
 <context>
@@ -33,8 +33,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     </context>
 <context>

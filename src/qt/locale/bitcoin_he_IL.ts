@@ -82,7 +82,7 @@
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <source>The Holy Roger</source>
+        <source>TheHolyRoger</source>
         <translation>לייטקוין</translation>
     </message>
     <message>
@@ -113,7 +113,7 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>The Holy Roger</source>
+        <source>TheHolyRoger</source>
         <translation>לייטקוין</translation>
     </message>
     </context>

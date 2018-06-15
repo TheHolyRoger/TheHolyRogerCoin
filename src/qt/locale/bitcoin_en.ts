@@ -465,8 +465,8 @@
     </message>
     <message>
         <location line="+517"/>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <location line="-743"/>
@@ -1099,8 +1099,8 @@
     </message>
     <message>
         <location filename="../intro.cpp" line="+20"/>
-        <source>The Holy Roger</source>
-        <translation type="unfinished">The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation type="unfinished">TheHolyRoger</translation>
     </message>
     <message>
         <location line="+6"/>

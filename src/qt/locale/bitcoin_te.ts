@@ -138,7 +138,7 @@
         <translation>నిష్క్రమించు</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
+        <source>TheHolyRoger</source>
         <translation>బిట్కోయిన్</translation>
     </message>
     <message>
@@ -197,7 +197,7 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>The Holy Roger</source>
+        <source>TheHolyRoger</source>
         <translation>బిట్కోయిన్</translation>
     </message>
     <message>
