@@ -362,7 +362,7 @@
         <translation>&amp;メッセージの確認...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
+        <source>TheHolyRoger</source>
         <translation>ビットコイン</translation>
     </message>
     <message>
