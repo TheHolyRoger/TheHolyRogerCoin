@@ -48,7 +48,7 @@ static const int MAX_URI_LENGTH = 255;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 36
 
-#define QAPP_ORG_NAME "The Holy Roger"
+#define QAPP_ORG_NAME "TheHolyRoger"
 #define QAPP_ORG_DOMAIN "theholyroger.org"
 #define QAPP_APP_NAME_DEFAULT "TheHolyRoger-Qt"
 #define QAPP_APP_NAME_TESTNET "TheHolyRoger-Qt-testnet"

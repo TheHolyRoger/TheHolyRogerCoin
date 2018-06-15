@@ -1,6 +1,6 @@
 
 * banlist.dat: stores the IPs/Subnets of banned nodes
-* .conf: contains configuration settings for theholyrogerd or theholyroger-qt
+* theholyroger.conf: contains configuration settings for theholyrogerd or theholyroger-qt
 * theholyrogerd.pid: stores the process id of theholyrogerd while running
 * blocks/blk000??.dat: block data (custom, 128 MiB per file); since 0.8.0
 * blocks/rev000??.dat; block undo data (custom); since 0.8.0 (format changed since pre-0.8)

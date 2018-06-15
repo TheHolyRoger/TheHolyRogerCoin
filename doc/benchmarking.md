@@ -6,9 +6,9 @@ for cryptographic algorithms such as SHA1, SHA256, SHA512 and RIPEMD160. As well
 
 Running
 ---------------------
-After compiling The Holy Roger-core, the benchmarks can be run with:
+After compiling TheHolyRoger-core, the benchmarks can be run with:
 
-    src/bench/bench_The Holy Roger
+    src/bench/bench_theholyroger
 
 The output will look similar to:
 ```
@@ -43,7 +43,7 @@ Help
 ---------------------
 `-?` will print a list of options and exit:
 
-    src/bench/bench_The Holy Roger -?
+    src/bench/bench_theholyroger -?
 
 Notes
 ---------------------

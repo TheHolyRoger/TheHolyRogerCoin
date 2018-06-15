@@ -49,7 +49,7 @@
       <string>org.theholyroger.TheHolyRogerPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string></string>
+        <string>theholyroger</string>
       </array>
     </dict>
   </array>
@@ -71,7 +71,7 @@
         <string>application/x-theholyroger-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>paymentrequest</string>
+          <string>theholyrogerpaymentrequest</string>
         </array>
       </dict>
     </dict>

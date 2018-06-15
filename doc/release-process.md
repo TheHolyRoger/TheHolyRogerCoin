@@ -103,7 +103,7 @@ Only missing files will be fetched, so this is safe to re-run for each build.
 NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from local URLs. For example:
 
     pushd ./gitian-builder
-    ./bin/gbuild --url =/path/to/,signature=/path/to/sigs {rest of arguments}
+    ./bin/gbuild --url TheHolyRogerCoin=/path/to/TheHolyRogerCoin,signature=/path/to/sigs {rest of arguments}
     popd
 
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
@@ -111,17 +111,17 @@ The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 ### Build and sign The Holy Roger Core for Linux, Windows, and OS X:
 
     pushd ./gitian-builder
-    ./bin/gbuild --num-make 2 --memory 3000 --commit =v${VERSION} ..//contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs.theholyroger/ ..//contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gbuild --num-make 2 --memory 3000 --commit TheHolyRogerCoin=v${VERSION} ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs.theholyroger/ ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-linux.yml
     mv build/out/theholyroger-*.tar.gz build/out/src/theholyroger-*.tar.gz ../
 
-    ./bin/gbuild --num-make 2 --memory 3000 --commit =v${VERSION} ..//contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs.theholyroger/ ..//contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gbuild --num-make 2 --memory 3000 --commit TheHolyRogerCoin=v${VERSION} ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs.theholyroger/ ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-win.yml
     mv build/out/theholyroger-*-win-unsigned.tar.gz inputs/theholyroger-win-unsigned.tar.gz
     mv build/out/theholyroger-*.zip build/out/theholyroger-*.exe ../
 
-    ./bin/gbuild --num-make 2 --memory 3000 --commit =v${VERSION} ..//contrib/gitian-descriptors/gitian-osx.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs.theholyroger/ ..//contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gbuild --num-make 2 --memory 3000 --commit TheHolyRogerCoin=v${VERSION} ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs.theholyroger/ ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-osx.yml
     mv build/out/theholyroger-*-osx-unsigned.tar.gz inputs/theholyroger-osx-unsigned.tar.gz
     mv build/out/theholyroger-*.tar.gz build/out/theholyroger-*.dmg ../
     popd
@@ -138,15 +138,15 @@ Build output expected:
 
 Add other gitian builders keys to your gpg keyring, and/or refresh keys.
 
-    gpg --import /contrib/gitian-keys/*.pgp
+    gpg --import TheHolyRogerCoin/contrib/gitian-keys/*.pgp
     gpg --refresh-keys
 
 Verify the signatures
 
     pushd ./gitian-builder
-    ./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-linux ..//contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-win-unsigned ..//contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-osx-unsigned ..//contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-linux ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-win-unsigned ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-osx-unsigned ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-osx.yml
     popd
 
 ### Next steps:
@@ -200,18 +200,18 @@ Non-codesigners: wait for Windows/OS X detached signatures:
 Create (and optionally verify) the signed OS X binary:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ..//contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs.theholyroger/ ..//contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-osx-signed ..//contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gbuild -i --commit signature=v${VERSION} ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs.theholyroger/ ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-osx-signed ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-osx-signer.yml
     mv build/out/theholyroger-osx-signed.dmg ../theholyroger-${VERSION}-osx.dmg
     popd
 
 Create (and optionally verify) the signed Windows binaries:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ..//contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs.theholyroger/ ..//contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-win-signed ..//contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gbuild -i --commit signature=v${VERSION} ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs.theholyroger/ ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs.theholyroger/ -r ${VERSION}-win-signed ../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-win-signer.yml
     mv build/out/theholyroger-*win64-setup.exe ../theholyroger-${VERSION}-win64-setup.exe
     mv build/out/theholyroger-*win32-setup.exe ../theholyroger-${VERSION}-win32-setup.exe
     popd
@@ -273,9 +273,9 @@ Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spur
 
   - blog.theholyroger.com blog post
 
-  - Update title of # and #theholyroger-dev on Freenode IRC
+  - Update title of #TheHolyRoger and #theholyroger-dev on Freenode IRC
 
-  - Optionally twitter, reddit /r/The Holy Roger, ... but this will usually sort out itself
+  - Optionally twitter, reddit /r/TheHolyRoger, ... but this will usually sort out itself
 
   - Archive release notes for the new version to `doc/release-notes/` (branch `master` and branch of the release)
 
