@@ -60,7 +60,7 @@
       <key>UTTypeIdentifier</key>
       <string>org.theholyroger.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>The Holy Roger payment request</string>
+      <string>TheHolyRoger payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>

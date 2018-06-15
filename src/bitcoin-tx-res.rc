@@ -16,8 +16,8 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "The Holy Roger"
-            VALUE "FileDescription",    "theholyroger-tx (CLI The Holy Roger transaction editor utility)"
+            VALUE "CompanyName",        "TheHolyRoger"
+            VALUE "FileDescription",    "theholyroger-tx (CLI TheHolyRoger transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "theholyroger-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR

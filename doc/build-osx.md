@@ -44,7 +44,7 @@ from the root of the repository.
 
 **Note**: You only need Berkeley DB if the wallet is enabled (see the section *Disable-Wallet mode* below).
 
-Build The Holy Roger Core
+Build TheHolyRoger Core
 ------------------------
 
 1. Clone the  source code and cd into ``
@@ -83,19 +83,19 @@ Build The Holy Roger Core
 Running
 -------
 
-The Holy Roger Core is now available at `./src/theholyrogerd`
+TheHolyRoger Core is now available at `./src/theholyrogerd`
 
 Before running, it's recommended you create an RPC configuration file.
 
-    echo -e "rpcuser=theholyrogerrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/The Holy Roger/.conf"
+    echo -e "rpcuser=theholyrogerrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/TheHolyRoger/.conf"
 
-    chmod 600 "/Users/${USER}/Library/Application Support/The Holy Roger/theholyroger.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/TheHolyRoger/theholyroger.conf"
 
 The first time you run theholyrogerd, it will start downloading the blockchain. This process could take several hours.
 
 You can monitor the download process by looking at the debug.log file:
 
-    tail -f $HOME/Library/Application\ Support/The Holy Roger/debug.log
+    tail -f $HOME/Library/Application\ Support/TheHolyRoger/debug.log
 
 Other commands:
 -------

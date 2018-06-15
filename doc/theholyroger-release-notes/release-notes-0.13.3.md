@@ -1,4 +1,4 @@
-The Holy Roger Core version 0.13.3 is now available from:
+TheHolyRoger Core version 0.13.3 is now available from:
 
   <https://download.theholyroger.com/theholyroger-0.13.3/>
 
@@ -41,7 +41,7 @@ Notable changes
 New Multisig Address Prefix
 ---------------------------
 
-The Holy Roger Core now supports P2SH addresses beginning with M on mainnet and Q on testnet.
+TheHolyRoger Core now supports P2SH addresses beginning with M on mainnet and Q on testnet.
 P2SH addresses beginning with 3 on mainnet and m or n on testnet will continue to be valid.
 Old and new addresses can be used interchangeably.
 
@@ -50,7 +50,7 @@ miniupnp CVE-2017-8798
 
 Bundled miniupnpc was updated to 2.0.20170509. This fixes an integer signedness error (present in MiniUPnPc v1.4.20101221 through v2.0) that allows remote attackers (within the LAN) to cause a denial of service or possibly have unspecified other impact.
 
-This only affects users that have explicitly enabled UPnP through the GUI setting or through the -upnp option, as since the last UPnP vulnerability (in The Holy Roger Core 0.10.4) it has been disabled by default.
+This only affects users that have explicitly enabled UPnP through the GUI setting or through the -upnp option, as since the last UPnP vulnerability (in TheHolyRoger Core 0.10.4) it has been disabled by default.
 
 If you use this option, it is recommended to upgrade to this version as soon as possible.
 

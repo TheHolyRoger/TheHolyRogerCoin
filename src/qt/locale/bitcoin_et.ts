@@ -63,11 +63,11 @@
     </message>
     <message>
         <source>These are your ROGER addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Need on sinu The Holy Roger aadressid maksete saatmiseks. Ennem müntide saatmist kontrolli alati summat ja makse saaja aadressi.</translation>
+        <translation>Need on sinu TheHolyRoger aadressid maksete saatmiseks. Ennem müntide saatmist kontrolli alati summat ja makse saaja aadressi.</translation>
     </message>
     <message>
         <source>These are your ROGER addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Need on sinu The Holy Roger aadressid sisenevate maksete vastu võtmiseks. Soovitav on iga tehingu tarbeks kasutada uut aadressi.</translation>
+        <translation>Need on sinu TheHolyRoger aadressid sisenevate maksete vastu võtmiseks. Soovitav on iga tehingu tarbeks kasutada uut aadressi.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -291,7 +291,7 @@
     </message>
     <message>
         <source>Send coins to a ROGER address</source>
-        <translation>Saada münte The Holy Rogeri aadressile</translation>
+        <translation>Saada münte TheHolyRogeri aadressile</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -314,8 +314,8 @@
         <translation>&amp;Kontrolli sõnumit...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -343,11 +343,11 @@
     </message>
     <message>
         <source>Sign messages with your ROGER addresses to prove you own them</source>
-        <translation>Omandi tõestamiseks allkirjasta sõnumid oma The Holy Rogeri aadressiga</translation>
+        <translation>Omandi tõestamiseks allkirjasta sõnumid oma TheHolyRogeri aadressiga</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified ROGER addresses</source>
-        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud The Holy Rogeri aadressiga</translation>
+        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud TheHolyRogeri aadressiga</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -378,8 +378,8 @@
         <translation>Käsurea valikud</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to The Holy Roger network</source>
-        <translation><numerusform>%n aktiivne ühendus The Holy Rogeri võrku</numerusform><numerusform>%n aktiivset ühendust The Holy Rogeri võrku</numerusform></translation>
+        <source>%n active connection(s) to TheHolyRoger network</source>
+        <translation><numerusform>%n aktiivne ühendus TheHolyRogeri võrku</numerusform><numerusform>%n aktiivset ühendust TheHolyRogeri võrku</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -627,7 +627,7 @@
     </message>
     <message>
         <source>The entered address "%1" is not a valid ROGER address.</source>
-        <translation>Sisestatud aadress "%1" ei ole korrektne The Holy Roger aadress.</translation>
+        <translation>Sisestatud aadress "%1" ei ole korrektne TheHolyRoger aadress.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -683,8 +683,8 @@
         <translation>Teretulemast</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Error</source>
@@ -760,8 +760,8 @@
         <translation>Ekspert</translation>
     </message>
     <message>
-        <source>Automatically open the The Holy Roger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>The Holy Rogeri kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
+        <source>Automatically open the TheHolyRoger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>TheHolyRogeri kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -859,7 +859,7 @@
         <translation>Vorm</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the The Holy Roger network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the TheHolyRoger network after a connection is established, but this process has not completed yet.</source>
         <translation>Kuvatav info ei pruugi olla ajakohane. Ühenduse loomisel süngitakse sinu rahakott automaatselt Liteconi võrgustikuga, kuid see toiming on hetkel lõpetamata.</translation>
     </message>
     <message>
@@ -1362,7 +1362,7 @@
     </message>
     <message>
         <source>Warning: Invalid ROGER address</source>
-        <translation>Hoiatus: Ebakorrektne The Holy Roger aadress</translation>
+        <translation>Hoiatus: Ebakorrektne TheHolyRoger aadress</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -1446,7 +1446,7 @@
     </message>
     <message>
         <source>The ROGER address to sign the message with</source>
-        <translation>The Holy Roger aadress millega sõnum allkirjastada</translation>
+        <translation>TheHolyRoger aadress millega sõnum allkirjastada</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1478,7 +1478,7 @@
     </message>
     <message>
         <source>Sign the message to prove you own this ROGER address</source>
-        <translation>Allkirjasta sõnum The Holy Rogeri aadressi sulle kuulumise tõestamiseks</translation>
+        <translation>Allkirjasta sõnum TheHolyRogeri aadressi sulle kuulumise tõestamiseks</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1498,11 +1498,11 @@
     </message>
     <message>
         <source>The ROGER address the message was signed with</source>
-        <translation>The Holy Roger aadress millega sõnum on allkirjastatud</translation>
+        <translation>TheHolyRoger aadress millega sõnum on allkirjastatud</translation>
     </message>
     <message>
         <source>Verify the message to ensure it was signed with the specified ROGER address</source>
-        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud The Holy Rogeri aadressiga.</translation>
+        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud TheHolyRogeri aadressiga.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1970,8 +1970,8 @@
         <translation>Tööta taustal ning aktsepteeri käsklusi</translation>
     </message>
     <message>
-        <source>The Holy Roger Core</source>
-        <translation>The Holy Rogeri tuumik</translation>
+        <source>TheHolyRoger Core</source>
+        <translation>TheHolyRogeri tuumik</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>

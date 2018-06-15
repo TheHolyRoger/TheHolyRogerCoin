@@ -86,7 +86,7 @@ class P2PConnection(asyncore.dispatcher):
         self.network = net
         self.disconnect = False
 
-        logger.info('Connecting to The Holy Roger Node: %s:%d' % (self.dstaddr, self.dstport))
+        logger.info('Connecting to TheHolyRoger Node: %s:%d' % (self.dstaddr, self.dstport))
 
         try:
             self.connect((dstaddr, dstport))

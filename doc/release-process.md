@@ -38,7 +38,7 @@ Check out the source code in the following directory hierarchy.
     git clone https://github.com/devrandom/gitian-builder.git
     git clone https://github.com/TheHolyRoger/TheHolyRogerCoin.git
 
-### The Holy Roger maintainers/release engineers, suggestion for writing release notes
+### TheHolyRoger maintainers/release engineers, suggestion for writing release notes
 
 Write release notes. git shortlog helps a lot, for example:
 
@@ -108,7 +108,7 @@ NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from 
 
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-### Build and sign The Holy Roger Core for Linux, Windows, and OS X:
+### Build and sign TheHolyRoger Core for Linux, Windows, and OS X:
 
     pushd ./gitian-builder
     ./bin/gbuild --num-make 2 --memory 3000 --commit =v${VERSION} ..//contrib/gitian-descriptors/gitian-linux.yml
@@ -275,7 +275,7 @@ Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spur
 
   - Update title of # and #theholyroger-dev on Freenode IRC
 
-  - Optionally twitter, reddit /r/The Holy Roger, ... but this will usually sort out itself
+  - Optionally twitter, reddit /r/TheHolyRoger, ... but this will usually sort out itself
 
   - Archive release notes for the new version to `doc/release-notes/` (branch `master` and branch of the release)
 

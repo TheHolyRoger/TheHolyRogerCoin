@@ -30,7 +30,7 @@ git clone https://github.com/TheHolyRoger/TheHolyRogerCoin
 
 See [dependencies.md](dependencies.md) for a complete overview.
 
-### Building The Holy Roger Core
+### Building TheHolyRoger Core
 
 **Important**: Use `gmake` (the non-GNU `make` will exit with an error).
 

@@ -143,7 +143,7 @@
     </message>
     <message>
         <source>Send coins to a ROGER address</source>
-        <translation>Enviar monedas a una dirección The Holy Roger</translation>
+        <translation>Enviar monedas a una dirección TheHolyRoger</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -166,8 +166,8 @@
         <translation>&amp;Verificar mensaje...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -195,11 +195,11 @@
     </message>
     <message>
         <source>Sign messages with your ROGER addresses to prove you own them</source>
-        <translation>Firmar mensajes con sus direcciones The Holy Roger para demostrar la propiedad</translation>
+        <translation>Firmar mensajes con sus direcciones TheHolyRoger para demostrar la propiedad</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified ROGER addresses</source>
-        <translation>Verificar mensajes comprobando que están firmados con direcciones The Holy Roger concretas</translation>
+        <translation>Verificar mensajes comprobando que están firmados con direcciones TheHolyRoger concretas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -219,7 +219,7 @@
     </message>
     <message>
         <source>Request payments (generates QR codes and theholyroger: URIs)</source>
-        <translation>Solicitar pagos (genera codigo QR y URL's de The Holy Roger)</translation>
+        <translation>Solicitar pagos (genera codigo QR y URL's de TheHolyRoger)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -421,8 +421,8 @@
         <translation>Utilice un directorio de datos personalizado:</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Error</source>
@@ -498,8 +498,8 @@
         <translation>Experto</translation>
     </message>
     <message>
-        <source>Automatically open the The Holy Roger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automáticamente el puerto del cliente The Holy Roger en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
+        <source>Automatically open the TheHolyRoger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir automáticamente el puerto del cliente TheHolyRoger en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -597,8 +597,8 @@
         <translation>Desde</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the The Holy Roger network after a connection is established, but this process has not completed yet.</source>
-        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red The Holy Roger después de que se haya establecido una conexión, pero este proceso aún no se ha completado.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the TheHolyRoger network after a connection is established, but this process has not completed yet.</source>
+        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red TheHolyRoger después de que se haya establecido una conexión, pero este proceso aún no se ha completado.</translation>
     </message>
     <message>
         <source>Your current spendable balance</source>
@@ -1012,7 +1012,7 @@
     </message>
     <message>
         <source>Sign the message to prove you own this ROGER address</source>
-        <translation>Firmar el mensaje para demostrar que se posee esta dirección The Holy Roger</translation>
+        <translation>Firmar el mensaje para demostrar que se posee esta dirección TheHolyRoger</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1032,7 +1032,7 @@
     </message>
     <message>
         <source>Verify the message to ensure it was signed with the specified ROGER address</source>
-        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección The Holy Roger indicada</translation>
+        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección TheHolyRoger indicada</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1115,8 +1115,8 @@
 </translation>
     </message>
     <message>
-        <source>The Holy Roger Core</source>
-        <translation>Núcleo de The Holy Roger</translation>
+        <source>TheHolyRoger Core</source>
+        <translation>Núcleo de TheHolyRoger</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>

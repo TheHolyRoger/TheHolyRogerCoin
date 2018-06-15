@@ -16,8 +16,8 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "The Holy Roger"
-            VALUE "FileDescription",    "theholyrogerd (The Holy Roger node with a JSON-RPC server)"
+            VALUE "CompanyName",        "TheHolyRoger"
+            VALUE "FileDescription",    "theholyrogerd (TheHolyRoger node with a JSON-RPC server)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "theholyrogerd"
             VALUE "LegalCopyright",     COPYRIGHT_STR

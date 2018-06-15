@@ -7,7 +7,7 @@ if [ -d "$1" ]; then
   cd "$1" || exit 1
 else
   echo "Usage: $0 <datadir>" >&2
-  echo "Removes obsolete The Holy Roger database files" >&2
+  echo "Removes obsolete TheHolyRoger database files" >&2
   exit 1
 fi
 
@@ -19,22 +19,22 @@ if [ -f wallet.dat -a -f peers.dat -a -f chainstate/CURRENT -a -f blocks/index/C
 
 case $LEVEL in
   0)
-    echo "Error: no The Holy Roger datadir detected."
+    echo "Error: no TheHolyRoger datadir detected."
     exit 1
     ;;
   1)
-    echo "Detected old The Holy Roger datadir (before 0.7)."
+    echo "Detected old TheHolyRoger datadir (before 0.7)."
     echo "Nothing to do."
     exit 0
     ;;
   2)
-    echo "Detected The Holy Roger 0.7 datadir."
+    echo "Detected TheHolyRoger 0.7 datadir."
     ;;
   3)
-    echo "Detected The Holy Roger pre-0.8 datadir."
+    echo "Detected TheHolyRoger pre-0.8 datadir."
     ;;
   4)
-    echo "Detected The Holy Roger 0.8 datadir."
+    echo "Detected TheHolyRoger 0.8 datadir."
     ;;
 esac
 

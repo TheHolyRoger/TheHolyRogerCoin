@@ -48,7 +48,7 @@
 #include <boost/thread.hpp>
 
 #if defined(NDEBUG)
-# error "The Holy Roger cannot be compiled without assertions."
+# error "TheHolyRoger cannot be compiled without assertions."
 #endif
 
 #define MICRO 0.000001
@@ -231,7 +231,7 @@ CTxMemPool mempool(&feeEstimator);
 /** Constant stuff for coinbase transactions we create: */
 CScript COINBASE_FLAGS;
 
-const std::string strMessageMagic = "The Holy Roger Signed Message:\n";
+const std::string strMessageMagic = "TheHolyRoger Signed Message:\n";
 
 // Internal stuff
 namespace {

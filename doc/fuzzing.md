@@ -1,4 +1,4 @@
-Fuzz-testing The Holy Roger Core
+Fuzz-testing TheHolyRoger Core
 ==========================
 
 A special test harness `test_theholyroger_fuzzy` is provided to provide an easy
@@ -20,7 +20,7 @@ export AFLPATH=$PWD
 Instrumentation
 ----------------
 
-To build The Holy Roger Core using AFL instrumentation (this assumes that the
+To build TheHolyRoger Core using AFL instrumentation (this assumes that the
 `AFLPATH` was set as above):
 ```
 ./configure --disable-ccache --disable-shared --enable-tests CC=${AFLPATH}/afl-gcc CXX=${AFLPATH}/afl-g++

@@ -1,7 +1,7 @@
 Bag Attributes
-    friendlyName: The Holy Roger Foundation LTD.'s DigiCert Inc ID
+    friendlyName: TheHolyRoger Foundation LTD.'s DigiCert Inc ID
     localKeyID: 2F AA 3A 86 85 98 1A 53 D5 23 F0 2E A0 22 CC 51 21 6D 78 B0 
-subject=/C=SG/L=Singapore/O=The Holy Roger Foundation LTD./CN=The Holy Roger Foundation LTD.
+subject=/C=SG/L=Singapore/O=TheHolyRoger Foundation LTD./CN=TheHolyRoger Foundation LTD.
 issuer=/C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert SHA2 Assured ID Code Signing CA
 -----BEGIN CERTIFICATE-----
 MIIFKjCCBBKgAwIBAgIQDvRXzQ2H3xYGUBDUDBeH/TANBgkqhkiG9w0BAQsFADBy

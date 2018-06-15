@@ -1,4 +1,4 @@
-The Holy Roger Core version 0.10.4.0 is now available from:
+TheHolyRoger Core version 0.10.4.0 is now available from:
 
   <https://download.theholyroger.com/theholyroger-0.10.4.0/>
 
@@ -26,7 +26,7 @@ Downgrade warning
 
 Because release 0.10+ and later makes use of headers-first synchronization and
 parallel block download (see further), the block files and databases are not
-backwards-compatible with pre-0.10 versions of The Holy Roger Core or other software:
+backwards-compatible with pre-0.10 versions of TheHolyRoger Core or other software:
 
 * Blocks will be stored on disk out of order (in the order they are
 received, really), which makes it incompatible with some tools or
@@ -66,13 +66,13 @@ specified point in the future.
    longer accept new version 3 blocks and it will only accept version 4
    blocks if they comply with the BIP65 rules for CLTV.
 
-**Notice to miners:** The Holy Roger Core’s block templates are now for
+**Notice to miners:** TheHolyRoger Core’s block templates are now for
 version 4 blocks only, and any mining software relying on its
 getblocktemplate must be updated in parallel to use libblkmaker either
 version v0.4.3 or any version from v0.5.2 onward.
 
 - If you are solo mining, this will affect you the moment you upgrade
-  The Holy Roger Core, which must be done prior to BIP65 achieving its 951/1001
+  TheHolyRoger Core, which must be done prior to BIP65 achieving its 951/1001
   status.
 
 - If you are mining with the stratum mining protocol: this does not
@@ -89,7 +89,7 @@ Windows bug fix for corrupted UTXO database on unclean shutdowns
 ----------------------------------------------------------------
 
 Several Windows users reported that they often need to reindex the
-entire blockchain after an unclean shutdown of The Holy Roger Core on Windows
+entire blockchain after an unclean shutdown of TheHolyRoger Core on Windows
 (or an unclean shutdown of Windows itself). Although unclean shutdowns
 remain unsafe, this release no longer relies on memory-mapped files for
 the UTXO database, which significantly reduced the frequency of unclean
@@ -105,7 +105,7 @@ next major release.
 
 This release is based upon Bitcoin Core v0.10.4.  Their upstream changelog applies to us and
 is included in as separate release-notes, see: [Release Notes](release-notes.md).  
-This section describes the The Holy Roger-specific differences.
+This section describes the TheHolyRoger-specific differences.
 
 - Added BIP65 CHECKLOCKTIMEVERIFY softfork.
 - Increased OP_RETURN relay size to 80 bytes.

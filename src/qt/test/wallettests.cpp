@@ -32,7 +32,7 @@
 namespace
 {
 //! Press "Ok" button in message box dialog.
-/* The Holy Roger: Disable RBF
+/* TheHolyRoger: Disable RBF
 void ConfirmMessage(QString* text = nullptr)
 {
     QTimer::singleShot(0, makeCallback([text](Callback* callback) {
@@ -72,7 +72,7 @@ uint256 SendCoins(CWallet& wallet, SendCoinsDialog& sendCoinsDialog, const CTxDe
     SendCoinsEntry* entry = qobject_cast<SendCoinsEntry*>(entries->itemAt(0)->widget());
     entry->findChild<QValidatedLineEdit*>("payTo")->setText(QString::fromStdString(EncodeDestination(address)));
     entry->findChild<BitcoinAmountField*>("payAmount")->setValue(amount);
-    /* The Holy Roger: Disabled RBF UI
+    /* TheHolyRoger: Disabled RBF UI
     sendCoinsDialog.findChild<QFrame*>("frameFee")
         ->findChild<QFrame*>("frameFeeSelection")
         ->findChild<QCheckBox*>("optInRBF")
@@ -102,7 +102,7 @@ QModelIndex FindTx(const QAbstractItemModel& model, const uint256& txid)
 }
 
 //! Request context menu (call method that is public in qt5, but protected in qt4).
-/* The Holy Roger: Disable RBF
+/* TheHolyRoger: Disable RBF
 void RequestContextMenu(QWidget* widget)
 {
     class Qt4Hack : public QWidget
@@ -200,7 +200,7 @@ void TestGUI()
     QVERIFY(FindTx(*transactionTableModel, txid2).isValid());
 
     // Call bumpfee. Test disabled, canceled, enabled, then failing cases.
-    // The Holy Roger: Disable BumpFee tests
+    // TheHolyRoger: Disable BumpFee tests
     // BumpFee(transactionView, txid1, true /* expect disabled */, "not BIP 125 replaceable" /* expected error */, false /* cancel */);
     // BumpFee(transactionView, txid2, false /* expect disabled */, {} /* expected error */, true /* cancel */);
     // BumpFee(transactionView, txid2, false /* expect disabled */, {} /* expected error */, false /* cancel */);

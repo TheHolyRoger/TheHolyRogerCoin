@@ -63,11 +63,11 @@
     </message>
     <message>
         <source>These are your ROGER addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Bunlar ödeme göndermek için gereken The Holy Roger adreslerinizdir. Para göndermeden önce her zaman miktarı ve alıcı adresi kontrol edin.</translation>
+        <translation>Bunlar ödeme göndermek için gereken TheHolyRoger adreslerinizdir. Para göndermeden önce her zaman miktarı ve alıcı adresi kontrol edin.</translation>
     </message>
     <message>
         <source>These are your ROGER addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Bunlar ödeme almak için kullanılacak The Holy Roger adreslerinizdir. Her işlem için yeni bir ödeme alma adresi kullanılması tavsiye edilir.</translation>
+        <translation>Bunlar ödeme almak için kullanılacak TheHolyRoger adreslerinizdir. Her işlem için yeni bir ödeme alma adresi kullanılması tavsiye edilir.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -287,7 +287,7 @@
     </message>
     <message>
         <source>Send coins to a ROGER address</source>
-        <translation>The Holy Roger adresine madeni para gönderin</translation>
+        <translation>TheHolyRoger adresine madeni para gönderin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -302,8 +302,8 @@
         <translation>Onay mesajı...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -458,7 +458,7 @@
     </message>
     <message>
         <source>The entered address "%1" is not a valid ROGER address.</source>
-        <translation>Girilen adres "%1" The Holy Roger adresiyle eşleşmiyor.</translation>
+        <translation>Girilen adres "%1" TheHolyRoger adresiyle eşleşmiyor.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -514,8 +514,8 @@
         <translation>Hoş geldiniz</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger
 </translation>
     </message>
     <message>
@@ -661,7 +661,7 @@
     <name>QObject</name>
     <message>
         <source>Enter a ROGER address (e.g. %1)</source>
-        <translation>The Holy Roger adresinizi girin (örneğin %1)</translation>
+        <translation>TheHolyRoger adresinizi girin (örneğin %1)</translation>
     </message>
     <message>
         <source>N/A</source>
@@ -1042,7 +1042,7 @@
     </message>
     <message>
         <source>Warning: Invalid ROGER address</source>
-        <translation>Uyarı: Hatalı The Holy Roger adresi</translation>
+        <translation>Uyarı: Hatalı TheHolyRoger adresi</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -1342,8 +1342,8 @@
         <translation>JSON-RPC komutları ile komut satırını onaylayın</translation>
     </message>
     <message>
-        <source>The Holy Roger Core</source>
-        <translation>The Holy Roger Çekirdeği</translation>
+        <source>TheHolyRoger Core</source>
+        <translation>TheHolyRoger Çekirdeği</translation>
     </message>
     <message>
         <source>&lt;category&gt; can be:</source>

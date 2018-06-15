@@ -1507,7 +1507,7 @@ void ThreadMapPort()
             }
         }
 
-        std::string strDesc = "The Holy Roger " + FormatFullVersion();
+        std::string strDesc = "TheHolyRoger " + FormatFullVersion();
 
         try {
             while (true) {
