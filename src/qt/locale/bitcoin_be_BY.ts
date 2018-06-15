@@ -63,11 +63,11 @@
     </message>
     <message>
         <source>These are your ROGER addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Тут знаходзяцца The Holy Roger-адрасы для высылання плацяжоў. Заўсёды спраўджвайце колькасць і адрас прызначэння перад здзяйсненнем транзакцыі.</translation>
+        <translation>Тут знаходзяцца TheHolyRoger-адрасы для высылання плацяжоў. Заўсёды спраўджвайце колькасць і адрас прызначэння перад здзяйсненнем транзакцыі.</translation>
     </message>
     <message>
         <source>These are your ROGER addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Тут знаходзяцца The Holy Roger-адрасы для прымання плацяжоў. Пажадана выкарыстоўваць новы адрас для кожнай транзакцыі.</translation>
+        <translation>Тут знаходзяцца TheHolyRoger-адрасы для прымання плацяжоў. Пажадана выкарыстоўваць новы адрас для кожнай транзакцыі.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -299,7 +299,7 @@
     </message>
     <message>
         <source>Send coins to a ROGER address</source>
-        <translation>Даслаць манеты на The Holy Roger-адрас</translation>
+        <translation>Даслаць манеты на TheHolyRoger-адрас</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -322,8 +322,8 @@
         <translation>Праверыць паведамленне...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -351,11 +351,11 @@
     </message>
     <message>
         <source>Sign messages with your ROGER addresses to prove you own them</source>
-        <translation>Падпісаць паведамленне з дапамогай The Holy Roger-адраса каб даказаць, што яно належыць вам</translation>
+        <translation>Падпісаць паведамленне з дапамогай TheHolyRoger-адраса каб даказаць, што яно належыць вам</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified ROGER addresses</source>
-        <translation>Спраўдзіць паведамленне з дапамогай The Holy Roger-адраса каб даказаць, што яно належыць вам</translation>
+        <translation>Спраўдзіць паведамленне з дапамогай TheHolyRoger-адраса каб даказаць, што яно належыць вам</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -675,8 +675,8 @@
         <translation>Вітаем</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1266,8 +1266,8 @@
         <translation>Запусціць у фоне як дэман і прымаць каманды</translation>
     </message>
     <message>
-        <source>The Holy Roger Core</source>
-        <translation>The Holy Roger Core</translation>
+        <source>TheHolyRoger Core</source>
+        <translation>TheHolyRoger Core</translation>
     </message>
     <message>
         <source>Do you want to rebuild the block database now?</source>

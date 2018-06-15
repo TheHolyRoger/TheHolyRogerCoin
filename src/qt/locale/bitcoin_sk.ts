@@ -63,11 +63,11 @@
     </message>
     <message>
         <source>These are your ROGER addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Toto sú Vaše The Holy Roger adresy pre posielanie platieb. Vždy skontrolujte sumu a prijímaciu adresu pred poslaním mincí.</translation>
+        <translation>Toto sú Vaše TheHolyRoger adresy pre posielanie platieb. Vždy skontrolujte sumu a prijímaciu adresu pred poslaním mincí.</translation>
     </message>
     <message>
         <source>These are your ROGER addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Toto sú vaše The Holy Roger adresy pre prijímanie platieb. Odporúča sa použiť vždy novú prijímaciu adresu pre každú transakciu.</translation>
+        <translation>Toto sú vaše TheHolyRoger adresy pre prijímanie platieb. Odporúča sa použiť vždy novú prijímaciu adresu pre každú transakciu.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -366,8 +366,8 @@
         <translation>O&amp;veriť správu...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -395,11 +395,11 @@
     </message>
     <message>
         <source>Sign messages with your ROGER addresses to prove you own them</source>
-        <translation>Podpísať správu s vašou adresou The Holy Roger aby ste preukázali že ju vlastníte</translation>
+        <translation>Podpísať správu s vašou adresou TheHolyRoger aby ste preukázali že ju vlastníte</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified ROGER addresses</source>
-        <translation>Overiť či správa bola podpísaná uvedenou The Holy Roger adresou</translation>
+        <translation>Overiť či správa bola podpísaná uvedenou TheHolyRoger adresou</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -438,8 +438,8 @@
         <translation>&amp;Možnosti príkazového riadku</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to The Holy Roger network</source>
-        <translation><numerusform>%n aktívne pripojenie do siete The Holy Roger</numerusform><numerusform>%n aktívne pripojenia do siete The Holy Roger</numerusform><numerusform>%n aktívnych pripojení do siete The Holy Roger</numerusform></translation>
+        <source>%n active connection(s) to TheHolyRoger network</source>
+        <translation><numerusform>%n aktívne pripojenie do siete TheHolyRoger</numerusform><numerusform>%n aktívne pripojenia do siete TheHolyRoger</numerusform><numerusform>%n aktívnych pripojení do siete TheHolyRoger</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -482,8 +482,8 @@
         <translation>Aktualizovaný</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible The Holy Roger command-line options</source>
-        <translation>Ukáž %1 zoznam možných nastavení The Holy Rogeru pomocou príkazového riadku</translation>
+        <source>Show the %1 help message to get a list with possible TheHolyRoger command-line options</source>
+        <translation>Ukáž %1 zoznam možných nastavení TheHolyRogeru pomocou príkazového riadku</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -552,8 +552,8 @@
         <translation>Peňaženka je &lt;b&gt;zašifrovaná&lt;/b&gt; a momentálne &lt;b&gt;zamknutá&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. The Holy Roger can no longer continue safely and will quit.</source>
-        <translation>Vyskytla sa kritická chyba. The Holy Roger nemôže ďalej bezpečne pokračovať a ukončí sa.</translation>
+        <source>A fatal error occurred. TheHolyRoger can no longer continue safely and will quit.</source>
+        <translation>Vyskytla sa kritická chyba. TheHolyRoger nemôže ďalej bezpečne pokračovať a ukončí sa.</translation>
     </message>
 </context>
 <context>
@@ -747,7 +747,7 @@
     </message>
     <message>
         <source>The entered address "%1" is not a valid ROGER address.</source>
-        <translation>Vložená adresa "%1" nieje platnou adresou The Holy Roger.</translation>
+        <translation>Vložená adresa "%1" nieje platnou adresou TheHolyRoger.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -875,8 +875,8 @@
         <translation>Použiť vlastný dátový adresár:</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -887,7 +887,7 @@
         <translation>Približne %1 GB dát bude uložených v tejto zložke.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the The Holy Roger block chain.</source>
+        <source>%1 will download and store a copy of the TheHolyRoger block chain.</source>
         <translation>%1 bude sťahovať kopiu reťazca blokov.</translation>
     </message>
     <message>
@@ -1092,8 +1092,8 @@
         <translation>&amp;Minúť nepotvrdený výdavok</translation>
     </message>
     <message>
-        <source>Automatically open the The Holy Roger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automaticky otvorit port pre The Holy Roger na routeri. Toto funguje len ak router podporuje UPnP a je táto podpora aktivovaná.</translation>
+        <source>Automatically open the TheHolyRoger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automaticky otvorit port pre TheHolyRoger na routeri. Toto funguje len ak router podporuje UPnP a je táto podpora aktivovaná.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1108,8 +1108,8 @@
         <translation>Povoliť prichá&amp;dzajúce spojenia</translation>
     </message>
     <message>
-        <source>Connect to the The Holy Roger network through a SOCKS5 proxy.</source>
-        <translation>Pripojiť do siete The Holy Roger cez proxy server SOCKS5.</translation>
+        <source>Connect to the TheHolyRoger network through a SOCKS5 proxy.</source>
+        <translation>Pripojiť do siete TheHolyRoger cez proxy server SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1144,8 +1144,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the The Holy Roger network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Pripojiť k The Holy Rogerovej sieti cez separované SOCKS5 proxy pre skrytú službu Tor.</translation>
+        <source>Connect to the TheHolyRoger network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Pripojiť k TheHolyRogerovej sieti cez separované SOCKS5 proxy pre skrytú službu Tor.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1251,8 +1251,8 @@
         <translation>Forma</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the The Holy Roger network after a connection is established, but this process has not completed yet.</source>
-        <translation>Zobrazené informácie môžu byť neaktuálne. Vaša peňaženka sa automaticky synchronizuje so sieťou The Holy Roger po nadviazaní spojenia, ale tento proces ešte nie je ukončený.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the TheHolyRoger network after a connection is established, but this process has not completed yet.</source>
+        <translation>Zobrazené informácie môžu byť neaktuálne. Vaša peňaženka sa automaticky synchronizuje so sieťou TheHolyRoger po nadviazaní spojenia, ale tento proces ešte nie je ukončený.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1327,7 +1327,7 @@
     </message>
     <message>
         <source>Cannot start theholyroger: click-to-pay handler</source>
-        <translation>Nemôžeme spustiť The Holy Roger: obsluha click-to-pay</translation>
+        <translation>Nemôžeme spustiť TheHolyRoger: obsluha click-to-pay</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1343,7 +1343,7 @@
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid ROGER address or malformed URI parameters.</source>
-        <translation>URI sa nedá analyzovať! To môže byť spôsobené neplatnou The Holy Roger adresou alebo zle nastavenými vlastnosťami URI.</translation>
+        <translation>URI sa nedá analyzovať! To môže byť spôsobené neplatnou TheHolyRoger adresou alebo zle nastavenými vlastnosťami URI.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1869,8 +1869,8 @@
         <translation>&amp;Správa:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the The Holy Roger network.</source>
-        <translation>Pridať voliteľnú správu k výzve na zaplatenie, ktorá sa zobrazí keď bude výzva otvorená. Poznámka: Správa nebude poslaná s platbou cez sieť The Holy Roger.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the TheHolyRoger network.</source>
+        <translation>Pridať voliteľnú správu k výzve na zaplatenie, ktorá sa zobrazí keď bude výzva otvorená. Poznámka: Správa nebude poslaná s platbou cez sieť TheHolyRoger.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2031,7 +2031,7 @@
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Poslať The Holy Rogers</translation>
+        <translation>Poslať TheHolyRogers</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -2287,7 +2287,7 @@
     </message>
     <message>
         <source>Warning: Invalid ROGER address</source>
-        <translation>Varovanie: Neplatná The Holy Roger adresa</translation>
+        <translation>Varovanie: Neplatná TheHolyRoger adresa</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2377,8 +2377,8 @@
         <translation>Vložte popis pre túto adresu aby sa uložila do zoznamu použitých adries</translation>
     </message>
     <message>
-        <source>A message that was attached to the theholyroger: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the The Holy Roger network.</source>
-        <translation>Správa ktorá bola pripojená k theholyroger: URI a ktorá bude uložená s transakcou pre Vaše potreby. Poznámka: Táto správa nebude poslaná cez sieť The Holy Roger.</translation>
+        <source>A message that was attached to the theholyroger: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the TheHolyRoger network.</source>
+        <translation>Správa ktorá bola pripojená k theholyroger: URI a ktorá bude uložená s transakcou pre Vaše potreby. Poznámka: Táto správa nebude poslaná cez sieť TheHolyRoger.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2427,7 +2427,7 @@
     </message>
     <message>
         <source>The ROGER address to sign the message with</source>
-        <translation>The Holy Roger adresa pre podpísanie správy s</translation>
+        <translation>TheHolyRoger adresa pre podpísanie správy s</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2483,11 +2483,11 @@
     </message>
     <message>
         <source>The ROGER address the message was signed with</source>
-        <translation>Adresa The Holy Roger, ktorou bola podpísaná správa</translation>
+        <translation>Adresa TheHolyRoger, ktorou bola podpísaná správa</translation>
     </message>
     <message>
         <source>Verify the message to ensure it was signed with the specified ROGER address</source>
-        <translation>Overím správy sa uistiť že bola podpísaná označenou The Holy Roger adresou</translation>
+        <translation>Overím správy sa uistiť že bola podpísaná označenou TheHolyRoger adresou</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3179,8 +3179,8 @@
         <translation>Nepodarilo sa spustiť HTTP server. Pre viac detailov zobrazte debug log.</translation>
     </message>
     <message>
-        <source>The Holy Roger Core</source>
-        <translation>The Holy Roger Core</translation>
+        <source>TheHolyRoger Core</source>
+        <translation>TheHolyRoger Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

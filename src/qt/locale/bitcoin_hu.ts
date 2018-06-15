@@ -63,11 +63,11 @@
     </message>
     <message>
         <source>These are your ROGER addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Ezek a The Holy Roger címeid kifizetések küldéséhez. Mindíg ellenőrizd az összeget és a fogadó címet mielőtt coinokat küldenél.</translation>
+        <translation>Ezek a TheHolyRoger címeid kifizetések küldéséhez. Mindíg ellenőrizd az összeget és a fogadó címet mielőtt coinokat küldenél.</translation>
     </message>
     <message>
         <source>These are your ROGER addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Ezek a The Holy Roger címeid kifizetések fogadásához. Ajánlott új címet használni minden új fogadáshoz.</translation>
+        <translation>Ezek a TheHolyRoger címeid kifizetések fogadásához. Ajánlott új címet használni minden új fogadáshoz.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -336,7 +336,7 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
     </message>
     <message>
         <source>Send coins to a ROGER address</source>
-        <translation>The Holy Roger küldése megadott címre</translation>
+        <translation>TheHolyRoger küldése megadott címre</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -359,8 +359,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Üzenet &amp;valódiságának ellenőrzése</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -388,11 +388,11 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
     </message>
     <message>
         <source>Sign messages with your ROGER addresses to prove you own them</source>
-        <translation>Üzenetek aláírása a The Holy Roger-címmeiddel, amivel bizonyítod, hogy a cím a sajátod</translation>
+        <translation>Üzenetek aláírása a TheHolyRoger-címmeiddel, amivel bizonyítod, hogy a cím a sajátod</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified ROGER addresses</source>
-        <translation>Üzenetek ellenőrzése, hogy valóban a megjelölt The Holy Roger-címekkel vannak-e aláírva</translation>
+        <translation>Üzenetek ellenőrzése, hogy valóban a megjelölt TheHolyRoger-címekkel vannak-e aláírva</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -431,8 +431,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Paran&amp;cssor kapcsolók</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to The Holy Roger network</source>
-        <translation><numerusform>%n aktív kapcsolat a The Holy Roger hálózathoz</numerusform><numerusform>%n aktív kapcsolat a The Holy Roger hálózathoz</numerusform></translation>
+        <source>%n active connection(s) to TheHolyRoger network</source>
+        <translation><numerusform>%n aktív kapcsolat a TheHolyRoger hálózathoz</numerusform><numerusform>%n aktív kapcsolat a TheHolyRoger hálózathoz</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -475,8 +475,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Naprakész</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible The Holy Roger command-line options</source>
-        <translation>A %1 súgó megjelenítése a The Holy Roger lehetséges parancssori kapcsolóinak listájával</translation>
+        <source>Show the %1 help message to get a list with possible TheHolyRoger command-line options</source>
+        <translation>A %1 súgó megjelenítése a TheHolyRoger lehetséges parancssori kapcsolóinak listájával</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -545,8 +545,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Tárca &lt;b&gt;kódolva&lt;/b&gt; és jelenleg &lt;b&gt;zárva&lt;/b&gt;.</translation>
     </message>
     <message>
-        <source>A fatal error occurred. The Holy Roger can no longer continue safely and will quit.</source>
-        <translation>Végzetes hiba történt. A The Holy Roger működése nem biztonságos és hamarosan leáll.</translation>
+        <source>A fatal error occurred. TheHolyRoger can no longer continue safely and will quit.</source>
+        <translation>Végzetes hiba történt. A TheHolyRoger működése nem biztonságos és hamarosan leáll.</translation>
     </message>
 </context>
 <context>
@@ -740,7 +740,7 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
     </message>
     <message>
         <source>The entered address "%1" is not a valid ROGER address.</source>
-        <translation>A megadott "%1" cím nem egy érvényes The Holy Roger-cím.</translation>
+        <translation>A megadott "%1" cím nem egy érvényes TheHolyRoger-cím.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -864,8 +864,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Saját adatkönyvtár használata:</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -876,8 +876,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Hozzávetőlegesen %1 GB adatot fogunk ebben a könyvtárban tárolni.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the The Holy Roger block chain.</source>
-        <translation>%1 le fog töltődni és a The Holy Roger blokk lánc egy másolatát fogja tárolni.</translation>
+        <source>%1 will download and store a copy of the TheHolyRoger block chain.</source>
+        <translation>%1 le fog töltődni és a TheHolyRoger blokk lánc egy másolatát fogja tárolni.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1065,16 +1065,16 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>&amp;Költése a a jóváhagyatlan visszajárónak</translation>
     </message>
     <message>
-        <source>Automatically open the The Holy Roger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>A The Holy Roger-kliens portjának automatikus megnyitása a routeren. Ez csak akkor működik, ha a routered támogatja az UPnP-t és az engedélyezve is van rajta.</translation>
+        <source>Automatically open the TheHolyRoger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>A TheHolyRoger-kliens portjának automatikus megnyitása a routeren. Ez csak akkor működik, ha a routered támogatja az UPnP-t és az engedélyezve is van rajta.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>&amp;UPnP port-feltérképezés</translation>
     </message>
     <message>
-        <source>Connect to the The Holy Roger network through a SOCKS5 proxy.</source>
-        <translation>Csatlakozás a The Holy Roger hálózatához SOCKS5 proxyn keresztül</translation>
+        <source>Connect to the TheHolyRoger network through a SOCKS5 proxy.</source>
+        <translation>Csatlakozás a TheHolyRoger hálózatához SOCKS5 proxyn keresztül</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1109,8 +1109,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the The Holy Roger network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Csatlakozás a The Holy Roger hálózathoz külön SOCKS5 proxy használatával a Tor rejtett szolgáltatásainak eléréséhez.</translation>
+        <source>Connect to the TheHolyRoger network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Csatlakozás a TheHolyRoger hálózathoz külön SOCKS5 proxy használatával a Tor rejtett szolgáltatásainak eléréséhez.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1212,8 +1212,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Űrlap</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the The Holy Roger network after a connection is established, but this process has not completed yet.</source>
-        <translation>A kijelzett információ lehet, hogy elavult. A pénztárcája automatikusan szinkronizálja magát a The Holy Roger hálózattal miután a kapcsolat létrejön, de ez e folyamat még nem fejeződött be.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the TheHolyRoger network after a connection is established, but this process has not completed yet.</source>
+        <translation>A kijelzett információ lehet, hogy elavult. A pénztárcája automatikusan szinkronizálja magát a TheHolyRoger hálózattal miután a kapcsolat létrejön, de ez e folyamat még nem fejeződött be.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1300,7 +1300,7 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid ROGER address or malformed URI parameters.</source>
-        <translation>Nem sikerült az URI elemzése! Ezt okozhatja érvénytelen The Holy Roger cím, vagy rossz URI paraméterezés.</translation>
+        <translation>Nem sikerült az URI elemzése! Ezt okozhatja érvénytelen TheHolyRoger cím, vagy rossz URI paraméterezés.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1398,7 +1398,7 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
     </message>
     <message>
         <source>Enter a ROGER address (e.g. %1)</source>
-        <translation>Ad meg egy The Holy Roger címet (pl: %1)</translation>
+        <translation>Ad meg egy TheHolyRoger címet (pl: %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1805,8 +1805,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>&amp;Üzenet:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the The Holy Roger network.</source>
-        <translation>Egy opcionális üzenet csatolása a fizetési kérelemhez, amely megjelenik a kérelem megnyitásakor. Megjegyzés: Az üzenet nem lesz elküldve a fizetséggel a The Holy Roger hálózaton keresztül.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the TheHolyRoger network.</source>
+        <translation>Egy opcionális üzenet csatolása a fizetési kérelemhez, amely megjelenik a kérelem megnyitásakor. Megjegyzés: Az üzenet nem lesz elküldve a fizetséggel a TheHolyRoger hálózaton keresztül.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2171,7 +2171,7 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
     </message>
     <message>
         <source>Warning: Invalid ROGER address</source>
-        <translation>Figyelmeztetés: Érvénytelen The Holy Roger cím</translation>
+        <translation>Figyelmeztetés: Érvénytelen TheHolyRoger cím</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2214,7 +2214,7 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
     </message>
     <message>
         <source>The ROGER address to send the payment to</source>
-        <translation>Erre a The Holy Roger címre küldje az összeget</translation>
+        <translation>Erre a TheHolyRoger címre küldje az összeget</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2287,7 +2287,7 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
     </message>
     <message>
         <source>The ROGER address to sign the message with</source>
-        <translation>The Holy Roger cím, amivel alá kívánja írni az üzenetet</translation>
+        <translation>TheHolyRoger cím, amivel alá kívánja írni az üzenetet</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2335,11 +2335,11 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
     </message>
     <message>
         <source>The ROGER address the message was signed with</source>
-        <translation>The Holy Roger cím, amivel aláírta az üzenetet</translation>
+        <translation>TheHolyRoger cím, amivel aláírta az üzenetet</translation>
     </message>
     <message>
         <source>Verify the message to ensure it was signed with the specified ROGER address</source>
-        <translation>Ellenőrizze az üzenetet, hogy valóban a megjelölt The Holy Roger címmel van-e aláírva</translation>
+        <translation>Ellenőrizze az üzenetet, hogy valóban a megjelölt TheHolyRoger címmel van-e aláírva</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2915,8 +2915,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
 </translation>
     </message>
     <message>
-        <source>The Holy Roger Core</source>
-        <translation>The Holy Roger Core</translation>
+        <source>TheHolyRoger Core</source>
+        <translation>TheHolyRoger Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

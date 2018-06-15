@@ -307,7 +307,7 @@
     </message>
     <message>
         <source>Send coins to a ROGER address</source>
-        <translation>ارسال وجه به نشانی The Holy Roger</translation>
+        <translation>ارسال وجه به نشانی TheHolyRoger</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -330,8 +330,8 @@
         <translation>با&amp;زبینی پیام...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -359,11 +359,11 @@
     </message>
     <message>
         <source>Sign messages with your ROGER addresses to prove you own them</source>
-        <translation>برای اثبات اینکه پیام‌ها به شما تعلق دارند، آن‌ها را با نشانی The Holy Roger خود امضا کنید</translation>
+        <translation>برای اثبات اینکه پیام‌ها به شما تعلق دارند، آن‌ها را با نشانی TheHolyRoger خود امضا کنید</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified ROGER addresses</source>
-        <translation>برای حصول اطمینان از اینکه پیام با نشانی The Holy Roger مشخص شده امضا است یا خیر، پیام را شناسایی کنید</translation>
+        <translation>برای حصول اطمینان از اینکه پیام با نشانی TheHolyRoger مشخص شده امضا است یا خیر، پیام را شناسایی کنید</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -402,8 +402,8 @@
         <translation>گزینه‌های خط‌فرمان</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to The Holy Roger network</source>
-        <translation><numerusform>%n ارتباط فعال با شبکهٔ The Holy Roger</numerusform></translation>
+        <source>%n active connection(s) to TheHolyRoger network</source>
+        <translation><numerusform>%n ارتباط فعال با شبکهٔ TheHolyRoger</numerusform></translation>
     </message>
     <message>
         <source>Processing blocks on disk...</source>
@@ -651,7 +651,7 @@
     </message>
     <message>
         <source>The entered address "%1" is not a valid ROGER address.</source>
-        <translation>نشانی وارد شده "%1" یک نشانی معتبر The Holy Roger نیست.</translation>
+        <translation>نشانی وارد شده "%1" یک نشانی معتبر TheHolyRoger نیست.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -751,8 +751,8 @@
         <translation>استفاده از یک مسیر سفارشی:</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Error</source>
@@ -856,8 +856,8 @@
         <translation>استخراج</translation>
     </message>
     <message>
-        <source>Automatically open the The Holy Roger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>باز کردن خودکار درگاه شبکهٔ The Holy Roger روی روترها. تنها زمانی کار می‌کند که روتر از پروتکل UPnP پشتیبانی کند و این پروتکل فعال باشد.</translation>
+        <source>Automatically open the TheHolyRoger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>باز کردن خودکار درگاه شبکهٔ TheHolyRoger روی روترها. تنها زمانی کار می‌کند که روتر از پروتکل UPnP پشتیبانی کند و این پروتکل فعال باشد.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -959,8 +959,8 @@
         <translation>فرم</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the The Holy Roger network after a connection is established, but this process has not completed yet.</source>
-        <translation>اطلاعات نمایش‌داده شده ممکن است قدیمی باشند. بعد از این که یک اتصال با شبکه برقرار شد، کیف پول شما به‌صورت خودکار با شبکهٔ The Holy Roger همگام‌سازی می‌شود. اما این روند هنوز کامل نشده است.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the TheHolyRoger network after a connection is established, but this process has not completed yet.</source>
+        <translation>اطلاعات نمایش‌داده شده ممکن است قدیمی باشند. بعد از این که یک اتصال با شبکه برقرار شد، کیف پول شما به‌صورت خودکار با شبکهٔ TheHolyRoger همگام‌سازی می‌شود. اما این روند هنوز کامل نشده است.</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1033,7 +1033,7 @@
     </message>
     <message>
         <source>Enter a ROGER address (e.g. %1)</source>
-        <translation>یک آدرس The Holy Roger وارد کنید (مثلاً %1)</translation>
+        <translation>یک آدرس TheHolyRoger وارد کنید (مثلاً %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1477,7 +1477,7 @@
     </message>
     <message>
         <source>The ROGER address to send the payment to</source>
-        <translation>نشانی The Holy Roger برای ارسال پرداخت به آن</translation>
+        <translation>نشانی TheHolyRoger برای ارسال پرداخت به آن</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1530,7 +1530,7 @@
     </message>
     <message>
         <source>The ROGER address to sign the message with</source>
-        <translation>نشانی The Holy Roger برای امضاء پیغام با آن</translation>
+        <translation>نشانی TheHolyRoger برای امضاء پیغام با آن</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1582,11 +1582,11 @@
     </message>
     <message>
         <source>The ROGER address the message was signed with</source>
-        <translation>نشانی The Holy Roger که پیغام با آن امضاء شده</translation>
+        <translation>نشانی TheHolyRoger که پیغام با آن امضاء شده</translation>
     </message>
     <message>
         <source>Verify the message to ensure it was signed with the specified ROGER address</source>
-        <translation>برای حصول اطمینان از اینکه پیام با نشانی The Holy Roger مشخص شده امضا است یا خیر، پیام را شناسایی کنید</translation>
+        <translation>برای حصول اطمینان از اینکه پیام با نشانی TheHolyRoger مشخص شده امضا است یا خیر، پیام را شناسایی کنید</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1706,8 +1706,8 @@
         <translation>اجرا در پشت زمینه به‌صورت یک سرویس و پذیرش دستورات</translation>
     </message>
     <message>
-        <source>The Holy Roger Core</source>
-        <translation> هسته The Holy Roger </translation>
+        <source>TheHolyRoger Core</source>
+        <translation> هسته TheHolyRoger </translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>

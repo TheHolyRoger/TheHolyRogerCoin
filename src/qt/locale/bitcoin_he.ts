@@ -362,7 +362,7 @@
         <translation>&amp;אימות הודעה…</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
+        <source>TheHolyRoger</source>
         <translation>לייטקוין</translation>
     </message>
     <message>
@@ -434,7 +434,7 @@
         <translation>אפשרויות &amp;שורת הפקודה</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to The Holy Roger network</source>
+        <source>%n active connection(s) to TheHolyRoger network</source>
         <translation><numerusform>חיבור אחד פעיל לרשת לייטקוין</numerusform><numerusform>%n חיבורים פעילים לרשת לייטקוין</numerusform></translation>
     </message>
     <message>
@@ -474,7 +474,7 @@
         <translation>עדכני</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible The Holy Roger command-line options</source>
+        <source>Show the %1 help message to get a list with possible TheHolyRoger command-line options</source>
         <translation>יש להציג את הודעת העזרה של %1 כדי להציג רשימה עם אפשרויות שורת פקודה לייטקוין</translation>
     </message>
     <message>
@@ -544,7 +544,7 @@
         <translation>הארנק &lt;b&gt;מוצפן&lt;/b&gt; ו&lt;b&gt;נעול&lt;/b&gt; כרגע</translation>
     </message>
     <message>
-        <source>A fatal error occurred. The Holy Roger can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. TheHolyRoger can no longer continue safely and will quit.</source>
         <translation>אירעה שגיאה חמורה. אין אפשרות להשתמש עוד בלייטקוין באופן מאובטח והיישום ייסגר.</translation>
     </message>
 </context>
@@ -867,7 +867,7 @@
         <translation>שימוש בתיקיית נתונים מותאמת אישית:</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
+        <source>TheHolyRoger</source>
         <translation>לייטקוין</translation>
     </message>
     <message>
@@ -879,7 +879,7 @@
         <translation>מידע בנפח של כ-%1 ג׳יגה-בייט יאוחסן בתיקייה זו.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the The Holy Roger block chain.</source>
+        <source>%1 will download and store a copy of the TheHolyRoger block chain.</source>
         <translation>%1 תוריד ותאחסן עותק של שרשרת הבלוקים של לייטקוין.</translation>
     </message>
     <message>
@@ -1068,7 +1068,7 @@
         <translation>עודף &amp;בלתי מאושר מההשקעה</translation>
     </message>
     <message>
-        <source>Automatically open the The Holy Roger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the TheHolyRoger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>פתיחת הפתחה של לייטקוין בנתב באופן אוטומטי. עובד רק אם UPnP מופעל ונתמך בנתב.</translation>
     </message>
     <message>
@@ -1076,7 +1076,7 @@
         <translation>מיפוי פתחה באמצעות UPnP</translation>
     </message>
     <message>
-        <source>Connect to the The Holy Roger network through a SOCKS5 proxy.</source>
+        <source>Connect to the TheHolyRoger network through a SOCKS5 proxy.</source>
         <translation>התחבר לרשת לייטקוין דרך פרוקסי SOCKS5.</translation>
     </message>
     <message>
@@ -1207,7 +1207,7 @@
         <translation>טופס</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the The Holy Roger network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the TheHolyRoger network after a connection is established, but this process has not completed yet.</source>
         <translation>המידע המוצג עשוי להיות מיושן. הארנק שלך מסתנכרן באופן אוטומטי עם רשת לייטקוין לאחר יצירת החיבור, אך התהליך טרם הסתיים.</translation>
     </message>
     <message>
@@ -1792,7 +1792,7 @@
         <translation>הו&amp;דעה:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the The Holy Roger network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the TheHolyRoger network.</source>
         <translation>הודעת רשות לצירוף לבקשת התשלום שתוצג בעת פתיחת הבקשה. לתשומת לבך: ההודעה לא תישלח עם התשלום ברשת לייטקוין.</translation>
     </message>
     <message>
@@ -2228,7 +2228,7 @@
         <translation>יש להזין תווית עבור כתובת זו כדי להוסיף אותה לרשימת הכתובות בשימוש</translation>
     </message>
     <message>
-        <source>A message that was attached to the theholyroger: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the The Holy Roger network.</source>
+        <source>A message that was attached to the theholyroger: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the TheHolyRoger network.</source>
         <translation>הודעה שצורפה לייטקוין: כתובת שתאוחסן בהעברה לצורך מעקב מצדך. לתשומת לבך: הודעה זו לא תישלח ברשת הלייטקוין.</translation>
     </message>
     <message>
@@ -2922,7 +2922,7 @@
         <translation>ריצה כסוכן ברקע וקבלת פקודות</translation>
     </message>
     <message>
-        <source>The Holy Roger Core</source>
+        <source>TheHolyRoger Core</source>
         <translation>ליבת לייטקוין</translation>
     </message>
     <message>

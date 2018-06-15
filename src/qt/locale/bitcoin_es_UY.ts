@@ -119,15 +119,15 @@
     </message>
     <message>
         <source>Send coins to a ROGER address</source>
-        <translation>Enviar monedas a una dirección The Holy Roger</translation>
+        <translation>Enviar monedas a una dirección TheHolyRoger</translation>
     </message>
     <message>
         <source>Change the passphrase used for wallet encryption</source>
         <translation>Cambie la clave utilizada para el cifrado del monedero</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -252,8 +252,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Error</source>

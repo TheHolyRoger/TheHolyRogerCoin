@@ -55,11 +55,11 @@
     </message>
     <message>
         <source>These are your ROGER addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Këto janë The Holy Roger adresat e juaja për të dërguar pagesa. Gjithmon kontrolloni shumën dhe adresën pranuese para se të dërgoni monedha.</translation>
+        <translation>Këto janë TheHolyRoger adresat e juaja për të dërguar pagesa. Gjithmon kontrolloni shumën dhe adresën pranuese para se të dërgoni monedha.</translation>
     </message>
     <message>
         <source>These are your ROGER addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Këto janë The Holy Roger adresat e juaja për të pranuar pagesa. Rekomandohet që gjithmon të përdorni një adresë të re për çdo transaksion.</translation>
+        <translation>Këto janë TheHolyRoger adresat e juaja për të pranuar pagesa. Rekomandohet që gjithmon të përdorni një adresë të re për çdo transaksion.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -230,8 +230,8 @@
         <translation>Ndrysho frazkalimin e përdorur per enkriptimin e portofolit</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -401,8 +401,8 @@
         <translation>Miresevini</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Error</source>
@@ -808,8 +808,8 @@
         <translation>Opsionet:</translation>
     </message>
     <message>
-        <source>The Holy Roger Core</source>
-        <translation>Berthama The Holy Roger</translation>
+        <source>TheHolyRoger Core</source>
+        <translation>Berthama TheHolyRoger</translation>
     </message>
     <message>
         <source>Information</source>

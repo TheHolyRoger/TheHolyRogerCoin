@@ -63,11 +63,11 @@
     </message>
     <message>
         <source>These are your ROGER addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dette er dine The Holy Roger adresser for å sende  å sende betalinger. Husk å sjekke beløp og mottager adresser før du sender mynter.</translation>
+        <translation>Dette er dine TheHolyRoger adresser for å sende  å sende betalinger. Husk å sjekke beløp og mottager adresser før du sender mynter.</translation>
     </message>
     <message>
         <source>These are your ROGER addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dette er dine The Holy Roger adresse for å motta betalinger. Det er anbefalt å bruke en ny mottager adresse for hver transaksjon.</translation>
+        <translation>Dette er dine TheHolyRoger adresse for å motta betalinger. Det er anbefalt å bruke en ny mottager adresse for hver transaksjon.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -339,7 +339,7 @@
     </message>
     <message>
         <source>Send coins to a ROGER address</source>
-        <translation>Send mynter til en The Holy Roger adresse</translation>
+        <translation>Send mynter til en TheHolyRoger adresse</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -362,8 +362,8 @@
         <translation>&amp;Verifiser meldingen...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -391,11 +391,11 @@
     </message>
     <message>
         <source>Sign messages with your ROGER addresses to prove you own them</source>
-        <translation>Signer meldingene med The Holy Roger adresse for å bevise at diu eier dem</translation>
+        <translation>Signer meldingene med TheHolyRoger adresse for å bevise at diu eier dem</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified ROGER addresses</source>
-        <translation>Verifiser meldinger for å sikre at de ble signert med en angitt The Holy Roger adresse</translation>
+        <translation>Verifiser meldinger for å sikre at de ble signert med en angitt TheHolyRoger adresse</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -466,8 +466,8 @@
         <translation>Oppdatert</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible The Holy Roger command-line options</source>
-        <translation>Vis %1-hjelpemeldingen for å få en liste over mulige The Holy Roger-kommandolinjealternativer</translation>
+        <source>Show the %1 help message to get a list with possible TheHolyRoger command-line options</source>
+        <translation>Vis %1-hjelpemeldingen for å få en liste over mulige TheHolyRoger-kommandolinjealternativer</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -535,8 +535,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Error</source>

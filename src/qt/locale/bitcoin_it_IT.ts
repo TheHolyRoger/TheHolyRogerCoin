@@ -63,11 +63,11 @@
     </message>
     <message>
         <source>These are your ROGER addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Questi sono i suoi indirizzi The Holy Roger per ricevere i pagamenti. Controlla sempre l'importo e gli indirizzi prima di inviare i coins.</translation>
+        <translation>Questi sono i suoi indirizzi TheHolyRoger per ricevere i pagamenti. Controlla sempre l'importo e gli indirizzi prima di inviare i coins.</translation>
     </message>
     <message>
         <source>These are your ROGER addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Questi sono i tuoi indirizzi The Holy Roger per ricevere i pagamenti. Si raccomanda di usare un nuovo indirizzo per ogni transazione.</translation>
+        <translation>Questi sono i tuoi indirizzi TheHolyRoger per ricevere i pagamenti. Si raccomanda di usare un nuovo indirizzo per ogni transazione.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -339,7 +339,7 @@
     </message>
     <message>
         <source>Send coins to a ROGER address</source>
-        <translation>Invia monete ad un indirizzo The Holy Roger...</translation>
+        <translation>Invia monete ad un indirizzo TheHolyRoger...</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -362,8 +362,8 @@
         <translation>Verifica messaggio...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -391,11 +391,11 @@
     </message>
     <message>
         <source>Sign messages with your ROGER addresses to prove you own them</source>
-        <translation>Firma messaggi con i tuoi indirizzi The Holy Roger per provare che li possiedi</translation>
+        <translation>Firma messaggi con i tuoi indirizzi TheHolyRoger per provare che li possiedi</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified ROGER addresses</source>
-        <translation>Verifica messaggi per accertarti che siano firmati dagli indirizzi The Holy Roger specificati</translation>
+        <translation>Verifica messaggi per accertarti che siano firmati dagli indirizzi TheHolyRoger specificati</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -470,8 +470,8 @@
         <translation>Aggiornato</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible The Holy Roger command-line options</source>
-        <translation>Mostra il %1 messaggio d'aiuto per ottenere una lista con le possibili opzioni per la riga di comando di The Holy Roger</translation>
+        <source>Show the %1 help message to get a list with possible TheHolyRoger command-line options</source>
+        <translation>Mostra il %1 messaggio d'aiuto per ottenere una lista con le possibili opzioni per la riga di comando di TheHolyRoger</translation>
     </message>
     <message>
         <source>Date: %1
@@ -512,8 +512,8 @@
         <translation>Transazione in arrivo</translation>
     </message>
     <message>
-        <source>A fatal error occurred. The Holy Roger can no longer continue safely and will quit.</source>
-        <translation>Si è verificato un errore fatale. The Holy Roger non può continuare in maniera sicura e sarà chiuso.</translation>
+        <source>A fatal error occurred. TheHolyRoger can no longer continue safely and will quit.</source>
+        <translation>Si è verificato un errore fatale. TheHolyRoger non può continuare in maniera sicura e sarà chiuso.</translation>
     </message>
 </context>
 <context>
@@ -691,7 +691,7 @@
     </message>
     <message>
         <source>The entered address "%1" is not a valid ROGER address.</source>
-        <translation>L'indirizzo inserito "%1" non è un indirizzo The Holy Roger valido.</translation>
+        <translation>L'indirizzo inserito "%1" non è un indirizzo TheHolyRoger valido.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -763,8 +763,8 @@
         <translation>Benvenuto</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>

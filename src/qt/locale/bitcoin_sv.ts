@@ -63,11 +63,11 @@
     </message>
     <message>
         <source>These are your ROGER addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Detta är dina The Holy Roger adresser för att skicka betalningar. Kolla alltid summan och den mottagande adressen innan du skickar The Holy Rogers.</translation>
+        <translation>Detta är dina TheHolyRoger adresser för att skicka betalningar. Kolla alltid summan och den mottagande adressen innan du skickar TheHolyRogers.</translation>
     </message>
     <message>
         <source>These are your ROGER addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Detta är dina The Holy Roger adresser för att ta emot betalningar. Det rekommenderas att använda en ny mottagningsadress för varje transaktion.</translation>
+        <translation>Detta är dina TheHolyRoger adresser för att ta emot betalningar. Det rekommenderas att använda en ny mottagningsadress för varje transaktion.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -344,7 +344,7 @@ Var vänlig och försök igen.</translation>
     </message>
     <message>
         <source>Send coins to a ROGER address</source>
-        <translation>Skicka ROGERs till en The Holy Roger-adress</translation>
+        <translation>Skicka ROGERs till en TheHolyRoger-adress</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -367,8 +367,8 @@ Var vänlig och försök igen.</translation>
         <translation>&amp;Verifiera meddelande...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -396,11 +396,11 @@ Var vänlig och försök igen.</translation>
     </message>
     <message>
         <source>Sign messages with your ROGER addresses to prove you own them</source>
-        <translation>Signera meddelanden med din The Holy Roger-adress för att bevisa att du äger dem</translation>
+        <translation>Signera meddelanden med din TheHolyRoger-adress för att bevisa att du äger dem</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified ROGER addresses</source>
-        <translation>Verifiera meddelanden för att vara säker på att de var signerade med specificerade The Holy Roger-adresser</translation>
+        <translation>Verifiera meddelanden för att vara säker på att de var signerade med specificerade TheHolyRoger-adresser</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -439,8 +439,8 @@ Var vänlig och försök igen.</translation>
         <translation>&amp;Kommandoradsalternativ</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to The Holy Roger network</source>
-        <translation><numerusform>%n aktiva anslutningar till The Holy Roger-nätverket.</numerusform><numerusform>%n aktiva anslutningar till The Holy Roger-nätverket.</numerusform></translation>
+        <source>%n active connection(s) to TheHolyRoger network</source>
+        <translation><numerusform>%n aktiva anslutningar till TheHolyRoger-nätverket.</numerusform><numerusform>%n aktiva anslutningar till TheHolyRoger-nätverket.</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -483,8 +483,8 @@ Var vänlig och försök igen.</translation>
         <translation>Uppdaterad</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible The Holy Roger command-line options</source>
-        <translation>Visa %1 hjälpmeddelande för att få en lista med möjliga The Holy Roger kommandoradsalternativ.</translation>
+        <source>Show the %1 help message to get a list with possible TheHolyRoger command-line options</source>
+        <translation>Visa %1 hjälpmeddelande för att få en lista med möjliga TheHolyRoger kommandoradsalternativ.</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -553,8 +553,8 @@ Var vänlig och försök igen.</translation>
         <translation>Denna plånbok är &lt;b&gt;krypterad&lt;/b&gt; och för närvarande &lt;b&gt;låst&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. The Holy Roger can no longer continue safely and will quit.</source>
-        <translation>Ett kritiskt fel uppstod. The Holy Roger kan inte fortsätta att köra säkert och kommer att avslutas.</translation>
+        <source>A fatal error occurred. TheHolyRoger can no longer continue safely and will quit.</source>
+        <translation>Ett kritiskt fel uppstod. TheHolyRoger kan inte fortsätta att köra säkert och kommer att avslutas.</translation>
     </message>
 </context>
 <context>
@@ -748,7 +748,7 @@ Var vänlig och försök igen.</translation>
     </message>
     <message>
         <source>The entered address "%1" is not a valid ROGER address.</source>
-        <translation>Den angivna adressen "%1" är inte en giltig The Holy Roger-adress.</translation>
+        <translation>Den angivna adressen "%1" är inte en giltig TheHolyRoger-adress.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -868,8 +868,8 @@ Var vänlig och försök igen.</translation>
         <translation>Använd en anpassad datakatalog:</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -880,8 +880,8 @@ Var vänlig och försök igen.</translation>
         <translation>Ungefär %1 GB data kommer att lagras i den här katalogen.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the The Holy Roger block chain.</source>
-        <translation>%1 kommer att hämta och lagra en kopia av The Holy Roger-blockkedjan.</translation>
+        <source>%1 will download and store a copy of the TheHolyRoger block chain.</source>
+        <translation>%1 kommer att hämta och lagra en kopia av TheHolyRoger-blockkedjan.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1073,16 +1073,16 @@ Var vänlig och försök igen.</translation>
         <translation>&amp;Spendera obekräftad växel</translation>
     </message>
     <message>
-        <source>Automatically open the The Holy Roger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Öppna automatiskt The Holy Roger-klientens port på routern. Detta fungerar endast om din router har UPnP aktiverat.</translation>
+        <source>Automatically open the TheHolyRoger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Öppna automatiskt TheHolyRoger-klientens port på routern. Detta fungerar endast om din router har UPnP aktiverat.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Tilldela port med hjälp av &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the The Holy Roger network through a SOCKS5 proxy.</source>
-        <translation>Anslut till The Holy Roger-nätverket genom en SOCKS5-proxy.</translation>
+        <source>Connect to the TheHolyRoger network through a SOCKS5 proxy.</source>
+        <translation>Anslut till TheHolyRoger-nätverket genom en SOCKS5-proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1117,8 +1117,8 @@ Var vänlig och försök igen.</translation>
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the The Holy Roger network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Anslut till The Holy Roger-nätverket genom en separat SOCKS5-proxy för dolda tjänster i Tor.</translation>
+        <source>Connect to the TheHolyRoger network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Anslut till TheHolyRoger-nätverket genom en separat SOCKS5-proxy för dolda tjänster i Tor.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1220,8 +1220,8 @@ Var vänlig och försök igen.</translation>
         <translation>Formulär</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the The Holy Roger network after a connection is established, but this process has not completed yet.</source>
-        <translation>Den visade informationen kan vara inaktuell. Plånboken synkroniseras automatiskt med The Holy Roger-nätverket efter att anslutningen är upprättad, men denna process har inte slutförts ännu.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the TheHolyRoger network after a connection is established, but this process has not completed yet.</source>
+        <translation>Den visade informationen kan vara inaktuell. Plånboken synkroniseras automatiskt med TheHolyRoger-nätverket efter att anslutningen är upprättad, men denna process har inte slutförts ännu.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1312,7 +1312,7 @@ Var vänlig och försök igen.</translation>
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid ROGER address or malformed URI parameters.</source>
-        <translation>URI kan inte tolkas! Detta kan orsakas av en ogiltig The Holy Roger-adress eller felaktiga URI parametrar.</translation>
+        <translation>URI kan inte tolkas! Detta kan orsakas av en ogiltig TheHolyRoger-adress eller felaktiga URI parametrar.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1414,7 +1414,7 @@ Var vänlig och försök igen.</translation>
     </message>
     <message>
         <source>Enter a ROGER address (e.g. %1)</source>
-        <translation>Ange en The Holy Roger-adress (t.ex. %1)</translation>
+        <translation>Ange en TheHolyRoger-adress (t.ex. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1825,8 +1825,8 @@ Var vänlig och försök igen.</translation>
         <translation>&amp;Meddelande:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the The Holy Roger network.</source>
-        <translation>Ett frivilligt meddelande att bifoga betalningsbegäran, vilket visas när begäran öppnas. NB: Meddelandet kommer inte att sändas med betalningen över The Holy Rogernätverket.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the TheHolyRoger network.</source>
+        <translation>Ett frivilligt meddelande att bifoga betalningsbegäran, vilket visas när begäran öppnas. NB: Meddelandet kommer inte att sändas med betalningen över TheHolyRogernätverket.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2215,7 +2215,7 @@ Var vänlig och försök igen.</translation>
     </message>
     <message>
         <source>Warning: Invalid ROGER address</source>
-        <translation>Varning: Felaktig The Holy Rogeradress</translation>
+        <translation>Varning: Felaktig TheHolyRogeradress</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2258,7 +2258,7 @@ Var vänlig och försök igen.</translation>
     </message>
     <message>
         <source>The ROGER address to send the payment to</source>
-        <translation>The Holy Rogeradress att sända betalning till</translation>
+        <translation>TheHolyRogeradress att sända betalning till</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2301,8 +2301,8 @@ Var vänlig och försök igen.</translation>
         <translation>Ange en etikett för denna adress att adderas till listan över använda adresser</translation>
     </message>
     <message>
-        <source>A message that was attached to the theholyroger: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the The Holy Roger network.</source>
-        <translation>Ett meddelande som bifogades theholyroger-URI, vilket lagras med transaktionen som referens. NB: Meddelandet kommer inte att sändas över The Holy Rogernätverket.</translation>
+        <source>A message that was attached to the theholyroger: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the TheHolyRoger network.</source>
+        <translation>Ett meddelande som bifogades theholyroger-URI, vilket lagras med transaktionen som referens. NB: Meddelandet kommer inte att sändas över TheHolyRogernätverket.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2351,7 +2351,7 @@ Var vänlig och försök igen.</translation>
     </message>
     <message>
         <source>The ROGER address to sign the message with</source>
-        <translation>The Holy Rogeradress att signera meddelandet med</translation>
+        <translation>TheHolyRogeradress att signera meddelandet med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2407,11 +2407,11 @@ Var vänlig och försök igen.</translation>
     </message>
     <message>
         <source>The ROGER address the message was signed with</source>
-        <translation>The Holy Rogeradressen som meddelandet signerades med</translation>
+        <translation>TheHolyRogeradressen som meddelandet signerades med</translation>
     </message>
     <message>
         <source>Verify the message to ensure it was signed with the specified ROGER address</source>
-        <translation>Verifiera meddelandet för att vara säker på att den var signerad med den angivna The Holy Roger-adressen</translation>
+        <translation>Verifiera meddelandet för att vara säker på att den var signerad med den angivna TheHolyRoger-adressen</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2958,7 +2958,7 @@ Var vänlig och försök igen.</translation>
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>Skicka The Holy Rogers</translation>
+        <translation>Skicka TheHolyRogers</translation>
     </message>
     <message>
         <source>Increasing transaction fee failed</source>
@@ -3087,8 +3087,8 @@ Var vänlig och försök igen.</translation>
         <translation>Kunde inte starta HTTP-server. Se avlusningsloggen för detaljer.</translation>
     </message>
     <message>
-        <source>The Holy Roger Core</source>
-        <translation>The Holy Roger Core</translation>
+        <source>TheHolyRoger Core</source>
+        <translation>TheHolyRoger Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

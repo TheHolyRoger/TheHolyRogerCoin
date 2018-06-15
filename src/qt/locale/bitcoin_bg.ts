@@ -67,7 +67,7 @@
     </message>
     <message>
         <source>These are your ROGER addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Това са Вашите The Holy Roger адреси,благодарение на които ще получавате плащания.Препоръчително е да използвате нови адреси за получаване на всяка транзакция.</translation>
+        <translation>Това са Вашите TheHolyRoger адреси,благодарение на които ще получавате плащания.Препоръчително е да използвате нови адреси за получаване на всяка транзакция.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -354,7 +354,7 @@
         <translation>&amp;Проверка на съобщение...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
+        <source>TheHolyRoger</source>
         <translation>Биткоин</translation>
     </message>
     <message>
@@ -383,11 +383,11 @@
     </message>
     <message>
         <source>Sign messages with your ROGER addresses to prove you own them</source>
-        <translation>Пишете съобщения със своя The Holy Roger адрес за да докажете,че е ваш.</translation>
+        <translation>Пишете съобщения със своя TheHolyRoger адрес за да докажете,че е ваш.</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified ROGER addresses</source>
-        <translation>Потвърждаване на съобщения  за да се знае,че са написани с дадените The Holy Roger адреси.</translation>
+        <translation>Потвърждаване на съобщения  за да се знае,че са написани с дадените TheHolyRoger адреси.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -407,7 +407,7 @@
     </message>
     <message>
         <source>Request payments (generates QR codes and theholyroger: URIs)</source>
-        <translation>Изискване на плащания(генерира QR кодове и The Holy Roger: URIs)</translation>
+        <translation>Изискване на плащания(генерира QR кодове и TheHolyRoger: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -419,7 +419,7 @@
     </message>
     <message>
         <source>Open a theholyroger: URI or payment request</source>
-        <translation>Отворете The Holy Roger: URI  или заявка за плащане</translation>
+        <translation>Отворете TheHolyRoger: URI  или заявка за плащане</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -462,8 +462,8 @@
         <translation>Синхронизиран</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible The Holy Roger command-line options</source>
-        <translation>Покажи %1 помощно съобщение за да получиш лист с възможни The Holy Roger команди</translation>
+        <source>Show the %1 help message to get a list with possible TheHolyRoger command-line options</source>
+        <translation>Покажи %1 помощно съобщение за да получиш лист с възможни TheHolyRoger команди</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -524,8 +524,8 @@
         <translation>Портфейлът е &lt;b&gt;криптиран&lt;/b&gt; и &lt;b&gt;заключен&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. The Holy Roger can no longer continue safely and will quit.</source>
-        <translation>Възникна фатална грешка. The Holy Roger не може да продължи безопасно и ще се изключи.</translation>
+        <source>A fatal error occurred. TheHolyRoger can no longer continue safely and will quit.</source>
+        <translation>Възникна фатална грешка. TheHolyRoger не може да продължи безопасно и ще се изключи.</translation>
     </message>
 </context>
 <context>
@@ -827,7 +827,7 @@
         <translation>Използване на директория ръчно</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
+        <source>TheHolyRoger</source>
         <translation>Биткоин</translation>
     </message>
     <message>
@@ -932,16 +932,16 @@
         <translation>&amp;Похарчете непотвърденото ресто</translation>
     </message>
     <message>
-        <source>Automatically open the The Holy Roger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Автоматично отваряне на входящия The Holy Roger порт. Работи само с рутери поддържащи UPnP.</translation>
+        <source>Automatically open the TheHolyRoger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Автоматично отваряне на входящия TheHolyRoger порт. Работи само с рутери поддържащи UPnP.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Отваряне на входящия порт чрез &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the The Holy Roger network through a SOCKS5 proxy.</source>
-        <translation>Свързване с The Holy Roger мрежата чрез SOCKS5  прокси.</translation>
+        <source>Connect to the TheHolyRoger network through a SOCKS5 proxy.</source>
+        <translation>Свързване с TheHolyRoger мрежата чрез SOCKS5  прокси.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1039,7 +1039,7 @@
         <translation>Формуляр</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the The Holy Roger network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the TheHolyRoger network after a connection is established, but this process has not completed yet.</source>
         <translation>Текущата информация на екрана може да не е актуална. Вашият портфейл ще се синхронизира автоматично с мрежата на Биткоин, щом поне една връзката с нея се установи; този процес все още не е приключил.</translation>
     </message>
     <message>
@@ -1095,7 +1095,7 @@
     </message>
     <message>
         <source>Cannot start theholyroger: click-to-pay handler</source>
-        <translation>The Holy Roger не можe да се стартира: click-to-pay handler</translation>
+        <translation>TheHolyRoger не можe да се стартира: click-to-pay handler</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1177,7 +1177,7 @@
     </message>
     <message>
         <source>Enter a ROGER address (e.g. %1)</source>
-        <translation>Въведете The Holy Roger адрес (например: %1)</translation>
+        <translation>Въведете TheHolyRoger адрес (например: %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1714,7 +1714,7 @@
     </message>
     <message>
         <source>Warning: Invalid ROGER address</source>
-        <translation>Внимание: Невалиден The Holy Roger адрес</translation>
+        <translation>Внимание: Невалиден TheHolyRoger адрес</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2366,8 +2366,8 @@
         <translation>Въведете Ваш публичен адрес</translation>
     </message>
     <message>
-        <source>The Holy Roger Core</source>
-        <translation>The Holy Roger ядро</translation>
+        <source>TheHolyRoger Core</source>
+        <translation>TheHolyRoger ядро</translation>
     </message>
     <message>
         <source>&lt;category&gt; can be:</source>

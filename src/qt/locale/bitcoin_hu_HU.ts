@@ -63,11 +63,11 @@
     </message>
     <message>
         <source>These are your ROGER addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Ezek az Ön kifizetéseinek küldésekor használandó The Holy Roger-címek. Fizetés indítása előtt mindig ellenőrizze az összeget és a fogadó címet!</translation>
+        <translation>Ezek az Ön kifizetéseinek küldésekor használandó TheHolyRoger-címek. Fizetés indítása előtt mindig ellenőrizze az összeget és a fogadó címet!</translation>
     </message>
     <message>
         <source>These are your ROGER addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Ezek az Ön fizetéseinek fogadásakor használandó The Holy Roger-címek. Célszerű minden tranzakcióhoz új fogadó címet használni.</translation>
+        <translation>Ezek az Ön fizetéseinek fogadásakor használandó TheHolyRoger-címek. Célszerű minden tranzakcióhoz új fogadó címet használni.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -343,7 +343,7 @@
     </message>
     <message>
         <source>Send coins to a ROGER address</source>
-        <translation>Érmék küldése egy The Holy Roger címre</translation>
+        <translation>Érmék küldése egy TheHolyRoger címre</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -366,8 +366,8 @@
         <translation>Üzenet &amp;ellenőrzése</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -395,11 +395,11 @@
     </message>
     <message>
         <source>Sign messages with your ROGER addresses to prove you own them</source>
-        <translation>Írja alá az üzeneteit a The Holy Roger címével, hogy bizonyítsa Öntől származnak</translation>
+        <translation>Írja alá az üzeneteit a TheHolyRoger címével, hogy bizonyítsa Öntől származnak</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified ROGER addresses</source>
-        <translation>Ellenőrizze az üzeneteket, hogy a megadott The Holy Roger címekkel lettek-e aláírva</translation>
+        <translation>Ellenőrizze az üzeneteket, hogy a megadott TheHolyRoger címekkel lettek-e aláírva</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -438,8 +438,8 @@
         <translation>&amp;Parancssor beállításai</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to The Holy Roger network</source>
-        <translation><numerusform>%n aktív kapcsolat a The Holy Roger-hálózaton</numerusform><numerusform>%n aktív kapcsolat a The Holy Roger-hálózaton</numerusform></translation>
+        <source>%n active connection(s) to TheHolyRoger network</source>
+        <translation><numerusform>%n aktív kapcsolat a TheHolyRoger-hálózaton</numerusform><numerusform>%n aktív kapcsolat a TheHolyRoger-hálózaton</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -482,8 +482,8 @@
         <translation>Naprakész</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible The Holy Roger command-line options</source>
-        <translation>Mutassa a %1 súgó üzenetet a lehetséges The Holy Roger parancssori beállítások listájáért</translation>
+        <source>Show the %1 help message to get a list with possible TheHolyRoger command-line options</source>
+        <translation>Mutassa a %1 súgó üzenetet a lehetséges TheHolyRoger parancssori beállítások listájáért</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -552,8 +552,8 @@
         <translation>Tárca &lt;b&gt;titkosítva&lt;/b&gt; és jelenleg &lt;b&gt;zárolva&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. The Holy Roger can no longer continue safely and will quit.</source>
-        <translation>Fatális hiba történt. A The Holy Roger program nem tud tovább biztonságosan működni és be fog záródni.</translation>
+        <source>A fatal error occurred. TheHolyRoger can no longer continue safely and will quit.</source>
+        <translation>Fatális hiba történt. A TheHolyRoger program nem tud tovább biztonságosan működni és be fog záródni.</translation>
     </message>
 </context>
 <context>
@@ -747,7 +747,7 @@
     </message>
     <message>
         <source>The entered address "%1" is not a valid ROGER address.</source>
-        <translation>A megadott cím"%1" nem egy érvényes The Holy Roger cím.</translation>
+        <translation>A megadott cím"%1" nem egy érvényes TheHolyRoger cím.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -875,8 +875,8 @@
         <translation>Egyéni adatmappa használata:</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -887,8 +887,8 @@
         <translation>Hozzávetőlegesen %1 GB adatot fogunk ebben a könyvtárban tárolni.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the The Holy Roger block chain.</source>
-        <translation>%1 le fog töltődni és a The Holy Roger blokk lánc egy másolatát fogja tárolni.</translation>
+        <source>%1 will download and store a copy of the TheHolyRoger block chain.</source>
+        <translation>%1 le fog töltődni és a TheHolyRoger blokk lánc egy másolatát fogja tárolni.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1084,8 +1084,8 @@
         <translation>&amp;Költése a a jóváhagyatlan visszajárónak</translation>
     </message>
     <message>
-        <source>Automatically open the The Holy Roger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatikusan nyissa meg a The Holy Roger kliens által használt portot a routeren. Ez csak akkor működik, ha a router támogatja a UPnP-t, és engedélyezett ez a beállítás.</translation>
+        <source>Automatically open the TheHolyRoger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatikusan nyissa meg a TheHolyRoger kliens által használt portot a routeren. Ez csak akkor működik, ha a router támogatja a UPnP-t, és engedélyezett ez a beállítás.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1096,8 +1096,8 @@
         <translation>Kívülről érkező kapcsolatok fogadása.</translation>
     </message>
     <message>
-        <source>Connect to the The Holy Roger network through a SOCKS5 proxy.</source>
-        <translation>Csatlakozás a The Holy Roger hálózathoz SOCKS5 proxy használatával.</translation>
+        <source>Connect to the TheHolyRoger network through a SOCKS5 proxy.</source>
+        <translation>Csatlakozás a TheHolyRoger hálózathoz SOCKS5 proxy használatával.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1132,8 +1132,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the The Holy Roger network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Csatlakozás a The Holy Roger hálózathoz külön SOCKS5 proxy használatával a Tor rejtett szolgáltatásainak eléréséhez.</translation>
+        <source>Connect to the TheHolyRoger network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Csatlakozás a TheHolyRoger hálózathoz külön SOCKS5 proxy használatával a Tor rejtett szolgáltatásainak eléréséhez.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1235,7 +1235,7 @@
         <translation>Űrlap</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the The Holy Roger network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the TheHolyRoger network after a connection is established, but this process has not completed yet.</source>
         <translation>Lehet, hogy a megjelenített információ elavult. A tárcája automatikusan szinkronizál a hálózattal kapcsolódás után, de a folyamat még nem ért véget.</translation>
     </message>
     <message>
@@ -1323,7 +1323,7 @@
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid ROGER address or malformed URI parameters.</source>
-        <translation>Az URI nem dolgozható fel! Ennek oka lehet egy érvénytelen The Holy Roger-cím, vagy hibás URI-paraméterek.</translation>
+        <translation>Az URI nem dolgozható fel! Ennek oka lehet egy érvénytelen TheHolyRoger-cím, vagy hibás URI-paraméterek.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1397,7 +1397,7 @@
     </message>
     <message>
         <source>Enter a ROGER address (e.g. %1)</source>
-        <translation>Adjon meg egy The Holy Roger-címet (pl. %1)</translation>
+        <translation>Adjon meg egy TheHolyRoger-címet (pl. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1736,8 +1736,8 @@
         <translation>&amp;Üzenet:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the The Holy Roger network.</source>
-        <translation>Opciónális üzenet csatolása a fizetési kérelemhez, ami a kérelem megnyitásakor megjelenik. Megjegyzés: Az üzenet nem lesz elküldve a fizetéssel a The Holy Roger hálózaton.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the TheHolyRoger network.</source>
+        <translation>Opciónális üzenet csatolása a fizetési kérelemhez, ami a kérelem megnyitásakor megjelenik. Megjegyzés: Az üzenet nem lesz elküldve a fizetéssel a TheHolyRoger hálózaton.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1950,7 +1950,7 @@
     </message>
     <message>
         <source>Warning: Invalid ROGER address</source>
-        <translation>Figyelem: érvénytelen The Holy Roger cím</translation>
+        <translation>Figyelem: érvénytelen TheHolyRoger cím</translation>
     </message>
     <message>
         <source>(no label)</source>

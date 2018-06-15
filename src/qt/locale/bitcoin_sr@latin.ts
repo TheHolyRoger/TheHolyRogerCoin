@@ -63,11 +63,11 @@
     </message>
     <message>
         <source>These are your ROGER addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Ovo su Vaše The Holy Roger adrese na koju se vrše uplate. Uvek proverite iznos i prijemnu adresu pre slanja novčića.</translation>
+        <translation>Ovo su Vaše TheHolyRoger adrese na koju se vrše uplate. Uvek proverite iznos i prijemnu adresu pre slanja novčića.</translation>
     </message>
     <message>
         <source>These are your ROGER addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Ovo su Vaše The Holy Roger adrese za primanje uplata. Preporučuje se upotreba nove adrese za svaku transakciju.</translation>
+        <translation>Ovo su Vaše TheHolyRoger adrese za primanje uplata. Preporučuje se upotreba nove adrese za svaku transakciju.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -339,7 +339,7 @@
     </message>
     <message>
         <source>Send coins to a ROGER address</source>
-        <translation>Pošalji novčiće na The Holy Roger adresu</translation>
+        <translation>Pošalji novčiće na TheHolyRoger adresu</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -362,8 +362,8 @@
         <translation>&amp;Proveri poruku...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -391,11 +391,11 @@
     </message>
     <message>
         <source>Sign messages with your ROGER addresses to prove you own them</source>
-        <translation>Potpišite poruke sa svojim The Holy Roger adresama da biste dokazali njihovo vlasništvo</translation>
+        <translation>Potpišite poruke sa svojim TheHolyRoger adresama da biste dokazali njihovo vlasništvo</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified ROGER addresses</source>
-        <translation>Proverite poruke da biste utvrdili sa kojim The Holy Roger adresama su potpisane</translation>
+        <translation>Proverite poruke da biste utvrdili sa kojim TheHolyRoger adresama su potpisane</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -519,8 +519,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Error</source>
@@ -686,8 +686,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>The Holy Roger Core</source>
-        <translation>The Holy Roger Core</translation>
+        <source>TheHolyRoger Core</source>
+        <translation>TheHolyRoger Core</translation>
     </message>
     <message>
         <source>Information</source>

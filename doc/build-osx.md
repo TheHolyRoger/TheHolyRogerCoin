@@ -44,7 +44,7 @@ from the root of the repository.
 
 **Note**: You only need Berkeley DB if the wallet is enabled (see the section *Disable-Wallet mode* below).
 
-Build The Holy Roger Core
+Build TheHolyRoger Core
 ------------------------
 
 1. Clone the  source code and cd into ``
@@ -83,7 +83,7 @@ Build The Holy Roger Core
 Running
 -------
 
-The Holy Roger Core is now available at `./src/theholyrogerd`
+TheHolyRoger Core is now available at `./src/theholyrogerd`
 
 Before running, it's recommended you create an RPC configuration file.
 

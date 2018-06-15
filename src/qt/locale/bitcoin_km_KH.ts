@@ -91,7 +91,7 @@
     <name>BitcoinGUI</name>
     <message>
         <source>Send coins to a ROGER address</source>
-        <translation>ផ្ញើកាក់ទៅកាន់ អាសយដ្ឋាន The Holy Roger មួយ</translation>
+        <translation>ផ្ញើកាក់ទៅកាន់ អាសយដ្ឋាន TheHolyRoger មួយ</translation>
     </message>
     <message>
         <source>Wallet</source>

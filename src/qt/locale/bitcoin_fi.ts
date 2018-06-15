@@ -63,11 +63,11 @@
     </message>
     <message>
         <source>These are your ROGER addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Nämä ovat The Holy Roger-osoitteesi maksujen lähettämistä varten. Tarkista aina määrä ja vastaanotto-osoite ennen kolikoiden lähettämistä.</translation>
+        <translation>Nämä ovat TheHolyRoger-osoitteesi maksujen lähettämistä varten. Tarkista aina määrä ja vastaanotto-osoite ennen kolikoiden lähettämistä.</translation>
     </message>
     <message>
         <source>These are your ROGER addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Tässä ovat The Holy Roger vastaanotto-osoitteesi. On suositeltavaa käyttää uutta vastaanotto-osoitetta jokaista lähetystä varten.</translation>
+        <translation>Tässä ovat TheHolyRoger vastaanotto-osoitteesi. On suositeltavaa käyttää uutta vastaanotto-osoitetta jokaista lähetystä varten.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -343,7 +343,7 @@
     </message>
     <message>
         <source>Send coins to a ROGER address</source>
-        <translation>Lähetä kolikoita The Holy Roger-osoitteeseen</translation>
+        <translation>Lähetä kolikoita TheHolyRoger-osoitteeseen</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -366,8 +366,8 @@
         <translation>Varmista &amp;viesti...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -387,7 +387,7 @@
     </message>
     <message>
         <source>Show or hide the main Window</source>
-        <translation>Näytä tai piilota The Holy Roger-ikkuna</translation>
+        <translation>Näytä tai piilota TheHolyRoger-ikkuna</translation>
     </message>
     <message>
         <source>Encrypt the private keys that belong to your wallet</source>
@@ -395,11 +395,11 @@
     </message>
     <message>
         <source>Sign messages with your ROGER addresses to prove you own them</source>
-        <translation>Allekirjoita viestisi omalla The Holy Roger -osoitteellasi todistaaksesi, että omistat ne</translation>
+        <translation>Allekirjoita viestisi omalla TheHolyRoger -osoitteellasi todistaaksesi, että omistat ne</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified ROGER addresses</source>
-        <translation>Varmista, että viestisi on allekirjoitettu määritetyllä The Holy Roger -osoitteella</translation>
+        <translation>Varmista, että viestisi on allekirjoitettu määritetyllä TheHolyRoger -osoitteella</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -474,8 +474,8 @@
         <translation>Rahansiirtohistoria on ajan tasalla</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible The Holy Roger command-line options</source>
-        <translation>Näytä %1 ohjeet saadaksesi listan mahdollisista The Holy Rogerin komentorivivalinnoista</translation>
+        <source>Show the %1 help message to get a list with possible TheHolyRoger command-line options</source>
+        <translation>Näytä %1 ohjeet saadaksesi listan mahdollisista TheHolyRogerin komentorivivalinnoista</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -544,8 +544,8 @@
         <translation>Lompakko on &lt;b&gt;salattu&lt;/b&gt; ja tällä hetkellä &lt;b&gt;lukittuna&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. The Holy Roger can no longer continue safely and will quit.</source>
-        <translation>Peruuttamaton virhe on tapahtunut. The Holy Roger ei voi enää jatkaa turvallisesti ja sammutetaan.</translation>
+        <source>A fatal error occurred. TheHolyRoger can no longer continue safely and will quit.</source>
+        <translation>Peruuttamaton virhe on tapahtunut. TheHolyRoger ei voi enää jatkaa turvallisesti ja sammutetaan.</translation>
     </message>
 </context>
 <context>
@@ -739,7 +739,7 @@
     </message>
     <message>
         <source>The entered address "%1" is not a valid ROGER address.</source>
-        <translation>Antamasi osoite "%1" ei ole kelvollinen The Holy Roger-osoite.</translation>
+        <translation>Antamasi osoite "%1" ei ole kelvollinen TheHolyRoger-osoite.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -867,8 +867,8 @@
         <translation>Määritä oma kansio:</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -879,8 +879,8 @@
         <translation>Noin %1 GB tietoa varastoidaan tähän hakemistoon.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the The Holy Roger block chain.</source>
-        <translation>%1 lataa ja tallentaa kopion The Holy Rogerin lohkoketjusta.</translation>
+        <source>%1 will download and store a copy of the TheHolyRoger block chain.</source>
+        <translation>%1 lataa ja tallentaa kopion TheHolyRogerin lohkoketjusta.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1064,16 +1064,16 @@
         <translation>&amp;Käytä varmistamattomia vaihtorahoja</translation>
     </message>
     <message>
-        <source>Automatically open the The Holy Roger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Avaa The Holy Roger-asiakasohjelman portti reitittimellä automaattisesti. Tämä toimii vain, jos reitittimesi tukee UPnP:tä ja se on käytössä.</translation>
+        <source>Automatically open the TheHolyRoger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Avaa TheHolyRoger-asiakasohjelman portti reitittimellä automaattisesti. Tämä toimii vain, jos reitittimesi tukee UPnP:tä ja se on käytössä.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Portin uudelleenohjaus &amp;UPnP:llä</translation>
     </message>
     <message>
-        <source>Connect to the The Holy Roger network through a SOCKS5 proxy.</source>
-        <translation>Yhdistä The Holy Roger-verkkoon SOCKS5-välityspalvelimen kautta.</translation>
+        <source>Connect to the TheHolyRoger network through a SOCKS5 proxy.</source>
+        <translation>Yhdistä TheHolyRoger-verkkoon SOCKS5-välityspalvelimen kautta.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1108,8 +1108,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the The Holy Roger network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Yhdistä The Holy Roger-verkkoon erillisen SOCKS5-välityspalvelimen kautta piilotettuja Tor-palveluja varten.</translation>
+        <source>Connect to the TheHolyRoger network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Yhdistä TheHolyRoger-verkkoon erillisen SOCKS5-välityspalvelimen kautta piilotettuja Tor-palveluja varten.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1211,8 +1211,8 @@
         <translation>Lomake</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the The Holy Roger network after a connection is established, but this process has not completed yet.</source>
-        <translation>Näytetyt tiedot eivät välttämättä ole ajantasalla. Lompakkosi synkronoituu The Holy Roger-verkon kanssa automaattisesti yhteyden muodostamisen jälkeen, mutta synkronointi on vielä meneillään.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the TheHolyRoger network after a connection is established, but this process has not completed yet.</source>
+        <translation>Näytetyt tiedot eivät välttämättä ole ajantasalla. Lompakkosi synkronoituu TheHolyRoger-verkon kanssa automaattisesti yhteyden muodostamisen jälkeen, mutta synkronointi on vielä meneillään.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1252,7 +1252,7 @@
     </message>
     <message>
         <source>Your current total balance</source>
-        <translation>Tililläsi tällä hetkellä olevien The Holy Rogerien määrä</translation>
+        <translation>Tililläsi tällä hetkellä olevien TheHolyRogerien määrä</translation>
     </message>
     <message>
         <source>Your current balance in watch-only addresses</source>
@@ -1287,7 +1287,7 @@
     </message>
     <message>
         <source>Cannot start theholyroger: click-to-pay handler</source>
-        <translation>The Holy Rogeria ei voi käynnistää: klikkaa-maksaaksesi -käsittelijän virhe</translation>
+        <translation>TheHolyRogeria ei voi käynnistää: klikkaa-maksaaksesi -käsittelijän virhe</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1303,7 +1303,7 @@
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid ROGER address or malformed URI parameters.</source>
-        <translation>URIa ei voitu jäsentää! Tämä voi johtua virheellisestä The Holy Roger-osoitteesta tai väärin muotoilluista URI parametreista.</translation>
+        <translation>URIa ei voitu jäsentää! Tämä voi johtua virheellisestä TheHolyRoger-osoitteesta tai väärin muotoilluista URI parametreista.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1401,7 +1401,7 @@
     </message>
     <message>
         <source>Enter a ROGER address (e.g. %1)</source>
-        <translation>Syötä The Holy Roger-osoite (esim. %1)</translation>
+        <translation>Syötä TheHolyRoger-osoite (esim. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1792,8 +1792,8 @@
         <translation>&amp;Viesti:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the The Holy Roger network.</source>
-        <translation>Valinnainen viesti liitetään maksupyyntöön ja näytetään avattaessa. Viestiä ei lähetetä The Holy Roger-verkkoon.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the TheHolyRoger network.</source>
+        <translation>Valinnainen viesti liitetään maksupyyntöön ja näytetään avattaessa. Viestiä ei lähetetä TheHolyRoger-verkkoon.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2182,7 +2182,7 @@
     </message>
     <message>
         <source>Warning: Invalid ROGER address</source>
-        <translation>Varoitus: Virheellinen The Holy Roger-osoite </translation>
+        <translation>Varoitus: Virheellinen TheHolyRoger-osoite </translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2225,7 +2225,7 @@
     </message>
     <message>
         <source>The ROGER address to send the payment to</source>
-        <translation>The Holy Roger-osoite johon maksu lähetetään</translation>
+        <translation>TheHolyRoger-osoite johon maksu lähetetään</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2268,8 +2268,8 @@
         <translation>Aseta nimi tälle osoitteelle lisätäksesi sen käytettyjen osoitteiden listalle.</translation>
     </message>
     <message>
-        <source>A message that was attached to the theholyroger: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the The Holy Roger network.</source>
-        <translation>Viesti joka liitettiin theholyroger: URI:iin tallennetaan rahansiirtoon viitteeksi. Tätä viestiä ei lähetetä The Holy Roger-verkkoon.</translation>
+        <source>A message that was attached to the theholyroger: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the TheHolyRoger network.</source>
+        <translation>Viesti joka liitettiin theholyroger: URI:iin tallennetaan rahansiirtoon viitteeksi. Tätä viestiä ei lähetetä TheHolyRoger-verkkoon.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2318,7 +2318,7 @@
     </message>
     <message>
         <source>The ROGER address to sign the message with</source>
-        <translation>The Holy Roger-osoite jolla viesti allekirjoitetaan</translation>
+        <translation>TheHolyRoger-osoite jolla viesti allekirjoitetaan</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2350,7 +2350,7 @@
     </message>
     <message>
         <source>Sign the message to prove you own this ROGER address</source>
-        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän The Holy Roger-osoitteen</translation>
+        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän TheHolyRoger-osoitteen</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2374,11 +2374,11 @@
     </message>
     <message>
         <source>The ROGER address the message was signed with</source>
-        <translation>The Holy Roger-osoite jolla viesti on allekirjoitettu</translation>
+        <translation>TheHolyRoger-osoite jolla viesti on allekirjoitettu</translation>
     </message>
     <message>
         <source>Verify the message to ensure it was signed with the specified ROGER address</source>
-        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä The Holy Roger-osoitteella</translation>
+        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä TheHolyRoger-osoitteella</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3034,8 +3034,8 @@
         <translation>HTTP-palvelinta ei voitu käynnistää. Katso debug-lokista lisätietoja.</translation>
     </message>
     <message>
-        <source>The Holy Roger Core</source>
-        <translation>The Holy Roger-ydin</translation>
+        <source>TheHolyRoger Core</source>
+        <translation>TheHolyRoger-ydin</translation>
     </message>
     <message>
         <source>The %s developers</source>

@@ -1,7 +1,7 @@
 Description
 ------------
 
-This directory contains data-driven tests for various aspects of The Holy Roger.
+This directory contains data-driven tests for various aspects of TheHolyRoger.
 
 License
 --------

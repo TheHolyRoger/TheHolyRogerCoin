@@ -63,11 +63,11 @@
     </message>
     <message>
         <source>These are your ROGER addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>To so vaši The Holy Roger naslovi za pošiljanje. Pred pošiljanjem vedno preverite količino in prejemnikov naslov.</translation>
+        <translation>To so vaši TheHolyRoger naslovi za pošiljanje. Pred pošiljanjem vedno preverite količino in prejemnikov naslov.</translation>
     </message>
     <message>
         <source>These are your ROGER addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>To so vaši The Holy Roger naslovi za prejemanje. Priporočeno je, da za vsako transakcijo uporabite nov naslov.</translation>
+        <translation>To so vaši TheHolyRoger naslovi za prejemanje. Priporočeno je, da za vsako transakcijo uporabite nov naslov.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -263,7 +263,7 @@
     </message>
     <message>
         <source>Send coins to a ROGER address</source>
-        <translation>Izvedite plačilo na naslov The Holy Roger</translation>
+        <translation>Izvedite plačilo na naslov TheHolyRoger</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -286,8 +286,8 @@
         <translation>&amp;Preveri sporočilo ...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -315,11 +315,11 @@
     </message>
     <message>
         <source>Sign messages with your ROGER addresses to prove you own them</source>
-        <translation>Podpišite poljubno sporočilo z enim svojih naslovov The Holy Roger, da prejemniku sporočila dokažete, da je ta naslov v vaši lasti.</translation>
+        <translation>Podpišite poljubno sporočilo z enim svojih naslovov TheHolyRoger, da prejemniku sporočila dokažete, da je ta naslov v vaši lasti.</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified ROGER addresses</source>
-        <translation>Preverite, če je bilo prejeto sporočilo podpisano z določenim naslovom The Holy Roger</translation>
+        <translation>Preverite, če je bilo prejeto sporočilo podpisano z določenim naslovom TheHolyRoger</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -358,8 +358,8 @@
         <translation>Opcije &amp;ukazne vrstice</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to The Holy Roger network</source>
-        <translation><numerusform>%n aktivna povezava v omrežje The Holy Roger</numerusform><numerusform>%n aktivni povezavi v omrežje The Holy Roger</numerusform><numerusform>%n aktivne povezave v omrežje The Holy Roger</numerusform><numerusform>%n aktivnih povezav v omrežje The Holy Roger</numerusform></translation>
+        <source>%n active connection(s) to TheHolyRoger network</source>
+        <translation><numerusform>%n aktivna povezava v omrežje TheHolyRoger</numerusform><numerusform>%n aktivni povezavi v omrežje TheHolyRoger</numerusform><numerusform>%n aktivne povezave v omrežje TheHolyRoger</numerusform><numerusform>%n aktivnih povezav v omrežje TheHolyRoger</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -635,8 +635,8 @@
         <translation>Uporabi to podatkovno mapo:</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -764,7 +764,7 @@
         <translation>Omogoči &amp;trošenje drobiža iz še nepotrjenih plačil</translation>
     </message>
     <message>
-        <source>Automatically open the The Holy Roger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the TheHolyRoger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Program samodejno odpre ustrezna vrata na usmerjevalniku. To deluje samo, če vaš usmerjevalnik podpira in ima omogočen UPnP.</translation>
     </message>
     <message>
@@ -772,8 +772,8 @@
         <translation>Preslikaj vrata z uporabo &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the The Holy Roger network through a SOCKS5 proxy.</source>
-        <translation>Poveži se v omrežje The Holy Roger preko posredniškega strežnika SOCKS5.</translation>
+        <source>Connect to the TheHolyRoger network through a SOCKS5 proxy.</source>
+        <translation>Poveži se v omrežje TheHolyRoger preko posredniškega strežnika SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -875,8 +875,8 @@
         <translation>Oblika</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the The Holy Roger network after a connection is established, but this process has not completed yet.</source>
-        <translation>Prikazani podatki so morda zastareli. Program ob vzpostavitvi povezave samodejno sinhronizira denarnico z omrežjem The Holy Roger, a trenutno ta proces še ni zaključen.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the TheHolyRoger network after a connection is established, but this process has not completed yet.</source>
+        <translation>Prikazani podatki so morda zastareli. Program ob vzpostavitvi povezave samodejno sinhronizira denarnico z omrežjem TheHolyRoger, a trenutno ta proces še ni zaključen.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -973,7 +973,7 @@
     </message>
     <message>
         <source>Enter a ROGER address (e.g. %1)</source>
-        <translation>Vnesite naslov The Holy Roger (npr. %1):</translation>
+        <translation>Vnesite naslov TheHolyRoger (npr. %1):</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1220,8 +1220,8 @@
         <translation>&amp;Sporočilo:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the The Holy Roger network.</source>
-        <translation>Neobvezno sporočilo kot priponka zahtevku za plačilo, ki bo prikazano, ko bo zahtevek odprt. Opomba: Opravljeno plačilo.prek omrežja The Holy Roger tega sporočila ne bo vsebovalo.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the TheHolyRoger network.</source>
+        <translation>Neobvezno sporočilo kot priponka zahtevku za plačilo, ki bo prikazano, ko bo zahtevek odprt. Opomba: Opravljeno plačilo.prek omrežja TheHolyRoger tega sporočila ne bo vsebovalo.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1465,7 +1465,7 @@
     </message>
     <message>
         <source>The ROGER address to send the payment to</source>
-        <translation>Naslov The Holy Roger, na katerega bo plačilo poslano</translation>
+        <translation>Naslov TheHolyRoger, na katerega bo plačilo poslano</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1508,8 +1508,8 @@
         <translation>Če vnesete oznako za zgornji naslov, se bo skupaj z naslovom shranila v imenk že uporabljenih naslovov</translation>
     </message>
     <message>
-        <source>A message that was attached to the theholyroger: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the The Holy Roger network.</source>
-        <translation>Sporočilo, ki ste ga pripeli na URI tipa theholyroger:. Shranjeno bo skupaj s podatki o transakciji. Opomba: Sporočilo ne bo poslano preko omrežja The Holy Roger.</translation>
+        <source>A message that was attached to the theholyroger: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the TheHolyRoger network.</source>
+        <translation>Sporočilo, ki ste ga pripeli na URI tipa theholyroger:. Shranjeno bo skupaj s podatki o transakciji. Opomba: Sporočilo ne bo poslano preko omrežja TheHolyRoger.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -1546,7 +1546,7 @@
     </message>
     <message>
         <source>The ROGER address to sign the message with</source>
-        <translation>Naslov The Holy Roger, s katerim podpisujete sporočilo</translation>
+        <translation>Naslov TheHolyRoger, s katerim podpisujete sporočilo</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1602,11 +1602,11 @@
     </message>
     <message>
         <source>The ROGER address the message was signed with</source>
-        <translation>Naslov The Holy Roger, s katerim je bilo sporočilo podpisano</translation>
+        <translation>Naslov TheHolyRoger, s katerim je bilo sporočilo podpisano</translation>
     </message>
     <message>
         <source>Verify the message to ensure it was signed with the specified ROGER address</source>
-        <translation>Preverite, ali je bilo sporočilo v resnici podpisano z navedenim naslovom The Holy Roger.</translation>
+        <translation>Preverite, ali je bilo sporočilo v resnici podpisano z navedenim naslovom TheHolyRoger.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1718,8 +1718,8 @@
         <translation>Teci v ozadju in sprejemaj ukaze</translation>
     </message>
     <message>
-        <source>The Holy Roger Core</source>
-        <translation>The Holy Roger Core</translation>
+        <source>TheHolyRoger Core</source>
+        <translation>TheHolyRoger Core</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>

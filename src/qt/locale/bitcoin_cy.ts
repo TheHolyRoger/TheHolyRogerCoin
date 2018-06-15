@@ -63,11 +63,11 @@
     </message>
     <message>
         <source>These are your ROGER addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Rhain ydi eich cyfeiriadau The Holy Roger ar gyfer gyrru taliadau. Gwnewch yn sicr o'r swm a'r cyfeiriad derbyn cyn gyrru arian.</translation>
+        <translation>Rhain ydi eich cyfeiriadau TheHolyRoger ar gyfer gyrru taliadau. Gwnewch yn sicr o'r swm a'r cyfeiriad derbyn cyn gyrru arian.</translation>
     </message>
     <message>
         <source>These are your ROGER addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dyma eich cyfeiriadau The Holy Roger ar gyfer derbyn taliadau. Argymhellwn ddefnyddio cyfeiriad derbyn newydd ar gyfer bob trafodyn.</translation>
+        <translation>Dyma eich cyfeiriadau TheHolyRoger ar gyfer derbyn taliadau. Argymhellwn ddefnyddio cyfeiriad derbyn newydd ar gyfer bob trafodyn.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -335,7 +335,7 @@
     </message>
     <message>
         <source>Send coins to a ROGER address</source>
-        <translation>Anfon arian i gyfeiriad The Holy Roger</translation>
+        <translation>Anfon arian i gyfeiriad TheHolyRoger</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -354,8 +354,8 @@
         <translation>&amp;Gwirio neges...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -383,11 +383,11 @@
     </message>
     <message>
         <source>Sign messages with your ROGER addresses to prove you own them</source>
-        <translation>Arwyddo negeseuon gyda eich cyfeiriadau The Holy Roger i brofi mae chi sy'n berchen arnynt</translation>
+        <translation>Arwyddo negeseuon gyda eich cyfeiriadau TheHolyRoger i brofi mae chi sy'n berchen arnynt</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified ROGER addresses</source>
-        <translation>Gwirio negeseuon i sicrhau eu bod wedi eu harwyddo gyda cyfeiriadau The Holy Roger penodol</translation>
+        <translation>Gwirio negeseuon i sicrhau eu bod wedi eu harwyddo gyda cyfeiriadau TheHolyRoger penodol</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -419,7 +419,7 @@
     </message>
     <message>
         <source>Open a theholyroger: URI or payment request</source>
-        <translation>Agor The Holy Roger: URI neu ofyn taliad</translation>
+        <translation>Agor TheHolyRoger: URI neu ofyn taliad</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -524,8 +524,8 @@
         <translation>Mae'r waled &lt;b&gt;wedi'i amgryptio&lt;/b&gt; ac &lt;b&gt;ar glo&lt;/b&gt; ar hyn o bryd</translation>
     </message>
     <message>
-        <source>A fatal error occurred. The Holy Roger can no longer continue safely and will quit.</source>
-        <translation>Mae gwall angheuol wedi digwydd. Ni all The Holy Roger barhau'n ddiogel ac mae'n cau lawr.</translation>
+        <source>A fatal error occurred. TheHolyRoger can no longer continue safely and will quit.</source>
+        <translation>Mae gwall angheuol wedi digwydd. Ni all TheHolyRoger barhau'n ddiogel ac mae'n cau lawr.</translation>
     </message>
 </context>
 <context>
@@ -635,8 +635,8 @@
         <translation>Croeso</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1042,8 +1042,8 @@
         <translation>Opsiynau:</translation>
     </message>
     <message>
-        <source>The Holy Roger Core</source>
-        <translation>Craidd The Holy Roger</translation>
+        <source>TheHolyRoger Core</source>
+        <translation>Craidd TheHolyRoger</translation>
     </message>
     <message>
         <source>Information</source>

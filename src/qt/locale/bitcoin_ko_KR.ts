@@ -366,7 +366,7 @@
         <translation>메시지 확인(&amp;V)...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
+        <source>TheHolyRoger</source>
         <translation>라이트코인을</translation>
     </message>
     <message>
@@ -438,7 +438,7 @@
         <translation>명령줄 옵션(&amp;C)</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to The Holy Roger network</source>
+        <source>%n active connection(s) to TheHolyRoger network</source>
         <translation><numerusform>라이트코인을 네트워크에 %n개의 연결이 활성화되어 있습니다.</numerusform></translation>
     </message>
     <message>
@@ -482,7 +482,7 @@
         <translation>현재까지</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible The Holy Roger command-line options</source>
+        <source>Show the %1 help message to get a list with possible TheHolyRoger command-line options</source>
         <translation>사용할 수 있는 라이트코인을 명령줄 옵션 목록을 가져오기 위해 %1 도움말 메시지를 표시합니다.</translation>
     </message>
     <message>
@@ -552,7 +552,7 @@
         <translation>지갑이 &lt;b&gt;암호화&lt;/b&gt; 되었고 현재 &lt;b&gt;잠겨져&lt;/b&gt; 있습니다</translation>
     </message>
     <message>
-        <source>A fatal error occurred. The Holy Roger can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. TheHolyRoger can no longer continue safely and will quit.</source>
         <translation>치명적인 오류가 발생했습니다. 라이트코인을을 더이상 안전하게 진행할 수 없어 곧 종료합니다.</translation>
     </message>
 </context>
@@ -875,7 +875,7 @@
         <translation>커스텀 데이터 폴더 사용:</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
+        <source>TheHolyRoger</source>
         <translation>라이트코인을</translation>
     </message>
     <message>
@@ -887,8 +887,8 @@
         <translation>약 %1GB의 데이터가 이 디렉토리에 저장됩니다.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the The Holy Roger block chain.</source>
-        <translation>%1은 The Holy Roger 블록 체인의 사본을 다운로드하여 저장합니다.</translation>
+        <source>%1 will download and store a copy of the TheHolyRoger block chain.</source>
+        <translation>%1은 TheHolyRoger 블록 체인의 사본을 다운로드하여 저장합니다.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1092,8 +1092,8 @@
         <translation>검증되지 않은 잔돈 쓰기 (&amp;S)</translation>
     </message>
     <message>
-        <source>Automatically open the The Holy Roger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>라우터에서 The Holy Roger 클라이언트 포트를 자동적으로 엽니다. 라우터에서 UPnP를 지원하고 활성화 했을 경우에만 동작합니다.</translation>
+        <source>Automatically open the TheHolyRoger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>라우터에서 TheHolyRoger 클라이언트 포트를 자동적으로 엽니다. 라우터에서 UPnP를 지원하고 활성화 했을 경우에만 동작합니다.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1108,7 +1108,7 @@
         <translation>연결 요청을 허용합니다.</translation>
     </message>
     <message>
-        <source>Connect to the The Holy Roger network through a SOCKS5 proxy.</source>
+        <source>Connect to the TheHolyRoger network through a SOCKS5 proxy.</source>
         <translation>SOCKS5 프록시를 통해 라이트코인을 네트워크 연결</translation>
     </message>
     <message>
@@ -1144,7 +1144,7 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the The Holy Roger network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the TheHolyRoger network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation>Tor 서비스를 경유하여 라이트코인을 네트워크에 연결하기 위해 분리된 SOCKS5 프록시를 사용.</translation>
     </message>
     <message>
@@ -1251,7 +1251,7 @@
         <translation>유형</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the The Holy Roger network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the TheHolyRoger network after a connection is established, but this process has not completed yet.</source>
         <translation>표시된 정보가 오래된 것 같습니다. 라이트코인을 네트워크에 연결하고 난 다음에 지갑을 자동으로 동기화 하지만, 아직 과정이 끝나지는 않았습니다.</translation>
     </message>
     <message>
@@ -1868,7 +1868,7 @@
         <translation>메시지(&amp;M):</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the The Holy Roger network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the TheHolyRoger network.</source>
         <translation>지불 요청에 첨부되는 선택가능한 메시지 입니다. 이 메세지는 요청이 열릴 때 표시될 것 입니다. 메모: 이 메시지는 라이트코인을 네트워크로 전송되지 않습니다.</translation>
     </message>
     <message>
@@ -2377,7 +2377,7 @@
         <translation>사용된 주소 목록에 새 주소를 추가하기 위해 라벨 이름을 입력해 주세요. </translation>
     </message>
     <message>
-        <source>A message that was attached to the theholyroger: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the The Holy Roger network.</source>
+        <source>A message that was attached to the theholyroger: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the TheHolyRoger network.</source>
         <translation>라이트코인을에 첨부된 메시지: 참고용으로 거래와 함께 저장될 URI. 메모: 이 메시지는 라이트코인을 네트워크로 전송되지 않습니다.</translation>
     </message>
     <message>
@@ -3179,7 +3179,7 @@
         <translation>HTTP 서버를 시작할 수 없습니다. 자세한 사항은 디버그 로그를 확인 하세요.</translation>
     </message>
     <message>
-        <source>The Holy Roger Core</source>
+        <source>TheHolyRoger Core</source>
         <translation>라이트코인을 코어</translation>
     </message>
     <message>

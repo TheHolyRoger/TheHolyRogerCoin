@@ -63,11 +63,11 @@
     </message>
     <message>
         <source>These are your ROGER addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Hierdie is die adresse vanwaar u The Holy Roger betalings stuur. U moet altyd die bedrag en die adres van die ontvanger nagaan voordat u enige munte stuur.</translation>
+        <translation>Hierdie is die adresse vanwaar u TheHolyRoger betalings stuur. U moet altyd die bedrag en die adres van die ontvanger nagaan voordat u enige munte stuur.</translation>
     </message>
     <message>
         <source>These are your ROGER addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Hierdie is die adresse waar u The Holy Rogers sal ontvang. Ons beveel aan dat u 'n nuwe adres kies vir elke transaksie</translation>
+        <translation>Hierdie is die adresse waar u TheHolyRogers sal ontvang. Ons beveel aan dat u 'n nuwe adres kies vir elke transaksie</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -335,7 +335,7 @@
     </message>
     <message>
         <source>Send coins to a ROGER address</source>
-        <translation>Stuur munte na 'n The Holy Roger adres</translation>
+        <translation>Stuur munte na 'n TheHolyRoger adres</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -358,8 +358,8 @@
         <translation>&amp;Verifieer boodskap...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -387,11 +387,11 @@
     </message>
     <message>
         <source>Sign messages with your ROGER addresses to prove you own them</source>
-        <translation>Onderteken boodskappe met u The Holy Roger adresse om u eienaarskap te bewys</translation>
+        <translation>Onderteken boodskappe met u TheHolyRoger adresse om u eienaarskap te bewys</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified ROGER addresses</source>
-        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde The Holy Roger adresse</translation>
+        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde TheHolyRoger adresse</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -516,8 +516,8 @@
         <translation>Inkomende transaksie</translation>
     </message>
     <message>
-        <source>A fatal error occurred. The Holy Roger can no longer continue safely and will quit.</source>
-        <translation>'N fatale fout het voorgekom. The Holy Roger kan nie meer veilig voortgaan nie en sal nou toemaak.</translation>
+        <source>A fatal error occurred. TheHolyRoger can no longer continue safely and will quit.</source>
+        <translation>'N fatale fout het voorgekom. TheHolyRoger kan nie meer veilig voortgaan nie en sal nou toemaak.</translation>
     </message>
 </context>
 <context>
@@ -711,7 +711,7 @@
     </message>
     <message>
         <source>The entered address "%1" is not a valid ROGER address.</source>
-        <translation>Die ingevoerde adres "%1" is nie 'n geldige The Holy Roger adres nie.</translation>
+        <translation>Die ingevoerde adres "%1" is nie 'n geldige TheHolyRoger adres nie.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -823,8 +823,8 @@
         <translation>Gebruik 'n persoonlike data gids:</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1189,7 +1189,7 @@
     </message>
     <message>
         <source>Enter a ROGER address (e.g. %1)</source>
-        <translation>Voer in 'n The Holy Roger adres (bv. %1)</translation>
+        <translation>Voer in 'n TheHolyRoger adres (bv. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1918,8 +1918,8 @@
         <translation>Opsies:</translation>
     </message>
     <message>
-        <source>The Holy Roger Core</source>
-        <translation>The Holy Roger Kern</translation>
+        <source>TheHolyRoger Core</source>
+        <translation>TheHolyRoger Kern</translation>
     </message>
     <message>
         <source>Connection options:</source>

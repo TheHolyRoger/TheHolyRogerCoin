@@ -63,11 +63,11 @@
     </message>
     <message>
         <source>These are your ROGER addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estes são os seus endereços The Holy Roger para enviar pagamentos. Verifique sempre o valor e o endereço de envio antes de enviar moedas.</translation>
+        <translation>Estes são os seus endereços TheHolyRoger para enviar pagamentos. Verifique sempre o valor e o endereço de envio antes de enviar moedas.</translation>
     </message>
     <message>
         <source>These are your ROGER addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estes são os seus endereços The Holy Roger para receber pagamentos. É recomendado que utilize um endereço novo para cada transacção.</translation>
+        <translation>Estes são os seus endereços TheHolyRoger para receber pagamentos. É recomendado que utilize um endereço novo para cada transacção.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -343,7 +343,7 @@
     </message>
     <message>
         <source>Send coins to a ROGER address</source>
-        <translation>Enviar moedas para um endereço The Holy Roger</translation>
+        <translation>Enviar moedas para um endereço TheHolyRoger</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -366,8 +366,8 @@
         <translation>&amp;Verificar mensagem...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -395,11 +395,11 @@
     </message>
     <message>
         <source>Sign messages with your ROGER addresses to prove you own them</source>
-        <translation>Assine as mensagens com os seus endereços The Holy Roger para provar que é o proprietário dos mesmos</translation>
+        <translation>Assine as mensagens com os seus endereços TheHolyRoger para provar que é o proprietário dos mesmos</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified ROGER addresses</source>
-        <translation>Verifique mensagens para assegurar que foram assinadas com o endereço The Holy Roger especificado</translation>
+        <translation>Verifique mensagens para assegurar que foram assinadas com o endereço TheHolyRoger especificado</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -438,8 +438,8 @@
         <translation>&amp;Opções da linha de &amp;comando</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to The Holy Roger network</source>
-        <translation><numerusform>%n ligação ativa à rede The Holy Roger</numerusform><numerusform>%n ligações ativas à rede The Holy Roger</numerusform></translation>
+        <source>%n active connection(s) to TheHolyRoger network</source>
+        <translation><numerusform>%n ligação ativa à rede TheHolyRoger</numerusform><numerusform>%n ligações ativas à rede TheHolyRoger</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -482,7 +482,7 @@
         <translation>Atualizado</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible The Holy Roger command-line options</source>
+        <source>Show the %1 help message to get a list with possible TheHolyRoger command-line options</source>
         <translation>Mostrar a mensagem de ajuda %1 para obter uma lista com possíveis opções a usar na linha de comandos.</translation>
     </message>
     <message>
@@ -552,8 +552,8 @@
         <translation>A carteira está &lt;b&gt;encriptada&lt;/b&gt; e atualmente &lt;b&gt;bloqueada&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. The Holy Roger can no longer continue safely and will quit.</source>
-        <translation>Ocorreu um erro fatal. O The Holy Roger não pode continuar com segurança e irá fechar.</translation>
+        <source>A fatal error occurred. TheHolyRoger can no longer continue safely and will quit.</source>
+        <translation>Ocorreu um erro fatal. O TheHolyRoger não pode continuar com segurança e irá fechar.</translation>
     </message>
 </context>
 <context>
@@ -859,8 +859,8 @@
         <translation>Utilizar uma pasta de dados personalizada:</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Approximately %1 GB of data will be stored in this directory.</source>
@@ -1053,7 +1053,7 @@
         <translation>&amp;Gastar troco não confirmado</translation>
     </message>
     <message>
-        <source>Automatically open the The Holy Roger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the TheHolyRoger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Abrir a porta do cliente ROGER automaticamente no seu router. Isto apenas funciona se o seu router suportar UPnP e este se encontrar ligado.</translation>
     </message>
     <message>
@@ -1069,8 +1069,8 @@
         <translation>Permitir ligações de "a receber"</translation>
     </message>
     <message>
-        <source>Connect to the The Holy Roger network through a SOCKS5 proxy.</source>
-        <translation>Conectar à rede da The Holy Roger através dum proxy SOCLS5.</translation>
+        <source>Connect to the TheHolyRoger network through a SOCKS5 proxy.</source>
+        <translation>Conectar à rede da TheHolyRoger através dum proxy SOCLS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1105,8 +1105,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the The Holy Roger network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Ligar à rede The Holy Roger através de um proxy SOCKS5 separado para utilizar os serviços ocultos do Tor.</translation>
+        <source>Connect to the TheHolyRoger network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Ligar à rede TheHolyRoger através de um proxy SOCKS5 separado para utilizar os serviços ocultos do Tor.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1208,8 +1208,8 @@
         <translation>Formulário</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the The Holy Roger network after a connection is established, but this process has not completed yet.</source>
-        <translation>A informação mostrada poderá estar desatualizada. A sua carteira sincroniza automaticamente com a rede The Holy Roger depois de estabelecer ligação, mas este processo ainda não está completo.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the TheHolyRoger network after a connection is established, but this process has not completed yet.</source>
+        <translation>A informação mostrada poderá estar desatualizada. A sua carteira sincroniza automaticamente com a rede TheHolyRoger depois de estabelecer ligação, mas este processo ainda não está completo.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1300,7 +1300,7 @@
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid ROGER address or malformed URI parameters.</source>
-        <translation>URI não foi lido correctamente! Isto pode ser causado por um endereço The Holy Roger inválido ou por parâmetros URI malformados.</translation>
+        <translation>URI não foi lido correctamente! Isto pode ser causado por um endereço TheHolyRoger inválido ou por parâmetros URI malformados.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1402,7 +1402,7 @@
     </message>
     <message>
         <source>Enter a ROGER address (e.g. %1)</source>
-        <translation>Entre um endereço The Holy Roger (ex. %1)</translation>
+        <translation>Entre um endereço TheHolyRoger (ex. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1809,8 +1809,8 @@
         <translation>&amp;Mensagem:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the The Holy Roger network.</source>
-        <translation>Uma mensagem opcional para anexar ao pedido de pagamento, que será exibida quando o pedido for aberto. Nota: A mensagem não será enviada com o pagamento através da rede The Holy Roger.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the TheHolyRoger network.</source>
+        <translation>Uma mensagem opcional para anexar ao pedido de pagamento, que será exibida quando o pedido for aberto. Nota: A mensagem não será enviada com o pagamento através da rede TheHolyRoger.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2192,7 +2192,7 @@
     </message>
     <message>
         <source>Warning: Invalid ROGER address</source>
-        <translation>Aviso: endereço The Holy Roger inválido</translation>
+        <translation>Aviso: endereço TheHolyRoger inválido</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2235,7 +2235,7 @@
     </message>
     <message>
         <source>The ROGER address to send the payment to</source>
-        <translation>O endereço The Holy Roger para enviar o pagamento</translation>
+        <translation>O endereço TheHolyRoger para enviar o pagamento</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2282,8 +2282,8 @@
         <translation>Introduza um rótulo para este endereço para o adicionar à sua lista de endereços usados</translation>
     </message>
     <message>
-        <source>A message that was attached to the theholyroger: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the The Holy Roger network.</source>
-        <translation>Uma mensagem que estava anexada ao URI theholyroger: que será armazenada com a transação para sua referência. Nota: Esta mensagem não será enviada através da rede The Holy Roger.</translation>
+        <source>A message that was attached to the theholyroger: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the TheHolyRoger network.</source>
+        <translation>Uma mensagem que estava anexada ao URI theholyroger: que será armazenada com a transação para sua referência. Nota: Esta mensagem não será enviada através da rede TheHolyRoger.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2332,7 +2332,7 @@
     </message>
     <message>
         <source>The ROGER address to sign the message with</source>
-        <translation>O endereço The Holy Roger para designar a mensagem</translation>
+        <translation>O endereço TheHolyRoger para designar a mensagem</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2364,7 +2364,7 @@
     </message>
     <message>
         <source>Sign the message to prove you own this ROGER address</source>
-        <translation>Assine uma mensagem para provar que é dono deste endereço The Holy Roger</translation>
+        <translation>Assine uma mensagem para provar que é dono deste endereço TheHolyRoger</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2388,11 +2388,11 @@
     </message>
     <message>
         <source>The ROGER address the message was signed with</source>
-        <translation>O endereço The Holy Roger com que a mensagem foi designada</translation>
+        <translation>O endereço TheHolyRoger com que a mensagem foi designada</translation>
     </message>
     <message>
         <source>Verify the message to ensure it was signed with the specified ROGER address</source>
-        <translation>Verifique a mensagem para assegurar que foi assinada com o endereço The Holy Roger especificado</translation>
+        <translation>Verifique a mensagem para assegurar que foi assinada com o endereço TheHolyRoger especificado</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3008,8 +3008,8 @@
         <translation>Não é possível iniciar o servidor HTTP. Verifique o debug.log para detalhes.</translation>
     </message>
     <message>
-        <source>The Holy Roger Core</source>
-        <translation>The Holy Roger Core</translation>
+        <source>TheHolyRoger Core</source>
+        <translation>TheHolyRoger Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

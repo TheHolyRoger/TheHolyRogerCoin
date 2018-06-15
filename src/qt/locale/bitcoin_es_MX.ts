@@ -63,7 +63,7 @@
     </message>
     <message>
         <source>These are your ROGER addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son tus direcciones de The Holy Roger para enviar pagos. Siempre revisa el monto y la dirección de envío antes de enviar monedas.</translation>
+        <translation>Estas son tus direcciones de TheHolyRoger para enviar pagos. Siempre revisa el monto y la dirección de envío antes de enviar monedas.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -179,7 +179,7 @@
     </message>
     <message>
         <source>Send coins to a ROGER address</source>
-        <translation>Enviar monedas a una dirección The Holy Roger</translation>
+        <translation>Enviar monedas a una dirección TheHolyRoger</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -202,8 +202,8 @@
         <translation>&amp;Verificar mensaje...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -365,8 +365,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Error</source>
@@ -458,8 +458,8 @@
         <translation>Mensaje:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the The Holy Roger network.</source>
-        <translation>Mensaje opcional para agregar a la solicitud de pago, el cual será mostrado cuando la solicitud este abierta. Nota: El mensaje no se manda con el pago a travéz de la red de The Holy Roger.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the TheHolyRoger network.</source>
+        <translation>Mensaje opcional para agregar a la solicitud de pago, el cual será mostrado cuando la solicitud este abierta. Nota: El mensaje no se manda con el pago a travéz de la red de TheHolyRoger.</translation>
     </message>
     <message>
         <source>Use this form to request payments. All fields are &lt;b&gt;optional&lt;/b&gt;.</source>
@@ -644,8 +644,8 @@
         <translation>Opciones:</translation>
     </message>
     <message>
-        <source>The Holy Roger Core</source>
-        <translation>nucleo The Holy Roger</translation>
+        <source>TheHolyRoger Core</source>
+        <translation>nucleo TheHolyRoger</translation>
     </message>
     <message>
         <source>&lt;category&gt; can be:</source>

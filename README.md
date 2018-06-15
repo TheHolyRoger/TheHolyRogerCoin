@@ -1,26 +1,26 @@
-The Holy Roger Core integration/staging tree
+TheHolyRoger Core integration/staging tree
 =====================================
 
 [![Build Status](https://travis-ci.org/TheHolyRoger/TheHolyRogerCoin.svg?branch=master)](https://travis-ci.org/TheHolyRoger/TheHolyRogerCoin)
 
 https://theholyroger.com
 
-What is The Holy Roger?
+What is TheHolyRoger?
 ----------------
 
-The Holy Roger is an experimental digital currency that enables instant payments to
-anyone, anywhere in the world. The Holy Roger uses peer-to-peer technology to operate
+TheHolyRoger is an experimental digital currency that enables instant payments to
+anyone, anywhere in the world. TheHolyRoger uses peer-to-peer technology to operate
 with no central authority: managing transactions and issuing money are carried
-out collectively by the network. The Holy Roger Core is the name of open source
+out collectively by the network. TheHolyRoger Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the The Holy Roger Core software, see [https://theholyroger.com](https://theholyroger.com).
+the TheHolyRoger Core software, see [https://theholyroger.com](https://theholyroger.com).
 
 License
 -------
 
-The Holy Roger Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+TheHolyRoger Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
 
 Development Process
@@ -28,7 +28,7 @@ Development Process
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
 completely stable. [Tags](https://github.com/TheHolyRoger/TheHolyRogerCoin/tags) are created
-regularly to indicate new official, stable release versions of The Holy Roger Core.
+regularly to indicate new official, stable release versions of TheHolyRoger Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -70,7 +70,7 @@ Translations
 ------------
 
 We only accept translation fixes that are submitted through [Bitcoin Core's Transifex page](https://www.transifex.com/projects/p/bitcoin/).
-Translations are converted to The Holy Roger periodically.
+Translations are converted to TheHolyRoger periodically.
 
 Translations are periodically pulled from Transifex and merged into the git repository. See the
 [translation process](doc/translation_process.md) for details on how this works.

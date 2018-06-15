@@ -335,7 +335,7 @@
     </message>
     <message>
         <source>Send coins to a ROGER address</source>
-        <translation>ارسل عملات الى عنوان The Holy Roger</translation>
+        <translation>ارسل عملات الى عنوان TheHolyRoger</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -358,7 +358,7 @@
         <translation>&amp;التحقق من الرسالة...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
+        <source>TheHolyRoger</source>
         <translation>بتكوين</translation>
     </message>
     <message>
@@ -387,11 +387,11 @@
     </message>
     <message>
         <source>Sign messages with your ROGER addresses to prove you own them</source>
-        <translation>وقَع الرسائل بواسطة ال: The Holy Roger الخاص بك لإثبات امتلاكك لهم</translation>
+        <translation>وقَع الرسائل بواسطة ال: TheHolyRoger الخاص بك لإثبات امتلاكك لهم</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified ROGER addresses</source>
-        <translation>تحقق من الرسائل للتأكد من أنَها وُقعت برسائل The Holy Roger محدَدة</translation>
+        <translation>تحقق من الرسائل للتأكد من أنَها وُقعت برسائل TheHolyRoger محدَدة</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -423,7 +423,7 @@
     </message>
     <message>
         <source>Open a theholyroger: URI or payment request</source>
-        <translation>فتح URI : The Holy Roger أو طلب دفع</translation>
+        <translation>فتح URI : TheHolyRoger أو طلب دفع</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -466,7 +466,7 @@
         <translation>محدث</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible The Holy Roger command-line options</source>
+        <source>Show the %1 help message to get a list with possible TheHolyRoger command-line options</source>
         <translation>بين اشارة المساعدة %1 للحصول على قائمة من خيارات اوامر البت كوين المحتملة </translation>
     </message>
     <message>
@@ -530,8 +530,8 @@
         <translation>المحفظة &lt;b&gt;مشفرة&lt;/b&gt; و &lt;b&gt;مقفلة&lt;/b&gt; حاليا</translation>
     </message>
     <message>
-        <source>A fatal error occurred. The Holy Roger can no longer continue safely and will quit.</source>
-        <translation>خطأ فادح حدث . لا يمكن اتمام The Holy Roger بامان سيتم الخروج</translation>
+        <source>A fatal error occurred. TheHolyRoger can no longer continue safely and will quit.</source>
+        <translation>خطأ فادح حدث . لا يمكن اتمام TheHolyRoger بامان سيتم الخروج</translation>
     </message>
 </context>
 <context>
@@ -809,7 +809,7 @@
         <translation>استخدام دليل بيانات مخصص:</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
+        <source>TheHolyRoger</source>
         <translation>بتكوين</translation>
     </message>
     <message>
@@ -2040,8 +2040,8 @@
         <translation>حدد مجلد المعلومات</translation>
     </message>
     <message>
-        <source>The Holy Roger Core</source>
-        <translation>جوهر The Holy Roger</translation>
+        <source>TheHolyRoger Core</source>
+        <translation>جوهر TheHolyRoger</translation>
     </message>
     <message>
         <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>

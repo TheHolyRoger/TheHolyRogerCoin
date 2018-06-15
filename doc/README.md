@@ -1,15 +1,15 @@
-The Holy Roger Core
+TheHolyRoger Core
 =============
 
 Setup
 ---------------------
-The Holy Roger Core is the original The Holy Roger client and it builds the backbone of the network. It downloads and, by default, stores the entire history of The Holy Roger transactions (which is currently more than 7 GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
+TheHolyRoger Core is the original TheHolyRoger client and it builds the backbone of the network. It downloads and, by default, stores the entire history of TheHolyRoger transactions (which is currently more than 7 GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download The Holy Roger Core, visit [theholyroger.com](https://theholyroger.com).
+To download TheHolyRoger Core, visit [theholyroger.com](https://theholyroger.com).
 
 Running
 ---------------------
-The following are some helpful notes on how to run The Holy Roger on your native platform.
+The following are some helpful notes on how to run TheHolyRoger on your native platform.
 
 ### Unix
 
@@ -24,18 +24,18 @@ Unpack the files into a directory, and then run theholyroger-qt.exe.
 
 ### OS X
 
-Drag The Holy Roger-Core to your applications folder, and then run The Holy Roger-Core.
+Drag TheHolyRoger-Core to your applications folder, and then run TheHolyRoger-Core.
 
 ### Need Help?
 
-* See the documentation at the [The Holy Roger Wiki](https://.info/)
+* See the documentation at the [TheHolyRoger Wiki](https://.info/)
 for help and more information.
 * Ask for help on [#](http://webchat.freenode.net?channels=) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=).
-* Ask for help on the [The Holy RogerTalk](https://litecointalk.io/) forums.
+* Ask for help on the [TheHolyRogerTalk](https://litecointalk.io/) forums.
 
 Building
 ---------------------
-The following are developer notes on how to build The Holy Roger on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build TheHolyRoger on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [Dependencies](dependencies.md)
 - [OS X Build Notes](build-osx.md)
@@ -46,7 +46,7 @@ The following are developer notes on how to build The Holy Roger on your native 
 
 Development
 ---------------------
-The The Holy Roger repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The TheHolyRoger repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Release Notes](release-notes.md)
@@ -61,8 +61,8 @@ The The Holy Roger repo's [root README](/README.md) contains relevant informatio
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [The Holy RogerTalk](https://litecointalk.io/) forums.
-* Discuss general The Holy Roger development on #theholyroger-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=theholyroger-dev).
+* Discuss on the [TheHolyRogerTalk](https://litecointalk.io/) forums.
+* Discuss general TheHolyRoger development on #theholyroger-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=theholyroger-dev).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

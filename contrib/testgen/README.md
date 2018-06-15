@@ -1,6 +1,6 @@
 ### TestGen ###
 
-Utilities to generate test vectors for the data-driven The Holy Roger tests.
+Utilities to generate test vectors for the data-driven TheHolyRoger tests.
 
 Usage: 
 

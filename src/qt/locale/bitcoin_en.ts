@@ -465,8 +465,8 @@
     </message>
     <message>
         <location line="+517"/>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <location line="-743"/>
@@ -555,10 +555,10 @@
     </message>
     <message numerus="yes">
         <location line="+357"/>
-        <source>%n active connection(s) to The Holy Roger network</source>
+        <source>%n active connection(s) to TheHolyRoger network</source>
         <translation>
-            <numerusform>%n active connection to The Holy Roger network</numerusform>
-            <numerusform>%n active connections to The Holy Roger network</numerusform>
+            <numerusform>%n active connection to TheHolyRoger network</numerusform>
+            <numerusform>%n active connections to TheHolyRoger network</numerusform>
         </translation>
     </message>
     <message>
@@ -616,7 +616,7 @@
     </message>
     <message>
         <location line="-441"/>
-        <source>Show the %1 help message to get a list with possible The Holy Roger command-line options</source>
+        <source>Show the %1 help message to get a list with possible TheHolyRoger command-line options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -696,7 +696,7 @@
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+534"/>
-        <source>A fatal error occurred. The Holy Roger can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. TheHolyRoger can no longer continue safely and will quit.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1099,8 +1099,8 @@
     </message>
     <message>
         <location filename="../intro.cpp" line="+20"/>
-        <source>The Holy Roger</source>
-        <translation type="unfinished">The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation type="unfinished">TheHolyRoger</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1114,7 +1114,7 @@
     </message>
     <message>
         <location line="+8"/>
-        <source>%1 will download and store a copy of the The Holy Roger block chain.</source>
+        <source>%1 will download and store a copy of the TheHolyRoger block chain.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1381,8 +1381,8 @@
     </message>
     <message>
         <location line="+30"/>
-        <source>Automatically open the The Holy Roger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatically open the The Holy Roger client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <source>Automatically open the TheHolyRoger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the TheHolyRoger client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1401,7 +1401,7 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the The Holy Roger network through a SOCKS5 proxy.</source>
+        <source>Connect to the TheHolyRoger network through a SOCKS5 proxy.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1449,7 +1449,7 @@
     </message>
     <message>
         <location line="+25"/>
-        <source>Connect to the The Holy Roger network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the TheHolyRoger network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1584,8 +1584,8 @@
     <message>
         <location line="+62"/>
         <location line="+386"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the The Holy Roger network after a connection is established, but this process has not completed yet.</source>
-        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the The Holy Roger network after a connection is established, but this process has not completed yet.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the TheHolyRoger network after a connection is established, but this process has not completed yet.</source>
+        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the TheHolyRoger network after a connection is established, but this process has not completed yet.</translation>
     </message>
     <message>
         <location line="-139"/>
@@ -2422,7 +2422,7 @@
     <message>
         <location line="-3"/>
         <location line="+46"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the The Holy Roger network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the TheHolyRoger network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3068,7 +3068,7 @@
     </message>
     <message>
         <location line="+54"/>
-        <source>A message that was attached to the theholyroger: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the The Holy Roger network.</source>
+        <source>A message that was attached to the theholyroger: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the TheHolyRoger network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4101,8 +4101,8 @@
     </message>
     <message>
         <location line="-397"/>
-        <source>The Holy Roger Core</source>
-        <translation type="unfinished">The Holy Roger Core</translation>
+        <source>TheHolyRoger Core</source>
+        <translation type="unfinished">TheHolyRoger Core</translation>
     </message>
     <message>
         <location line="+1"/>

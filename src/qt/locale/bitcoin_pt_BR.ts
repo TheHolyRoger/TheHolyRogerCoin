@@ -362,8 +362,8 @@
         <translation>&amp;Verificar mensagem...</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -391,11 +391,11 @@
     </message>
     <message>
         <source>Sign messages with your ROGER addresses to prove you own them</source>
-        <translation>Assine mensagens com seus endereços The Holy Roger para provar que você é dono delas</translation>
+        <translation>Assine mensagens com seus endereços TheHolyRoger para provar que você é dono delas</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified ROGER addresses</source>
-        <translation>Verificar mensagens para se assegurar que elas foram assinadas pelo dono de Endereços The Holy Roger específicos</translation>
+        <translation>Verificar mensagens para se assegurar que elas foram assinadas pelo dono de Endereços TheHolyRoger específicos</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -434,8 +434,8 @@
         <translation>Opções de linha de &amp;comando</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to The Holy Roger network</source>
-        <translation><numerusform>%n conexão ativa na rede The Holy Roger</numerusform><numerusform>%n conexões ativas na rede The Holy Roger</numerusform></translation>
+        <source>%n active connection(s) to TheHolyRoger network</source>
+        <translation><numerusform>%n conexão ativa na rede TheHolyRoger</numerusform><numerusform>%n conexões ativas na rede TheHolyRoger</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -478,8 +478,8 @@
         <translation>Atualizado</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible The Holy Roger command-line options</source>
-        <translation>Mostrar a mensagem de ajuda do %1 para obter uma lista com possíveis opções de linha de comando The Holy Roger</translation>
+        <source>Show the %1 help message to get a list with possible TheHolyRoger command-line options</source>
+        <translation>Mostrar a mensagem de ajuda do %1 para obter uma lista com possíveis opções de linha de comando TheHolyRoger</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -548,8 +548,8 @@
         <translation>Carteira está &lt;b&gt;criptografada&lt;/b&gt; e atualmente &lt;b&gt;bloqueada&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. The Holy Roger can no longer continue safely and will quit.</source>
-        <translation>Um erro fatal ocorreu. The Holy Roger não pode continuar em segurança e irá fechar.</translation>
+        <source>A fatal error occurred. TheHolyRoger can no longer continue safely and will quit.</source>
+        <translation>Um erro fatal ocorreu. TheHolyRoger não pode continuar em segurança e irá fechar.</translation>
     </message>
 </context>
 <context>
@@ -868,8 +868,8 @@ Esta sincronização inicial é muito exigente e pode expor problemas de hardwar
         <translation>Use um diretório de dados personalizado:</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -880,8 +880,8 @@ Esta sincronização inicial é muito exigente e pode expor problemas de hardwar
         <translation>Aproximadamente %1 GB de dados serão armazenados neste diretório.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the The Holy Roger block chain.</source>
-        <translation>%1 irá baixar e armazenar uma cópia da blockchain do The Holy Roger</translation>
+        <source>%1 will download and store a copy of the TheHolyRoger block chain.</source>
+        <translation>%1 irá baixar e armazenar uma cópia da blockchain do TheHolyRoger</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1081,8 +1081,8 @@ Esta sincronização inicial é muito exigente e pode expor problemas de hardwar
         <translation>Ga&amp;star mudança não confirmada</translation>
     </message>
     <message>
-        <source>Automatically open the The Holy Roger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir as portas do cliente The Holy Roger automaticamente no roteador. Isto só funcionará se seu roteador suportar UPnP e esta função estiver habilitada.</translation>
+        <source>Automatically open the TheHolyRoger client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir as portas do cliente TheHolyRoger automaticamente no roteador. Isto só funcionará se seu roteador suportar UPnP e esta função estiver habilitada.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1097,8 +1097,8 @@ Esta sincronização inicial é muito exigente e pode expor problemas de hardwar
         <translation>Permitir receber conexões</translation>
     </message>
     <message>
-        <source>Connect to the The Holy Roger network through a SOCKS5 proxy.</source>
-        <translation>Conectar na rede The Holy Roger através de um proxy SOCKS5.</translation>
+        <source>Connect to the TheHolyRoger network through a SOCKS5 proxy.</source>
+        <translation>Conectar na rede TheHolyRoger através de um proxy SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1133,8 +1133,8 @@ Esta sincronização inicial é muito exigente e pode expor problemas de hardwar
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the The Holy Roger network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Conecte-se à rede The Holy Roger através de um proxy SOCKS5 separado para utilizar serviços ocultos Tor.</translation>
+        <source>Connect to the TheHolyRoger network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Conecte-se à rede TheHolyRoger através de um proxy SOCKS5 separado para utilizar serviços ocultos Tor.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1236,8 +1236,8 @@ Esta sincronização inicial é muito exigente e pode expor problemas de hardwar
         <translation>Formulário</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the The Holy Roger network after a connection is established, but this process has not completed yet.</source>
-        <translation>A informação mostrada pode estar desatualizada. Sua carteira sincroniza automaticamente com a rede The Holy Roger depois que a conexão é estabelecida, mas este processo pode não estar completo ainda.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the TheHolyRoger network after a connection is established, but this process has not completed yet.</source>
+        <translation>A informação mostrada pode estar desatualizada. Sua carteira sincroniza automaticamente com a rede TheHolyRoger depois que a conexão é estabelecida, mas este processo pode não estar completo ainda.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1430,7 +1430,7 @@ Esta sincronização inicial é muito exigente e pode expor problemas de hardwar
     </message>
     <message>
         <source>Enter a ROGER address (e.g. %1)</source>
-        <translation>Informe um endereço The Holy Roger (ex: %1)</translation>
+        <translation>Informe um endereço TheHolyRoger (ex: %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1849,8 +1849,8 @@ Esta sincronização inicial é muito exigente e pode expor problemas de hardwar
         <translation>&amp;Mensagem</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the The Holy Roger network.</source>
-        <translation>Uma mensagem opcional que será anexada na cobrança e será mostrada quando ela for aberta. Nota: A mensagem não será enviada com o pagamento pela rede The Holy Roger.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the TheHolyRoger network.</source>
+        <translation>Uma mensagem opcional que será anexada na cobrança e será mostrada quando ela for aberta. Nota: A mensagem não será enviada com o pagamento pela rede TheHolyRoger.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2357,8 +2357,8 @@ Esta sincronização inicial é muito exigente e pode expor problemas de hardwar
         <translation>Digite um rótulo para este endereço para adicioná-lo no catálogo</translation>
     </message>
     <message>
-        <source>A message that was attached to the theholyroger: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the The Holy Roger network.</source>
-        <translation>A mensagem que foi anexada ao theholyroger: URI na qual será gravada na transação para sua referência. Nota: Essa mensagem não será gravada publicamente na rede The Holy Roger.</translation>
+        <source>A message that was attached to the theholyroger: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the TheHolyRoger network.</source>
+        <translation>A mensagem que foi anexada ao theholyroger: URI na qual será gravada na transação para sua referência. Nota: Essa mensagem não será gravada publicamente na rede TheHolyRoger.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2407,7 +2407,7 @@ Esta sincronização inicial é muito exigente e pode expor problemas de hardwar
     </message>
     <message>
         <source>The ROGER address to sign the message with</source>
-        <translation>O enderesso The Holy Roger que assinará a mensagem</translation>
+        <translation>O enderesso TheHolyRoger que assinará a mensagem</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2439,7 +2439,7 @@ Esta sincronização inicial é muito exigente e pode expor problemas de hardwar
     </message>
     <message>
         <source>Sign the message to prove you own this ROGER address</source>
-        <translation>Assinar mensagem para provar que você é dono deste endereço The Holy Roger</translation>
+        <translation>Assinar mensagem para provar que você é dono deste endereço TheHolyRoger</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2463,11 +2463,11 @@ Esta sincronização inicial é muito exigente e pode expor problemas de hardwar
     </message>
     <message>
         <source>The ROGER address the message was signed with</source>
-        <translation>O enderesso The Holy Roger que assionou a mesnagem</translation>
+        <translation>O enderesso TheHolyRoger que assionou a mesnagem</translation>
     </message>
     <message>
         <source>Verify the message to ensure it was signed with the specified ROGER address</source>
-        <translation>Verificar mensagem para se assegurar que ela foi assinada pelo dono de um endereço The Holy Roger específico.</translation>
+        <translation>Verificar mensagem para se assegurar que ela foi assinada pelo dono de um endereço TheHolyRoger específico.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3159,8 +3159,8 @@ Esta sincronização inicial é muito exigente e pode expor problemas de hardwar
         <translation>Não foi possível iniciar o servidor HTTP. Veja o log para detaihes.</translation>
     </message>
     <message>
-        <source>The Holy Roger Core</source>
-        <translation>The Holy Roger Core</translation>
+        <source>TheHolyRoger Core</source>
+        <translation>TheHolyRoger Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

@@ -143,7 +143,7 @@
     </message>
     <message>
         <source>Send coins to a ROGER address</source>
-        <translation>Enviar monedas a una dirección The Holy Roger</translation>
+        <translation>Enviar monedas a una dirección TheHolyRoger</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -158,8 +158,8 @@
         <translation>Abre la consola de depuración y diágnostico</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -187,11 +187,11 @@
     </message>
     <message>
         <source>Sign messages with your ROGER addresses to prove you own them</source>
-        <translation>Firma mensajes con tus direcciones The Holy Roger para probar que eres dueño de ellas</translation>
+        <translation>Firma mensajes con tus direcciones TheHolyRoger para probar que eres dueño de ellas</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified ROGER addresses</source>
-        <translation>Verificar mensajes para asegurar que estaban firmados con direcciones The Holy Roger especificas</translation>
+        <translation>Verificar mensajes para asegurar que estaban firmados con direcciones TheHolyRoger especificas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -437,8 +437,8 @@
         <translation>Usa un directorio de datos personalizado:</translation>
     </message>
     <message>
-        <source>The Holy Roger</source>
-        <translation>The Holy Roger</translation>
+        <source>TheHolyRoger</source>
+        <translation>TheHolyRoger</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -708,8 +708,8 @@
         <translation>Correr en segundo plano como daemon y aceptar comandos</translation>
     </message>
     <message>
-        <source>The Holy Roger Core</source>
-        <translation>The Holy Roger Core</translation>
+        <source>TheHolyRoger Core</source>
+        <translation>TheHolyRoger Core</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
