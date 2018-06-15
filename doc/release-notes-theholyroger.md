@@ -86,7 +86,7 @@ to new wallets; wallets made with previous versions will not be upgraded to be H
 
 The Holy Roger Core now has more flexibility in where the wallets directory can be
 located. Previously wallet database files were stored at the top level of the
- data directory. The behavior is now:
+theholyroger data directory. The behavior is now:
 
 - For new installations (where the data directory doesn't already exist),
   wallets will now be stored in a new `wallets/` subdirectory inside the data
@@ -189,7 +189,7 @@ Other changed command-line options
 Testing changes
 ----------------
 - The default regtest JSON-RPC port has been changed to 19443 to avoid conflict with testnet's default of 19332.
-- Segwit is now always active in regtest mode by default. Thus, if you upgrade a regtest node you will need to either -reindex or use the old rules by adding `vbparams=segwit:0:999999999999` to your regtest .conf. Failure to do this will result in a CheckBlockIndex() assertion failure that will look like: Assertion `(pindexFirstNeverProcessed != nullptr) == (pindex->nChainTx == 0)' failed.
+- Segwit is now always active in regtest mode by default. Thus, if you upgrade a regtest node you will need to either -reindex or use the old rules by adding `vbparams=segwit:0:999999999999` to your regtest theholyroger.conf. Failure to do this will result in a CheckBlockIndex() assertion failure that will look like: Assertion `(pindexFirstNeverProcessed != nullptr) == (pindex->nChainTx == 0)' failed.
 
 0.16.0 change log
 ------------------

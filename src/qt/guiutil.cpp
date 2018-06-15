@@ -615,10 +615,10 @@ fs::path static StartupShortcutPath()
 {
     std::string chain = ChainNameFromCommandLine();
     if (chain == CBaseChainParams::MAIN)
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "The Holy Roger.lnk";
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "TheHolyRoger.lnk";
     if (chain == CBaseChainParams::TESTNET) // Remove this special case when CBaseChainParams::TESTNET = "testnet4"
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "The Holy Roger (testnet).lnk";
-    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("The Holy Roger (%s).lnk", chain);
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "TheHolyRoger (testnet).lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("TheHolyRoger (%s).lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
@@ -758,9 +758,9 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (chain == CBaseChainParams::MAIN)
-            optionFile << "Name=The Holy Roger\n";
+            optionFile << "Name=TheHolyRoger\n";
         else
-            optionFile << strprintf("Name=The Holy Roger (%s)\n", chain);
+            optionFile << strprintf("Name=TheHolyRoger (%s)\n", chain);
         optionFile << "Exec=" << pszExePath << strprintf(" -min -testnet=%d -regtest=%d\n", gArgs.GetBoolArg("-testnet", false), gArgs.GetBoolArg("-regtest", false));
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
