@@ -1,0 +1,92 @@
+#!/sbin/openrc-run
+
+# backward compatibility for existing gentoo layout 
+#
+if [ -d "/var/lib/theholyroger/.theholyroger" ]; then
+	THEHOLYROGERD_DEFAULT_DATADIR="/var/lib/theholyroger/.theholyroger"
+else
+	THEHOLYROGERD_DEFAULT_DATADIR="/var/lib/theholyrogerd"
+fi
+
+THEHOLYROGERD_CONFIGFILE=${THEHOLYROGERD_CONFIGFILE:-/etc/theholyroger/theholyroger.conf}
+THEHOLYROGERD_PIDDIR=${THEHOLYROGERD_PIDDIR:-/var/run/theholyrogerd}
+THEHOLYROGERD_PIDFILE=${THEHOLYROGERD_PIDFILE:-${THEHOLYROGERD_PIDDIR}/theholyrogerd.pid}
+THEHOLYROGERD_DATADIR=${THEHOLYROGERD_DATADIR:-${THEHOLYROGERD_DEFAULT_DATADIR}}
+THEHOLYROGERD_USER=${THEHOLYROGERD_USER:-${THEHOLYROGER_USER:-theholyroger}}
+THEHOLYROGERD_GROUP=${THEHOLYROGERD_GROUP:-theholyroger}
+THEHOLYROGERD_BIN=${THEHOLYROGERD_BIN:-/usr/local/bin/theholyrogerd}
+THEHOLYROGERD_NICE=${THEHOLYROGERD_NICE:-${NICELEVEL:-0}}
+THEHOLYROGERD_OPTS="${THEHOLYROGERD_OPTS:-${THEHOLYROGER_OPTS}}"
+
+name="Bitcoin Core Daemon"
+description="Bitcoin cryptocurrency P2P network daemon"
+
+command="/usr/local/bin/theholyrogerd"
+command_args="-pid=\"${THEHOLYROGERD_PIDFILE}\" \
+		-conf=\"${THEHOLYROGERD_CONFIGFILE}\" \
+		-datadir=\"${THEHOLYROGERD_DATADIR}\" \
+		-daemon \
+		${THEHOLYROGERD_OPTS}"
+
+required_files="${THEHOLYROGERD_CONFIGFILE}"
+start_stop_daemon_args="-u ${THEHOLYROGERD_USER} \
+			-N ${THEHOLYROGERD_NICE} -w 2000"
+pidfile="${THEHOLYROGERD_PIDFILE}"
+
+# The retry schedule to use when stopping the daemon. Could be either
+# a timeout in seconds or multiple signal/timeout pairs (like
+# "SIGKILL/180 SIGTERM/300")
+retry="${THEHOLYROGERD_SIGTERM_TIMEOUT}"
+
+depend() {
+	need localmount net
+}
+
+# verify
+# 1) that the datadir exists and is writable (or create it)
+# 2) that a directory for the pid exists and is writable
+# 3) ownership and permissions on the config file
+start_pre() {
+	checkpath \
+	-d \
+	--mode 0750 \
+	--owner "${THEHOLYROGERD_USER}:${THEHOLYROGERD_GROUP}" \
+	"${THEHOLYROGERD_DATADIR}"
+
+	checkpath \
+	-d \
+	--mode 0755 \
+	--owner "${THEHOLYROGERD_USER}:${THEHOLYROGERD_GROUP}" \
+	"${THEHOLYROGERD_PIDDIR}"
+
+	checkpath -f \
+	-o ${THEHOLYROGERD_USER}:${THEHOLYROGERD_GROUP} \
+	-m 0660 \
+	${THEHOLYROGERD_CONFIGFILE}
+
+	checkconfig || return 1
+}
+
+checkconfig()
+{
+	if ! grep -qs '^rpcpassword=' "${THEHOLYROGERD_CONFIGFILE}" ; then
+		eerror ""
+		eerror "ERROR: You must set a secure rpcpassword to run theholyrogerd."
+		eerror "The setting must appear in ${THEHOLYROGERD_CONFIGFILE}"
+		eerror ""
+		eerror "This password is security critical to securing wallets "
+		eerror "and must not be the same as the rpcuser setting."
+		eerror "You can generate a suitable random password using the following "
+		eerror "command from the shell:"
+		eerror ""
+		eerror "bash -c 'tr -dc a-zA-Z0-9 < /dev/urandom | head -c32 && echo'"
+		eerror ""
+		eerror "It is recommended that you also set alertnotify so you are "
+		eerror "notified of problems:"
+		eerror ""
+		eerror "ie: alertnotify=echo %%s | mail -s \"Bitcoin Alert\"" \
+			"admin@foo.com"
+		eerror ""
+		return 1
+	fi
+}

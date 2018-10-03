@@ -1,0 +1,33 @@
+# /etc/conf.d/theholyrogerd: config file for /etc/init.d/theholyrogerd
+
+# Config file location
+#THEHOLYROGERD_CONFIGFILE="/etc/theholyroger/theholyroger.conf"
+
+# What directory to write pidfile to?  (created and owned by $THEHOLYROGERD_USER)
+#THEHOLYROGERD_PIDDIR="/var/run/theholyrogerd"
+
+# What filename to give the pidfile
+#THEHOLYROGERD_PIDFILE="${THEHOLYROGERD_PIDDIR}/theholyrogerd.pid"
+
+# Where to write theholyrogerd data (be mindful that the blockchain is large)
+#THEHOLYROGERD_DATADIR="/var/lib/theholyrogerd"
+
+# User and group to own theholyrogerd process
+#THEHOLYROGERD_USER="theholyroger"
+#THEHOLYROGERD_GROUP="theholyroger"
+
+# Path to theholyrogerd executable
+#THEHOLYROGERD_BIN="/usr/local/bin/theholyrogerd"
+
+# Nice value to run theholyrogerd under
+#THEHOLYROGERD_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#THEHOLYROGERD_OPTS=""
+
+# The timeout in seconds OpenRC will wait for theholyrogerd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+THEHOLYROGERD_SIGTERM_TIMEOUT=60
