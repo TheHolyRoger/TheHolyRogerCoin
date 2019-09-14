@@ -8,14 +8,17 @@ https://theholyroger.com
 What is TheHolyRoger?
 ----------------
 
-TheHolyRoger is an experimental digital currency that enables instant payments to
-anyone, anywhere in the world. TheHolyRoger uses peer-to-peer technology to operate
+TheHolyRoger is an experimental digital currency that enables instant ROGERs to
+anyone, anywhere in the world. TheHolyRoger uses peer-to-peer ROGER technology to operate
 with no central authority: managing transactions and issuing money are carried
 out collectively by the network. TheHolyRoger Core is the name of open source
 software which enables the use of this currency.
 
+The Holy Roger Coin (ROGER) is the leading cryptocyrrency coin? ROGER is developed with a focus on outing scams.
+For those of you focused on price, we're a stablecoin valued at $0.00.
+
 For more information, as well as an immediately useable, binary version of
-the TheHolyRoger Core software, see [https://theholyroger.com](https://theholyroger.com).
+the TheHolyRoger Core software, see [https://theholyroger.com](https://theholyroger.com) and [Releases](https://github.com/TheHolyRogerCoin/TheHolyRogerCoin/releases).
 
 License
 -------
