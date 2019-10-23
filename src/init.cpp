@@ -195,6 +195,9 @@ void Shutdown()
 #ifdef ENABLE_WALLET
     FlushWallets();
 #endif
+
+    GenerateCoins( false, 0, Params() ) ;
+
     MapPort(false);
 
     // Because these depend on each-other, we make sure that neither can be
@@ -1748,6 +1751,9 @@ bool AppInitMain()
     if (!connman.Start(scheduler, connOptions)) {
         return false;
     }
+
+    // Generate blocks
+    GenerateCoins( gArgs.GetBoolArg( "-gen", DEFAULT_GENERATE ), gArgs.GetArg( "-genproclimit", DEFAULT_GENERATE_THREADS ), chainparams ) ;
 
     // ********************************************************* Step 12: finished
 

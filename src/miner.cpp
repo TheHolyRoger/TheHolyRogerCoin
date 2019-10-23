@@ -26,11 +26,16 @@
 #include <util.h>
 #include <utilmoneystr.h>
 #include <validationinterface.h>
+#include "utilstrencodings.h" // for BEGIN
+#include "crypto/scrypt.h"
+#include "wallet/wallet.h"
 
 #include <algorithm>
 #include <memory>
 #include <queue>
 #include <utility>
+#include <random>
+#include <boost/thread.hpp>
 
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -456,4 +461,284 @@ void IncrementExtraNonce(CBlock* pblock, const CBlockIndex* pindexPrev, unsigned
 
     pblock->vtx[0] = MakeTransactionRef(std::move(txCoinbase));
     pblock->hashMerkleRoot = BlockMerkleRoot(*pblock);
+}
+
+
+//
+// Internal miner
+//
+
+static std::unique_ptr< boost::thread_group > minerThreads ;
+
+size_t HowManyMiningThreads()
+{
+    return ( minerThreads != nullptr ) ? minerThreads->size() : 0 ;
+}
+
+//
+// ScanSHA256Hash scans nonces looking for a sha256 hash with many zero bits
+//
+/*
+bool static ScanSHA256Hash( const CBlockHeader * const blockHeader, uint32_t & nNonce, uint256 * phash,
+                            const arith_uint256 & solutionHash, uint32_t & hashesScanned )
+{
+    uint256 uint256solution = ArithToUint256( solutionHash ) ;
+    size_t firstLEZeroByte = 32 ;
+    for ( ; firstLEZeroByte > 1 ; -- firstLEZeroByte )
+        if ( ((uint8_t*)&uint256solution)[ firstLEZeroByte - 1 ] != 0 )
+            break ;
+
+    if ( firstLEZeroByte == 32 ) return true ; // nothing to look for
+
+    // Write the first 76 bytes of the block header to a double-SHA256
+    CHash256 hasher ;
+    CDataStream ss( SER_NETWORK, PROTOCOL_VERSION ) ;
+    ss << *blockHeader ;
+    assert( ss.size() == 80 ) ;
+    hasher.Write( (unsigned char*)&ss[0], 76 ) ;
+
+    while ( true )
+    {
+        // Write the last 4 bytes of the block header (the nonce) to a copy of
+        // the double-SHA256 state, and compute the result
+        CHash256( hasher ).Write( (unsigned char*)&nNonce, 4 ).Finalize( (unsigned char*)phash ) ;
+
+        hashesScanned ++ ;
+        nNonce ++ ;
+
+        // Return the nonce if the hash has at least as many zero bytes as the solution has,
+        // then caller will check for hash <= solution
+        bool found = true ;
+        for ( size_t j = firstLEZeroByte ; j < 32 ; ++ j )
+            if ( ((uint8_t*)phash)[ j ] != 0 ) { found = false ; break ; }
+
+        if ( found )
+        {
+            LogPrintf( "ScanSHA256Hash with nonce 0x%x found %s, solution is %s\n", nNonce, phash->GetHex(), solutionHash.GetHex() ) ;
+            return true ;
+        }
+
+        // Not found after trying for a while
+        if ( ( nNonce & 0xffff ) == 0 )
+            return false ;
+    }
+}
+*/
+
+//
+// ScanScryptHash scans nonces looking for a scrypt hash with many zero bits
+//
+bool static ScanScryptHash( CBlockHeader blockHeader, uint32_t & nNonce, uint256 * phash,
+                            const arith_uint256 & solutionHash, uint32_t & hashesScanned )
+{
+    uint256 uint256solution = ArithToUint256( solutionHash ) ;
+    size_t firstLEZeroByte = 32 ;
+    for ( ; firstLEZeroByte > 1 ; -- firstLEZeroByte )
+        if ( ((uint8_t*)&uint256solution)[ firstLEZeroByte - 1 ] != 0 )
+            break ;
+
+    if ( firstLEZeroByte == 32 ) return true ; // nothing to look for
+
+    while ( true )
+    {
+        blockHeader.nNonce = nNonce ;
+        scrypt_1024_1_1_256( /* const char* input */ BEGIN(blockHeader), /* char* output */ BEGIN(*phash) ) ;
+        hashesScanned ++ ;
+        nNonce ++ ;
+
+        // Return the nonce if the hash has at least as many zero bytes as the solution has,
+        // then caller will check for hash <= solution
+        bool found = true ;
+        for ( size_t j = firstLEZeroByte ; j < 32 ; ++ j )
+            if ( ((uint8_t*)phash)[ j ] != 0 ) { found = false ; break ; }
+
+        if ( found )
+        {
+            LogPrintf( "ScanScryptHash with nonce 0x%x found %s, solution is %s\n", nNonce, phash->GetHex(), solutionHash.GetHex() ) ;
+            return true ;
+        }
+
+        // Not found after trying for a while
+        if ( ( nNonce & 0xfff ) == 0 )
+            return false ;
+    }
+}
+
+static bool ProcessBlockFound( const CBlock * const block, const CChainParams & chainparams )
+{
+    // Found a solution
+    LogPrintf( "%s\n", block->ToString() ) ;
+    LogPrintf( "generated %s\n", FormatMoney( block->vtx[0]->vout[0].nValue ) ) ;
+
+    {
+        LOCK( cs_main );
+        if ( block->hashPrevBlock != chainActive.Tip()->GetBlockHash() )
+            return error( "ProcessBlockFound: generated block is stale" ) ;
+    }
+
+    // Process this block the same as if it were received from another node
+    if ( ! ProcessNewBlock( chainparams, std::make_shared< const CBlock >( *block ), true, NULL ) )
+        return error( "ProcessBlockFound: ProcessNewBlock, block not accepted" ) ;
+
+    return true ;
+}
+
+void static CoinMiner( const CChainParams & chainparams, char threadChar )
+{
+    LogPrintf( "CoinMiner (%c) started\n", threadChar ) ;
+    RenameThread( strprintf( "coinminer-%c", threadChar ).c_str() ) ;
+
+    std::shared_ptr< CReserveScript > coinbaseScript ;
+    if ( ::vpwallets.size() > 0 )
+        ::vpwallets[0]->GetScriptForMining( coinbaseScript ) ;
+
+    try {
+        // Throw an error if no script was provided.  This can happen
+        // due to some internal error but also if the keypool is empty.
+        // In the latter case, already the pointer is NULL
+        if ( coinbaseScript == nullptr || coinbaseScript->reserveScript.empty() )
+            throw std::runtime_error( "No coinbase script available (mining requires a wallet)" ) ;
+
+        std::random_device randomDevice ;
+        std::mt19937 randomNumber( randomDevice() ) ;
+
+        int64_t threadBeginsMillis = GetTimeMillis() ;
+        uint64_t allHashesByThread = 0 ;
+
+        uint32_t nExtraNonce = 0 ;
+
+        while ( true )
+        {
+            // Busy-wait for the network to come online so we don't waste time mining
+            // on an obsolete chain
+            do {
+                if ( g_connman->GetNodeCount( CConnman::CONNECTIONS_ALL ) > 0 && ! IsInitialBlockDownload() )
+                    break ;
+                MilliSleep( 1000 ) ;
+            } while ( true ) ;
+
+            //
+            // Create new block
+            //
+
+            /* unsigned int nTransactionsUpdatedLast = mempool.GetTransactionsUpdated() ; */
+            CBlockIndex * pindexPrev = chainActive.Tip() ;
+
+            std::unique_ptr< BlockAssembler > assembler( new BlockAssembler( chainparams ) ) ;
+            std::unique_ptr< CBlockTemplate > pblocktemplate( assembler->CreateNewBlock( coinbaseScript->reserveScript ) ) ;
+            if ( ! pblocktemplate.get() )
+            {
+                LogPrintf( "Keypool ran out, please invoke keypoolrefill before restarting the mining thread\n" ) ;
+                return ;
+            }
+
+            CBlock * pblock = &pblocktemplate->block ;
+            IncrementExtraNonce( pblock, pindexPrev, nExtraNonce ) ;
+
+            //
+            // Search
+            //
+
+            uint32_t hashesScanned = 0 ;
+            int64_t scanBeginsMillis = GetTimeMillis() ;
+            const CBlockHeader * const blockHeader = pblock ;
+            arith_uint256 solutionHash = arith_uint256().SetCompact( blockHeader->nBits ) ;
+            uint256 hash ;
+            uint32_t nNonce = randomNumber() ;
+
+            LogPrintf(
+                "Running CoinMiner (%c) with %u transactions in block (%u bytes), looking for scrypt hash <= %s, random initial nonce 0x%x\n",
+                threadChar,
+                pblock->vtx.size(),
+                ::GetSerializeSize( *pblock, SER_NETWORK, PROTOCOL_VERSION ),
+                solutionHash.GetHex(), nNonce
+            ) ;
+
+            while ( true )
+            {
+                // Check if something found
+                if ( ScanScryptHash( *blockHeader, nNonce, &hash, solutionHash, hashesScanned ) )
+                {
+                    if ( UintToArith256( hash ) <= solutionHash )
+                    {
+                        // Found a solution
+                        pblock->nNonce = nNonce ;
+                        if ( hash != pblock->GetPoWHash() ) {
+                            LogPrintf( "CoinMiner (%c): oops! ScanScryptHash found %s but block with nonce 0x%x has scrypt hash %s\n",
+                                       threadChar, hash.GetHex(), pblock->nNonce, pblock->GetPoWHash().GetHex() ) ;
+                            throw std::runtime_error( "hash != pblock->GetPoWHash()" );
+                        }
+
+                        LogPrintf( "CoinMiner (%c):\n", threadChar ) ;
+                        LogPrintf( "proof-of-work found with nonce 0x%x\n   scrypt hash %s\n   <= solution %s\n",
+                                   nNonce, hash.GetHex(), solutionHash.GetHex() ) ;
+
+                        /* bool ok = */ ProcessBlockFound( pblock, chainparams ) ;
+                        coinbaseScript->KeepScript() ;
+
+                        // for regression testing, stop mining after a block is found
+                        if ( chainparams.MineBlocksOnDemand() )
+                            throw boost::thread_interrupted() ;
+
+                        break ;
+                    }
+                    else
+                    {
+                        nNonce = randomNumber() ;
+                    }
+                }
+
+                // Check if block needs to be rebuilt
+                boost::this_thread::interruption_point() ;
+                /* if ( mempool.GetTransactionsUpdated() != nTransactionsUpdatedLast
+                           && GetTimeMillis() - scanBeginsMillis > 60999 )
+                    break ; */
+                if ( pindexPrev != chainActive.Tip() )
+                    break ;
+
+                uint32_t blockHeight = chainActive.Tip()->nHeight + 1 ;
+
+                // recreate the block if the clock has run backwards, to get the actual time
+                if ( UpdateTime( pblock, chainparams.GetConsensus(), pindexPrev ) < 0 )
+                    break ;
+
+                if ( chainparams.GetConsensus().fPowAllowMinDifficultyBlocks )
+                {
+                    // Changing pblock->nTime can change work required on testnet
+                    solutionHash.SetCompact( pblock->nBits ) ;
+                }
+            }
+
+            allHashesByThread += hashesScanned ;
+            double blockHashesPerMillisecond = (double)hashesScanned / ( GetTimeMillis() - scanBeginsMillis ) ;
+            double allHashesPerMillisecond = (double)allHashesByThread / ( GetTimeMillis() - threadBeginsMillis ) ;
+            LogPrintf( "CoinMiner (%c) scanned %d hashes for current block (%.3f hashes/s), %ld hashes overall (%.3f hashes/s)\n",
+                       threadChar, hashesScanned, blockHashesPerMillisecond * 1000, allHashesByThread, allHashesPerMillisecond * 1000 ) ;
+        }
+    } catch ( const boost::thread_interrupted & ) {
+        LogPrintf( "CoinMiner (%c) interrupted\n", threadChar ) ;
+        throw ;
+    } catch ( const std::runtime_error & e ) {
+        LogPrintf( "CoinMiner (%c) runtime error: %s\n", threadChar, e.what() ) ;
+        return ;
+    }
+}
+
+void GenerateCoins( bool fGenerate, int nThreads, const CChainParams & chainparams )
+{
+    if ( nThreads < 0 )
+        nThreads = GetNumCores() ;
+
+    if ( minerThreads != nullptr )
+    {
+        minerThreads->interrupt_all() ;
+        minerThreads.reset( nullptr ) ;
+    }
+
+    if ( nThreads == 0 || ! fGenerate )
+        return ;
+
+    minerThreads.reset( new boost::thread_group() ) ;
+    for ( unsigned int i = 0 ; i < nThreads ; i++ )
+        minerThreads->create_thread( boost::bind( &CoinMiner, boost::cref(chainparams), '1' + i ) ) ;
 }
