@@ -18,7 +18,7 @@ pkg_add automake # (select highest version, e.g. 1.15)
 pkg_add python # (select highest version, e.g. 3.6)
 pkg_add boost
 
-git clone https://github.com/TheHolyRoger/TheHolyRogerCoin.git
+git clone https://github.com/TheHolyRogerCoin/TheHolyRogerCoin.git
 ```
 
 See [dependencies.md](dependencies.md) for a complete overview.

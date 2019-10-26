@@ -49,7 +49,7 @@ Build TheHolyRoger Core
 
 1. Clone the  source code and cd into ``
 
-        git clone https://github.com/TheHolyRoger/TheHolyRogerCoin
+        git clone https://github.com/TheHolyRogerCoin/TheHolyRogerCoin
         cd 
 
 2.  Build theholyroger-core:
