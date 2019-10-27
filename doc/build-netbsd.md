@@ -25,7 +25,7 @@ python27
 
 Download the source code:
 ```
-git clone https://github.com/TheHolyRoger/TheHolyRogerCoin
+git clone https://github.com/TheHolyRogerCoin/TheHolyRogerCoin
 ```
 
 See [dependencies.md](dependencies.md) for a complete overview.
