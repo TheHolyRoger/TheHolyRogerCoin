@@ -3118,13 +3118,12 @@ bool CheckBlock(const CBlock& block, CValidationState& state, const Consensus::P
                                  strprintf("Transaction check failed (tx hash %s) %s", tx->GetHash().ToString(), state.GetDebugMessage()));
 
     CBlockIndex* tip = chainActive.Tip();
-    if (tip->nHeight != 0 && !IsInitialBlockDownload()) {
+    if (tip && tip->nHeight != 0 && !IsInitialBlockDownload()) {
         if (!CheckBlockForBlackListedAddresses(block, tip->nHeight + 1, consensusParams)) {
             return state.DoS(50, error("CheckBlock() : transaction contains blacklisted source addresses"),
                              REJECT_INVALID, "blacklisted-addresses", true);
         }
     }
-
 
     unsigned int nSigOps = 0;
     for (const auto& tx : block.vtx)
