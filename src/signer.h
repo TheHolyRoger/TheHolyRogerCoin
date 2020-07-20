@@ -16,9 +16,7 @@
 #include <key.h>
 
 class CSporkSigner;
-
 extern CSporkSigner sporkSigner;
-extern std::string strMasterNodePrivKey;
 
 class CSporkSigner
 {

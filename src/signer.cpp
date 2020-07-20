@@ -27,10 +27,6 @@ using namespace boost;
 CCriticalSection cs_darksend;
 CSporkSigner sporkSigner;
 
-// count peers we've requested the list from
-int requestedMasterNodeList = 0;
-bool isMasternodeListSynced = false;
-
 bool CSporkSigner::SetKey(std::string strSecret, std::string& errorMessage, CKey& key, CPubKey& pubkey)
 {
     CBitcoinSecret vchSecret;
@@ -69,9 +65,9 @@ bool CSporkSigner::VerifyMessage(CPubKey pubkey, vector<unsigned char>& vchSig, 
     ss << strMessageMagic;
     ss << strMessage;
 
-/*    CKey key;
+    /* CKey key;
     key.SetPubKey(pubkey);
-    return key.Verify(ss.GetHash(), vchSig);*/
+    return key.Verify(ss.GetHash(), vchSig); */
 
     CPubKey pubkey2;
 
@@ -86,38 +82,6 @@ bool CSporkSigner::VerifyMessage(CPubKey pubkey, vector<unsigned char>& vchSig, 
     return pubkey2.GetID() == pubkey.GetID();
 
 }
-
-/*bool CDarksendQueue::Sign()
-{
-    if (!fMasterNode)
-        return false;
-
-    std::string strMessage = vin.ToString() + boost::lexical_cast<std::string>(nDenom) + boost::lexical_cast<std::string>(time) +
-                             boost::lexical_cast<std::string>(ready);
-    CKey key2;
-    CPubKey pubkey2;
-    std::string errorMessage = "";
-
-    if (!darkSendSigner.SetKey(strMasterNodePrivKey, errorMessage, key2, pubkey2))
-    {
-        LogPrintf("CDarksendQueue():Relay - ERROR: Invalid masternodeprivkey: '%s'\n", errorMessage.c_str());
-        return false;
-    }
-
-    if (!darkSendSigner.SignMessage(strMessage, errorMessage, vchSig, key2))
-    {
-        LogPrintf("CDarksendQueue():Relay - Sign message failed");
-        return false;
-    }
-
-    if (!darkSendSigner.VerifyMessage(pubkey2, vchSig, strMessage, errorMessage))
-    {
-        LogPrintf("CDarksendQueue():Relay - Verify message failed");
-        return false;
-    }
-
-    return true;
-}*/
 
 /*void ThreadCheckDarkSend(CConnman& connman)
 {
