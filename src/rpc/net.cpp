@@ -13,6 +13,8 @@
 #include <netbase.h>
 #include <policy/policy.h>
 #include <rpc/protocol.h>
+#include <spork.h>
+#include <sporkdb.h>
 #include <sync.h>
 #include <timedata.h>
 #include <ui_interface.h>
@@ -624,6 +626,54 @@ UniValue setnetworkactive(const JSONRPCRequest& request)
     return g_connman->GetNetworkActive();
 }
 
+
+UniValue spork(const JSONRPCRequest& request)
+{
+    if (request.params.size() == 1 && request.params[0].get_str() == "show") {
+        UniValue ret(UniValue::VOBJ);
+
+        for (int nSporkID = SPORK_START; nSporkID <= SPORK_END; nSporkID++) {
+            if (sporkManager.GetSporkNameByID(nSporkID) != "Unknown")
+                ret.push_back(Pair(sporkManager.GetSporkNameByID(nSporkID), GetSporkValue(nSporkID)));
+        }
+
+        return ret;
+    } else if (request.params.size() == 1 && request.params[0].get_str() == "active") {
+        UniValue ret(UniValue::VOBJ);
+
+        for (int nSporkID = SPORK_START; nSporkID <= SPORK_END; nSporkID++) {
+            if (sporkManager.GetSporkNameByID(nSporkID) != "Unknown")
+                ret.push_back(Pair(sporkManager.GetSporkNameByID(nSporkID), IsSporkActive(nSporkID)));
+        }
+
+        return ret;
+    } else if (request.params.size() == 2) {
+        int nSporkID = sporkManager.GetSporkIDByName(request.params[0].get_str());
+
+        if (nSporkID == -1) {
+            return "Invalid spork name";
+        }
+
+        int64_t nValue = request.params[1].get_int64();
+
+        // broadcast new spork
+        if (sporkManager.UpdateSpork(nSporkID, nValue)) {
+            return "success";
+        } else {
+            return "failure";
+        }
+    }
+    {
+    throw std::runtime_error(
+        "spork <name-or-command> [<value>]\n"
+        "\nSet or get spork information.\n"
+        "\nArguments:\n"
+        "1. \"name\"         (string, required) is the corresponding spork name, or \"show\" to show all current spork settings. Use \"active\" to show which sporks are active\n"
+        "2. \"value\"        (numeric, optional) is a epoch datetime of the time to enable the spork or a non-zero numeric value"
+    );
+    }
+}
+
 static const CRPCCommand commands[] =
 { //  category              name                      actor (function)         argNames
   //  --------------------- ------------------------  -----------------------  ----------
@@ -639,6 +689,7 @@ static const CRPCCommand commands[] =
     { "network",            "listbanned",             &listbanned,             {} },
     { "network",            "clearbanned",            &clearbanned,            {} },
     { "network",            "setnetworkactive",       &setnetworkactive,       {"state"} },
+    { "network",            "spork",                  &spork,                  {"name", "value" } },
 };
 
 void RegisterNetRPCCommands(CRPCTable &t)
