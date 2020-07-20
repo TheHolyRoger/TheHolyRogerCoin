@@ -29,6 +29,7 @@
 #include <util.h>
 #include <utilmoneystr.h>
 #include <utilstrencodings.h>
+#include <spork.h>
 
 #include <memory>
 
@@ -2852,12 +2853,14 @@ bool static ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStr
         // message would be undesirable as we transmit it ourselves.
     }
 
+    else if (strCommand == NetMsgType::SPORK || strCommand == NetMsgType::GETSPORKS) {
+        ProcessSpork(pfrom, strCommand, vRecv);
+    }
+
     else {
         // Ignore unknown commands for extensibility
         LogPrint(BCLog::NET, "Unknown command \"%s\" from peer=%d\n", SanitizeString(strCommand), pfrom->GetId());
     }
-
-
 
     return true;
 }
