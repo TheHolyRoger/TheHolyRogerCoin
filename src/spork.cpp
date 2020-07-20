@@ -32,7 +32,8 @@ std::map<int, CSporkMessage> mapSporksActive;
 
 void LoadSporksFromDB()
 {
-    for (int i = SPORK_START; i <= SPORK_END; ++i) {
+    for (int i = SPORK_START; i <= SPORK_END; ++i)
+    {
         // Since not all spork IDs are in use, we have to exclude undefined IDs
         std::string strSpork = sporkManager.GetSporkNameByID(i);
         if (strSpork == "Unknown") continue;
@@ -48,6 +49,7 @@ void LoadSporksFromDB()
         mapSporks[spork.GetHash()] = spork;
         mapSporksActive[spork.nSporkID] = spork;
         std::time_t result = spork.nValue;
+
         // If SPORK Value is greater than 1,000,000 assume it's actually a Date and then convert to a more readable format
         if (spork.nValue > 1000000) {
             LogPrintf("%s : loaded spork %s with value %d : %s", __func__,
@@ -60,14 +62,14 @@ void LoadSporksFromDB()
     }
 }
 
-void ProcessSpork(CNode* pfrom, std::string& strCommand, CDataStream& vRecv)
+void ProcessSpork(CNode* pfrom, const std::string& strCommand, CDataStream& vRecv)
 {
     if (strCommand == NetMsgType::SPORK) {
         CDataStream vMsg(vRecv);
         CSporkMessage spork;
         vRecv >> spork;
 
-        if (chainActive.Tip() == NULL) return;
+        if (chainActive.Tip() == nullptr) return;
 
         // Ignore spork messages about unknown/deleted sporks
         std::string strSpork = sporkManager.GetSporkNameByID(spork.nSporkID);
@@ -95,6 +97,7 @@ void ProcessSpork(CNode* pfrom, std::string& strCommand, CDataStream& vRecv)
         sporkManager.Relay(spork);
         pSporkDB->WriteSpork(spork.nSporkID, spork);
     }
+
     if (strCommand == NetMsgType::GETSPORKS) {
         std::map<int, CSporkMessage>::iterator it = mapSporksActive.begin();
         CNetMsgMaker msgMaker(pfrom->GetSendVersion());
@@ -139,55 +142,14 @@ bool IsSporkActive(int nSporkID)
     return r < GetTime();
 }
 
-/*
-
-TODO: (ROGER) Remove - as it's probably not needed
-
-void ReprocessBlocks(int nBlocks)
-{
-    std::map<uint256, int64_t>::iterator it = mapRejectedBlocks.begin();
-    while (it != mapRejectedBlocks.end())
-    {
-        //use a window twice as large as is usual for the nBlocks we want to reset
-        if ((*it).second > GetTime() - (nBlocks * 60 * 5))
-        {
-            BlockMap::iterator mi = mapBlockIndex.find((*it).first);
-            if (mi != mapBlockIndex.end() && (*mi).second)
-            {
-                LOCK(cs_main);
-
-                CBlockIndex* pindex = (*mi).second;
-                LogPrintf("ReprocessBlocks - %s\n", (*it).first.ToString());
-
-                CValidationState state;
-                ReconsiderBlock(state, pindex);
-            }
-        }
-
-        ++it;
-    }
-
-    CValidationState state;
-    {
-        LOCK(cs_main);
-        DisconnectBlocksAndReprocess(nBlocks);
-    }
-
-    if (state.IsValid())
-    {
-        ActivateBestChain(state);
-    }
-}
-
-*/
-
 bool CSporkManager::CheckSignature(CSporkMessage& spork, bool fCheckSigner)
 {
     //note: need to investigate why this is failing
-    std::string strMessage = boost::lexical_cast<std::string>(spork.nSporkID) + boost::lexical_cast<std::string>(spork.nValue) + boost::lexical_cast<std::string>(spork.nTimeSigned);
+    std::string strMessage = boost::lexical_cast<std::string>(spork.nSporkID) + boost::lexical_cast<std::string>(spork.nValue) +
+                             boost::lexical_cast<std::string>(spork.nTimeSigned);
+
     CPubKey pubkeynew(ParseHex(Params().SporkKey()));
     std::string errorMessage = "";
-
     bool valid = sporkSigner.VerifyMessage(pubkeynew, spork.vchSig,strMessage, errorMessage);
 
     if (fCheckSigner && !valid)
@@ -198,13 +160,13 @@ bool CSporkManager::CheckSignature(CSporkMessage& spork, bool fCheckSigner)
 
 bool CSporkManager::Sign(CSporkMessage& spork)
 {
-    std::string strMessage = boost::lexical_cast<std::string>(spork.nSporkID) + boost::lexical_cast<std::string>(spork.nValue) + boost::lexical_cast<std::string>(spork.nTimeSigned);
-
+    std::string strMessage = boost::lexical_cast<std::string>(spork.nSporkID) + boost::lexical_cast<std::string>(spork.nValue) +
+                             boost::lexical_cast<std::string>(spork.nTimeSigned);
     CKey key2;
     CPubKey pubkey2;
     std::string errorMessage = "";
 
-    if (!sporkSigner.SetKey(strMasterPrivKey, errorMessage, key2, pubkey2)) {
+    if (!sporkSigner.SetKey(privKey, errorMessage, key2, pubkey2)) {
         LogPrintf("CMasternodePayments::Sign - ERROR: Invalid masternodeprivkey: '%s'\n", errorMessage);
         return false;
     }
@@ -248,9 +210,7 @@ void CSporkManager::Relay(CSporkMessage& msg)
 bool CSporkManager::SetPrivKey(std::string strPrivKey)
 {
     CSporkMessage msg;
-
-    // Test signing successful, proceed
-    strMasterPrivKey = strPrivKey;
+    privKey = strPrivKey;
 
     Sign(msg);
 
