@@ -35,6 +35,7 @@
 #include <script/standard.h>
 #include <script/sigcache.h>
 #include <scheduler.h>
+#include <sporkdb.h>
 #include <timedata.h>
 #include <txdb.h>
 #include <txmempool.h>
@@ -277,6 +278,10 @@ void Shutdown()
 #ifdef ENABLE_WALLET
     CloseWallets();
 #endif
+
+    delete pSporkDB;
+    pSporkDB = nullptr;
+
     globalVerifyHandle.reset();
     ECC_Stop();
     LogPrintf("%s: done\n", __func__);
@@ -1434,6 +1439,10 @@ bool AppInitMain()
         do {
             try {
                 UnloadBlockIndex();
+
+                delete pSporkDB;
+                pSporkDB = new CSporkDB(0, false, false);
+
                 pcoinsTip.reset();
                 pcoinsdbview.reset();
                 pcoinscatcher.reset();
