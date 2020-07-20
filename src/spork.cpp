@@ -64,6 +64,9 @@ void LoadSporksFromDB()
 
 void ProcessSpork(CNode* pfrom, const std::string& strCommand, CDataStream& vRecv)
 {
+    if (pfrom->nVersion < SPORK_VERSION)
+        return;
+
     if (strCommand == NetMsgType::SPORK) {
         CDataStream vMsg(vRecv);
         CSporkMessage spork;
