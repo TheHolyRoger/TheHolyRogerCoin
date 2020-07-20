@@ -3,8 +3,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef UNIGRID_CSPORKDB_H
-#define UNIGRID_CSPORKDB_H
+#ifndef CSPORKDB_H
+#define CSPORKDB_H
 
 #include <boost/filesystem/path.hpp>
 #include <dbwrapper.h>
@@ -27,4 +27,4 @@ public:
 
 extern CSporkDB* pSporkDB;
 
-#endif //UNIGRID_CSPORKDB_H
+#endif // CSPORKDB_H

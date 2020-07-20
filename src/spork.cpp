@@ -40,6 +40,7 @@ void LoadSporksFromDB()
 
         // attempt to read spork from sporkDB
         CSporkMessage spork;
+
         if (!pSporkDB->ReadSpork(i, spork)) {
             LogPrintf("%s : no previous value for %s found in database\n", __func__, strSpork);
             continue;
@@ -112,7 +113,6 @@ void ProcessSpork(CNode* pfrom, const std::string& strCommand, CDataStream& vRec
     }
 }
 
-// grab the value of the spork on the network, or the default
 int64_t GetSporkValue(int nSporkID)
 {
     int64_t r = -1;
@@ -127,7 +127,7 @@ int64_t GetSporkValue(int nSporkID)
     return r;
 }
 
-// grab the spork value, and see if it's off
+// Grab the spork value, and see if it's off
 bool IsSporkActive(int nSporkID)
 {
     int64_t r = GetSporkValue(nSporkID);
@@ -170,17 +170,17 @@ bool CSporkManager::Sign(CSporkMessage& spork)
     std::string errorMessage = "";
 
     if (!sporkSigner.SetKey(privKey, errorMessage, key2, pubkey2)) {
-        LogPrintf("CMasternodePayments::Sign - ERROR: Invalid masternodeprivkey: '%s'\n", errorMessage);
+        LogPrintf("%s [ERROR] : Invalid spork key: '%s'\n", __func__, errorMessage);
         return false;
     }
 
     if (!sporkSigner.SignMessage(strMessage, errorMessage, spork.vchSig, key2)) {
-        LogPrintf("CMasternodePayments::Sign - Sign message failed");
+        LogPrintf("%s : Sign message failed", __func__);
         return false;
     }
 
     if (!sporkSigner.VerifyMessage(pubkey2, spork.vchSig, strMessage, errorMessage)) {
-        LogPrintf("CMasternodePayments::Sign - Verify message failed");
+        LogPrintf("%s : Verify message failed", __func__);
         return false;
     }
 
