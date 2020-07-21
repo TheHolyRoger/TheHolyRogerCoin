@@ -1780,7 +1780,9 @@ bool static ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStr
             nCMPCTBLOCKVersion = 1;
             connman->PushMessage(pfrom, msgMaker.Make(NetMsgType::SENDCMPCT, fAnnounceUsingCMPCTBLOCK, nCMPCTBLOCKVersion));
         }
+
         pfrom->fSuccessfullyConnected = true;
+        g_connman->PushMessage(pfrom, msgMaker.Make(NetMsgType::GETSPORKS));
     }
 
     else if (!pfrom->fSuccessfullyConnected)
@@ -1790,7 +1792,6 @@ bool static ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStr
         Misbehaving(pfrom->GetId(), 1);
         return false;
     }
-
     else if (strCommand == NetMsgType::ADDR)
     {
         std::vector<CAddress> vAddr;
