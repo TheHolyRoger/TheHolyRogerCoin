@@ -1417,6 +1417,12 @@ bool AppInitMain()
 
     // ********************************************************* Step 7: load block chain
 
+    delete pSporkDB;
+    pSporkDB = new CSporkDB(0, false, false);
+
+    uiInterface.InitMessage(_("Loading sporks..."));
+    LoadSporksFromDB();
+
     fReindex = gArgs.GetBoolArg("-reindex", false);
     bool fReindexChainState = gArgs.GetBoolArg("-reindex-chainstate", false);
 
@@ -1448,9 +1454,6 @@ bool AppInitMain()
         do {
             try {
                 UnloadBlockIndex();
-
-                delete pSporkDB;
-                pSporkDB = new CSporkDB(0, false, false);
 
                 pcoinsTip.reset();
                 pcoinsdbview.reset();
