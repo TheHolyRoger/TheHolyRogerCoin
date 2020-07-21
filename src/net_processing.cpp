@@ -991,6 +991,8 @@ bool static AlreadyHave(const CInv& inv) EXCLUSIVE_LOCKS_REQUIRED(cs_main)
     case MSG_BLOCK:
     case MSG_WITNESS_BLOCK:
         return mapBlockIndex.count(inv.hash);
+    case MSG_SPORK:
+        return mapSporks.count(inv.hash);
     }
     // Don't know what it is, just say we already got one
     return true;
@@ -1238,6 +1240,15 @@ void static ProcessGetData(CNode* pfrom, const Consensus::Params& consensusParam
         if (inv.type == MSG_BLOCK || inv.type == MSG_FILTERED_BLOCK || inv.type == MSG_CMPCT_BLOCK || inv.type == MSG_WITNESS_BLOCK) {
             it++;
             ProcessGetBlockData(pfrom, consensusParams, inv, connman, interruptMsgProc);
+        } else if (inv.type == MSG_SPORK) {
+            it++;
+
+            if(mapSporks.count(inv.hash)) {
+                CDataStream ss(SER_NETWORK, PROTOCOL_VERSION);
+                ss.reserve(1000);
+                ss << mapSporks[inv.hash];
+                connman->PushMessage(pfrom, msgMaker.Make(NetMsgType::SPORK, ss));
+            }
         }
     }
 
@@ -3437,6 +3448,16 @@ bool PeerLogicValidation::SendMessages(CNode* pto, std::atomic<bool>& interruptM
                 }
             }
             pto->vInventoryBlockToSend.clear();
+
+            // Spork handling
+            for (const uint256& hash : pto->vInventorySporksToSend) {
+                vInv.push_back(CInv(MSG_SPORK, hash));
+                if (vInv.size() == MAX_INV_SZ) {
+                    connman->PushMessage(pto, msgMaker.Make(NetMsgType::INV, vInv));
+                    vInv.clear();
+                }
+            }
+            pto->vInventorySporksToSend.clear();
 
             // Check whether periodic sends should happen
             bool fSendTrickle = pto->fWhitelisted;
