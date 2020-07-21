@@ -150,15 +150,17 @@ bool CSporkManager::CheckSignature(CSporkMessage& spork, bool fCheckSigner)
     //note: need to investigate why this is failing
     std::string strMessage = boost::lexical_cast<std::string>(spork.nSporkID) + boost::lexical_cast<std::string>(spork.nValue) +
                              boost::lexical_cast<std::string>(spork.nTimeSigned);
-
-    CPubKey pubkeynew(ParseHex(Params().SporkKey()));
+    CPubKey pubkey(ParseHex(Params().SporkKey()));
     std::string errorMessage = "";
-    bool valid = sporkSigner.VerifyMessage(pubkeynew, spork.vchSig,strMessage, errorMessage);
 
-    if (fCheckSigner && !valid)
+    bool valid = sporkSigner.VerifyMessage(pubkey, spork.vchSig, strMessage, errorMessage);
+
+    if (fCheckSigner && !valid) {
+        LogPrintf("%s : %s\n", __func__, errorMessage.c_str());
         return false;
+    }
 
-    return valid;
+    return true;
 }
 
 bool CSporkManager::Sign(CSporkMessage& spork)
@@ -175,12 +177,12 @@ bool CSporkManager::Sign(CSporkMessage& spork)
     }
 
     if (!sporkSigner.SignMessage(strMessage, errorMessage, spork.vchSig, key2)) {
-        LogPrintf("%s : Sign message failed", __func__);
+        LogPrintf("%s : Sign message failed\n", __func__);
         return false;
     }
 
     if (!sporkSigner.VerifyMessage(pubkey2, spork.vchSig, strMessage, errorMessage)) {
-        LogPrintf("%s : Verify message failed", __func__);
+        LogPrintf("%s : Verify message failed\n", __func__);
         return false;
     }
 
@@ -214,7 +216,6 @@ bool CSporkManager::SetPrivKey(std::string strPrivKey)
 {
     CSporkMessage msg;
     privKey = strPrivKey;
-
     Sign(msg);
 
     if (CheckSignature(msg, true)) {

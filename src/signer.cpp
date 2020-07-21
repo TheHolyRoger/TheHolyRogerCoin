@@ -24,7 +24,6 @@
 using namespace std;
 using namespace boost;
 
-CCriticalSection cs_darksend;
 CSporkSigner sporkSigner;
 
 bool CSporkSigner::SetKey(std::string strSecret, std::string& errorMessage, CKey& key, CPubKey& pubkey)
@@ -50,7 +49,7 @@ bool CSporkSigner::SignMessage(std::string strMessage, std::string& errorMessage
     ss << strMessageMagic;
     ss << strMessage;
 
-    if (!key.Sign(ss.GetHash(), vchSig))
+    if (!key.SignCompact(ss.GetHash(), vchSig))
     {
         errorMessage = _("Signing failed.");
         return false;
@@ -65,22 +64,16 @@ bool CSporkSigner::VerifyMessage(CPubKey pubkey, vector<unsigned char>& vchSig, 
     ss << strMessageMagic;
     ss << strMessage;
 
-    /* CKey key;
-    key.SetPubKey(pubkey);
-    return key.Verify(ss.GetHash(), vchSig); */
-
     CPubKey pubkey2;
-
     if (!pubkey2.RecoverCompact(ss.GetHash(), vchSig)) {
         errorMessage = _("Error recovering public key.");
         return false;
     }
 
     if (pubkey2.GetID() != pubkey.GetID())
-        LogPrintf("%s -- keys don't match: %s %s\n", __func__, pubkey2.GetID().ToString(), pubkey.GetID().ToString());
+        LogPrintf("%s : keys don't match: %s %s\n", __func__, pubkey2.GetID().ToString(), pubkey.GetID().ToString());
 
-    return pubkey2.GetID() == pubkey.GetID();
-
+    return (pubkey2.GetID() == pubkey.GetID());
 }
 
 /*void ThreadCheckDarkSend(CConnman& connman)
