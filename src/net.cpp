@@ -1068,7 +1068,7 @@ bool CConnman::AttemptToEvictConnection()
     return false;
 }
 
-void CConnman::AcceptConnection(const ListenSocket& hListenSocket) {
+bool CConnman::AcceptConnection(const ListenSocket& hListenSocket) {
     struct sockaddr_storage sockaddr;
     socklen_t len = sizeof(sockaddr);
     SOCKET hSocket = accept(hListenSocket.socket, (struct sockaddr*)&sockaddr, &len);
@@ -1095,20 +1095,20 @@ void CConnman::AcceptConnection(const ListenSocket& hListenSocket) {
         int nErr = WSAGetLastError();
         if (nErr != WSAEWOULDBLOCK)
             LogPrintf("socket error accept failed: %s\n", NetworkErrorString(nErr));
-        return;
+        return false;
     }
 
     if (!fNetworkActive) {
         LogPrintf("connection from %s dropped: not accepting new connections\n", addr.ToString());
         CloseSocket(hSocket);
-        return;
+        return false;
     }
 
     if (!IsSelectableSocket(hSocket))
     {
         LogPrintf("connection from %s dropped: non-selectable socket\n", addr.ToString());
         CloseSocket(hSocket);
-        return;
+        return false;
     }
 
     // According to the internet TCP_NODELAY is not carried into accepted sockets
@@ -1119,7 +1119,7 @@ void CConnman::AcceptConnection(const ListenSocket& hListenSocket) {
     {
         LogPrint(BCLog::NET, "connection from %s dropped (banned)\n", addr.ToString());
         CloseSocket(hSocket);
-        return;
+        return false;
     }
 
     if (nInbound >= nMaxInbound)
@@ -1128,7 +1128,7 @@ void CConnman::AcceptConnection(const ListenSocket& hListenSocket) {
             // No connection to evict, disconnect the new connection
             LogPrint(BCLog::NET, "failed to find an eviction candidate - connection dropped (full)\n");
             CloseSocket(hSocket);
-            return;
+            return false;
         }
     }
 
@@ -1147,6 +1147,8 @@ void CConnman::AcceptConnection(const ListenSocket& hListenSocket) {
         LOCK(cs_vNodes);
         vNodes.push_back(pnode);
     }
+
+    return true;
 }
 
 void CConnman::ThreadSocketHandler()

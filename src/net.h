@@ -330,7 +330,7 @@ private:
     void ProcessOneShot();
     void ThreadOpenConnections(std::vector<std::string> connect);
     void ThreadMessageHandler();
-    void AcceptConnection(const ListenSocket& hListenSocket);
+    bool AcceptConnection(const ListenSocket& hListenSocket);
     void ThreadSocketHandler();
     void ThreadDNSAddressSeed();
 
