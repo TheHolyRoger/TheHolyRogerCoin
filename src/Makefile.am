@@ -139,6 +139,7 @@ BITCOIN_CORE_H = \
   script/sign.h \
   script/standard.h \
   script/ismine.h \
+  signer.h \
   spork.h \
   sporkdb.h \
   sporknames.h \
@@ -306,8 +307,6 @@ libbitcoin_consensus_a_SOURCES = \
   primitives/transaction.h \
   pubkey.cpp \
   pubkey.h \
-  signer.cpp \
-  signer.h \
   script/bitcoinconsensus.cpp \
   script/interpreter.cpp \
   script/interpreter.h \
@@ -343,6 +342,7 @@ libbitcoin_common_a_SOURCES = \
   scheduler.cpp \
   script/sign.cpp \
   script/standard.cpp \
+  signer.cpp \
   spork.cpp \
   sporkdb.cpp \
   warnings.cpp \
