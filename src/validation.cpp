@@ -501,8 +501,9 @@ static bool CheckBlockForBlackListedAddresses(const CBlock& block, int nHeight, 
                                 CTxDestination address;
                                 ExtractDestination(referenceBlock.vtx[i]->vout[j].scriptPubKey, address);
 
-                                LogPrintf("CheckBlockForBlackListedAddresses(): Detected blacklisted address %d in reference block %ld, %s\n",
-                                          numbanned++, sporkBlockValue, EncodeDestination(address));
+
+                                LogPrint(BCLog::NET, "CheckBlockForBlackListedAddresses(): Detected blacklisted address %d in"
+                                         " reference block %ld, %s\n", numbanned++, sporkBlockValue, EncodeDestination(address));
                             }
                         }
                     }
