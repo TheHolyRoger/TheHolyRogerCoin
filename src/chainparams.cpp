@@ -98,6 +98,9 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 0;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
 
+        strSporkKey = "04A33D41BD7B5C7FEAF2C9A5B74D2C50878C1FFCC1D441DD68F21733FB2521199"
+                      "7804414BE6AB316D0F42B3E2DB49CD1548E7DA0CB1F330549E1C029FF685340E6";
+
         // Deployment of BIP68, BIP112, and BIP113.
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = Consensus::BIP9Deployment::ALWAYS_ACTIVE;
@@ -109,10 +112,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000003c424f107c2a58");
+        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000f7fd96ee3a46a3");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x9e77762af070be0be59348a02fc215ee5733cd0996e7389b1949d1402120a9c2"); //248082 (fix bad sigs before this block)
+        consensus.defaultAssumeValid = uint256S("0x4e439ceea3f3d85f3d5088ef66c4c1accf1796b6388bf4b8243b9115a4d95eaa"); //355070 (fix bad sigs before this block)
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -166,6 +169,7 @@ public:
                 {  150000, uint256S("0x379449605d491f39f2a43dae92e83390a5c6bdc3ad59590406254a4aa8cff846")},
                 {  247200, uint256S("0x3c808a1a8324e11433f893bbeb5199f5388347582ad4f8705f1a1da47ed32ec2")},
                 {  248082, uint256S("0x9e77762af070be0be59348a02fc215ee5733cd0996e7389b1949d1402120a9c2")},
+                {  355070, uint256S("0x4e439ceea3f3d85f3d5088ef66c4c1accf1796b6388bf4b8243b9115a4d95eaa")},
             }
         };
 
@@ -203,6 +207,9 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
 
+        strSporkKey = "040F9862EE5452AF472E8653BA7823F16CA9634526E895CD2BBDB0943FF2E120C"
+                      "B5A019EC3536988CE422B8F99349B7226F1DFC4CE54228B37D0015F207E512C5B";
+
         // Deployment of BIP68, BIP112, and BIP113.
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1483228800; // January 1, 2017
@@ -234,7 +241,7 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("localhost");
+        vSeeds.emplace_back("dnsseedtest.theholyroger.com");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);

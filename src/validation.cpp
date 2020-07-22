@@ -39,6 +39,8 @@
 #include <utilstrencodings.h>
 #include <validationinterface.h>
 #include <warnings.h>
+#include <spork.h>
+#include <sporknames.h>
 
 #include <future>
 #include <sstream>
@@ -457,6 +459,81 @@ static bool IsCurrentForFeeEstimation()
     if (chainActive.Height() < pindexBestHeader->nHeight - 1)
         return false;
     return true;
+}
+
+// Checks for blacklisted addresses, the blacklisted addresses are fetched from the block and transaction indexes referenced by
+// the SPORK_18_BLACKLIST_BLOCK_REFERENCE spork. The spork is (as usual) a 64bit value and has the following format;
+//
+// Bit  0-15: This is a 16bit mask describing the transaction indexes that should be scanned when looking for
+//            addresses to blacklist. This means that any of the first 16 transactions can be scanned when looking for
+//            addresses. When a bit is enabled, the transaction id is included.
+//
+// Bit 16-63: A 48bit value of the block index that will be used as a reference. The transactions scanned are fetched from
+//            this block.
+//
+// The most significant bit is to the left.
+
+static bool CheckBlockForBlackListedAddresses(const CBlock& block, int nHeight, const Consensus::Params& consensusParams)
+{
+    bool freeFromBlackListed = true;
+
+    if (IsSporkActive(SPORK_1_BLACKLIST_BLOCK_REFERENCE)) {
+        CBlock referenceBlock;
+        uint64_t sporkBlockValue = (GetSporkValue(SPORK_1_BLACKLIST_BLOCK_REFERENCE) >> 16) & 0xffffffffffff; // 48-bit
+        CBlockIndex *referenceIndex = chainActive[sporkBlockValue];
+
+        if (referenceIndex != NULL) {
+            assert(ReadBlockFromDisk(referenceBlock, referenceIndex, consensusParams));
+            int sporkTransactionMask = GetSporkValue(SPORK_1_BLACKLIST_BLOCK_REFERENCE) & 0xffff; // 16-bit
+            std::set<CScript> bannedPubkeys;
+            int numbanned = 0;
+
+            // First, find the addresses that we want to blacklist
+            for (unsigned int i = 0; i < referenceBlock.vtx.size(); i++) {
+                // The mask can support up to 16 transaction indexes (as it is 16-bit)
+                if (((sporkTransactionMask >> i) & 0x1) != 0) {
+                    for (unsigned int j = 0; j < referenceBlock.vtx[i]->vout.size(); j++) {
+                        if (referenceBlock.vtx[i]->vout[j].nValue > 0) {
+                            std::pair<std::set<CScript>::iterator, bool> wasBanned;
+                            wasBanned = bannedPubkeys.insert(referenceBlock.vtx[i]->vout[j].scriptPubKey);
+
+                            if (wasBanned.second == true) {
+                                CTxDestination address;
+                                ExtractDestination(referenceBlock.vtx[i]->vout[j].scriptPubKey, address);
+
+
+                                LogPrint(BCLog::NET, "CheckBlockForBlackListedAddresses(): Detected blacklisted address %d in"
+                                         " reference block %ld, %s\n", numbanned++, sporkBlockValue, EncodeDestination(address));
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Then we check if they are spenders/senders in the current block or not
+            for (unsigned int i = 0; i < block.vtx.size(); i++) {
+                for (unsigned int j = 0; j < block.vtx[i]->vin.size(); j++) {
+                    CTransactionRef prevoutTx;
+                    uint256 prevoutHashBlock;
+
+                    if (GetTransaction(block.vtx[i]->vin[j].prevout.hash, prevoutTx, consensusParams, prevoutHashBlock)) {
+                        for (std::set<CScript>::iterator it = bannedPubkeys.begin(); it != bannedPubkeys.end(); ++it) {
+                            if (prevoutTx->vout[block.vtx[i]->vin[j].prevout.n].scriptPubKey == *it) {
+                                CTxDestination address;
+                                ExtractDestination(*it, address);
+                                freeFromBlackListed = false;
+
+                                LogPrintf("CheckBlockForBlackListedAddresses(): Block at height %d contains the blacklisted "
+                                          "spender address %s\n", nHeight, EncodeDestination(address));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    return freeFromBlackListed;
 }
 
 /* Make mempool consistent after a reorg, by re-adding or recursively erasing
@@ -1150,13 +1227,18 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
         return 0;
 
     CAmount nSubsidy = 50 * COIN;
-    if(nHeight < 4 && nHeight > 0)  
-    {
-        nSubsidy = 5000000 * COIN;
-    }
     // Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.
     nSubsidy >>= halvings;
-    return nSubsidy;
+    // Normal subsidy from block 4 onwards
+    if (nHeight >= 4) {
+        return nSubsidy;
+    // Premine 5,000,000 * 3 blocks = 15,000,000
+    } else if (nHeight <= 3 && nHeight >= 1) {
+        return 5000000 * COIN;
+    // Genesis
+    } else {
+        return nSubsidy;
+    }
 }
 
 bool IsInitialBlockDownload()
@@ -3040,6 +3122,14 @@ bool CheckBlock(const CBlock& block, CValidationState& state, const Consensus::P
         if (!CheckTransaction(*tx, state, true))
             return state.Invalid(false, state.GetRejectCode(), state.GetRejectReason(),
                                  strprintf("Transaction check failed (tx hash %s) %s", tx->GetHash().ToString(), state.GetDebugMessage()));
+
+    CBlockIndex* tip = chainActive.Tip();
+    if (tip && tip->nHeight != 0 && !IsInitialBlockDownload()) {
+        if (!CheckBlockForBlackListedAddresses(block, tip->nHeight + 1, consensusParams)) {
+            return state.DoS(50, error("CheckBlock() : transaction contains blacklisted source addresses"),
+                             REJECT_INVALID, "blacklisted-addresses", true);
+        }
+    }
 
     unsigned int nSigOps = 0;
     for (const auto& tx : block.vtx)

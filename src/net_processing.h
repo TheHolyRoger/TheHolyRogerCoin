@@ -76,6 +76,7 @@ struct CNodeStateStats {
     std::vector<int> vHeightInFlight;
 };
 
+void RelayInv(CInv& inv, CConnman* connman);
 /** Get statistics from node state */
 bool GetNodeStateStats(NodeId nodeid, CNodeStateStats &stats);
 /** Increase a node's misbehavior score. */

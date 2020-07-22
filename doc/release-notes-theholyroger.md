@@ -1,6 +1,6 @@
-TheHolyRoger Core version 0.16.3 is now available from:
+TheHolyRoger Core version 0.16.4 is now available from:
 
-  <https://download.theholyroger.com/theholyroger-0.16.3/>
+  <https://github.com/TheHolyRogerCoin/TheHolyRogerCoin/releases>
 
 This is a new major version release, including new features, various bugfixes
 and performance improvements, as well as updated translations.

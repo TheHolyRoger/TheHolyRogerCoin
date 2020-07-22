@@ -139,6 +139,10 @@ BITCOIN_CORE_H = \
   script/sign.h \
   script/standard.h \
   script/ismine.h \
+  signer.h \
+  spork.h \
+  sporkdb.h \
+  sporknames.h \
   streams.h \
   support/allocators/secure.h \
   support/allocators/zeroafterfree.h \
@@ -338,6 +342,9 @@ libbitcoin_common_a_SOURCES = \
   scheduler.cpp \
   script/sign.cpp \
   script/standard.cpp \
+  signer.cpp \
+  spork.cpp \
+  sporkdb.cpp \
   warnings.cpp \
   $(BITCOIN_CORE_H)
 
