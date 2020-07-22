@@ -98,8 +98,8 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 0;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
 
-        strSporkKey = "04d49661b86c78a7256fee86670543a8c776b2944b8f9d4106c82884c0a366c29"
-                      "5c8436ce17c05bb04618aeb434e4de8c0754bf131b5bd6b29b22f85f90a0adb01";
+        strSporkKey = "04A33D41BD7B5C7FEAF2C9A5B74D2C50878C1FFCC1D441DD68F21733FB2521199"
+                      "7804414BE6AB316D0F42B3E2DB49CD1548E7DA0CB1F330549E1C029FF685340E6";
 
         // Deployment of BIP68, BIP112, and BIP113.
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
@@ -206,8 +206,8 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
 
-        strSporkKey = "04a4f4a95a5669199cb7b5a7d19a94d978d62f391a37206117b9e36bd4c37e67d"
-                      "3c8c183b24ccd731892df0f640f24eb74fb78efe5922b39ffaeda2ed7b8ee1cc7";
+        strSporkKey = "040F9862EE5452AF472E8653BA7823F16CA9634526E895CD2BBDB0943FF2E120C"
+                      "B5A019EC3536988CE422B8F99349B7226F1DFC4CE54228B37D0015F207E512C5B";
 
         // Deployment of BIP68, BIP112, and BIP113.
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
