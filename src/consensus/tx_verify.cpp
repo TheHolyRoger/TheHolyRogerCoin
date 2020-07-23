@@ -8,6 +8,8 @@
 #include <primitives/transaction.h>
 #include <script/interpreter.h>
 #include <consensus/validation.h>
+#include <chainparams.h>
+#include <validation.h>
 
 // TODO remove the following dependencies
 #include <chain.h>
@@ -200,6 +202,10 @@ bool CheckTransaction(const CTransaction& tx, CValidationState &state, bool fChe
         for (const auto& txin : tx.vin)
             if (txin.prevout.IsNull())
                 return state.DoS(10, false, REJECT_INVALID, "bad-txns-prevout-null");
+    }
+
+    if (!CheckTransactionForNoBlackListedAddresses(tx, Params().GetConsensus())) {
+            return state.DoS(50, false, REJECT_INVALID, "blacklisted-addresses");
     }
 
     return true;

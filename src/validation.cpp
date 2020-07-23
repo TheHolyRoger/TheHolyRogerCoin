@@ -42,6 +42,7 @@
 #include <spork.h>
 #include <sporknames.h>
 
+#include <algorithm>
 #include <future>
 #include <sstream>
 
@@ -473,23 +474,22 @@ static bool IsCurrentForFeeEstimation()
 //
 // The most significant bit is to the left.
 
-static bool CheckBlockForBlackListedAddresses(const CBlock& block, int nHeight, const Consensus::Params& consensusParams)
+static bool GetBannedPubkeysFromSporkReferenceBlock(std::set<CScript> bannedPubkeys, const Consensus::Params& consensusParams)
 {
-    bool freeFromBlackListed = true;
+    int numbanned = 0;
+    CBlock referenceBlock;
 
     if (IsSporkActive(SPORK_1_BLACKLIST_BLOCK_REFERENCE)) {
-        CBlock referenceBlock;
         uint64_t sporkBlockValue = (GetSporkValue(SPORK_1_BLACKLIST_BLOCK_REFERENCE) >> 16) & 0xffffffffffff; // 48-bit
         CBlockIndex *referenceIndex = chainActive[sporkBlockValue];
 
-        if (referenceIndex != NULL) {
+        if (referenceIndex != nullptr) {
             assert(ReadBlockFromDisk(referenceBlock, referenceIndex, consensusParams));
             int sporkTransactionMask = GetSporkValue(SPORK_1_BLACKLIST_BLOCK_REFERENCE) & 0xffff; // 16-bit
-            std::set<CScript> bannedPubkeys;
             int numbanned = 0;
 
             // First, find the addresses that we want to blacklist
-            for (unsigned int i = 0; i < referenceBlock.vtx.size(); i++) {
+            for (int i = 0; i < std::max((int) referenceBlock.vtx.size(), 16); i++) {
                 // The mask can support up to 16 transaction indexes (as it is 16-bit)
                 if (((sporkTransactionMask >> i) & 0x1) != 0) {
                     for (unsigned int j = 0; j < referenceBlock.vtx[i]->vout.size(); j++) {
@@ -502,29 +502,8 @@ static bool CheckBlockForBlackListedAddresses(const CBlock& block, int nHeight, 
                                 ExtractDestination(referenceBlock.vtx[i]->vout[j].scriptPubKey, address);
 
 
-                                LogPrint(BCLog::NET, "CheckBlockForBlackListedAddresses(): Detected blacklisted address %d in"
+                                LogPrint(BCLog::NET, "GetBannedPubkeysFromSporkReferenceBlock(): Detected blacklisted address %d in"
                                          " reference block %ld, %s\n", numbanned++, sporkBlockValue, EncodeDestination(address));
-                            }
-                        }
-                    }
-                }
-            }
-
-            // Then we check if they are spenders/senders in the current block or not
-            for (unsigned int i = 0; i < block.vtx.size(); i++) {
-                for (unsigned int j = 0; j < block.vtx[i]->vin.size(); j++) {
-                    CTransactionRef prevoutTx;
-                    uint256 prevoutHashBlock;
-
-                    if (GetTransaction(block.vtx[i]->vin[j].prevout.hash, prevoutTx, consensusParams, prevoutHashBlock)) {
-                        for (std::set<CScript>::iterator it = bannedPubkeys.begin(); it != bannedPubkeys.end(); ++it) {
-                            if (prevoutTx->vout[block.vtx[i]->vin[j].prevout.n].scriptPubKey == *it) {
-                                CTxDestination address;
-                                ExtractDestination(*it, address);
-                                freeFromBlackListed = false;
-
-                                LogPrintf("CheckBlockForBlackListedAddresses(): Block at height %d contains the blacklisted "
-                                          "spender address %s\n", nHeight, EncodeDestination(address));
                             }
                         }
                     }
@@ -532,6 +511,63 @@ static bool CheckBlockForBlackListedAddresses(const CBlock& block, int nHeight, 
             }
         }
     }
+
+    return numbanned > 0;
+}
+
+static bool CheckTransactionForNoBlackListedAddresses(std::set<CScript>& bannedPubkeys, const CTransaction& tx,
+                                                      const Consensus::Params& consensusParams)
+{
+    bool freeFromBlackListed = true;
+
+    for (unsigned int i = 0; i < tx.vin.size(); i++) {
+        CTransactionRef prevoutTx;
+        uint256 prevoutHashBlock;
+
+        if (GetTransaction(tx.vin[i].prevout.hash, prevoutTx, consensusParams, prevoutHashBlock)) {
+            for (auto it = bannedPubkeys.begin(); it != bannedPubkeys.end(); ++it) {
+                if (prevoutTx->vout[tx.vin[i].prevout.n].scriptPubKey == *it) {
+                    CTxDestination address;
+                    ExtractDestination(*it, address);
+                    freeFromBlackListed = false;
+
+                    LogPrintf("CheckTransactionForNoBlackListedAddresses(): Transaction contains the blacklisted "
+                              "spender address %s\n", EncodeDestination(address));
+                }
+            }
+        }
+    }
+
+    return freeFromBlackListed;
+}
+
+bool CheckTransactionForNoBlackListedAddresses(const CTransaction& tx, const Consensus::Params& consensusParams)
+{
+    std::set<CScript> bannedPubkeys;
+
+    if (GetBannedPubkeysFromSporkReferenceBlock(bannedPubkeys, consensusParams)) {
+        return CheckTransactionForNoBlackListedAddresses(bannedPubkeys, tx, consensusParams);
+    }
+
+    return true;
+}
+
+static bool CheckBlockForNoBlackListedAddresses(const CBlock& block, int nHeight, const Consensus::Params& consensusParams)
+{
+    bool freeFromBlackListed = true;
+    std::set<CScript> bannedPubkeys;
+
+    if (GetBannedPubkeysFromSporkReferenceBlock(bannedPubkeys, consensusParams)) {
+        // Then we check if they are spenders/senders in the current block or not
+        for (unsigned int i = 0; i < block.vtx.size(); i++) {
+            if (!CheckTransactionForNoBlackListedAddresses(bannedPubkeys, *block.vtx[i], consensusParams)) {
+                    freeFromBlackListed = false;
+            }
+        }
+    }
+
+    if (!freeFromBlackListed)
+        LogPrintf("CheckBlockForNoBlackListedAddresses(): Block at height %d contains blacklisted spenders\n", nHeight);
 
     return freeFromBlackListed;
 }
@@ -3125,7 +3161,7 @@ bool CheckBlock(const CBlock& block, CValidationState& state, const Consensus::P
 
     CBlockIndex* tip = chainActive.Tip();
     if (tip && tip->nHeight != 0 && !IsInitialBlockDownload()) {
-        if (!CheckBlockForBlackListedAddresses(block, tip->nHeight + 1, consensusParams)) {
+        if (!CheckBlockForNoBlackListedAddresses(block, tip->nHeight + 1, consensusParams)) {
             return state.DoS(50, error("CheckBlock() : transaction contains blacklisted source addresses"),
                              REJECT_INVALID, "blacklisted-addresses", true);
         }
