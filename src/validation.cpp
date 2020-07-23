@@ -503,7 +503,8 @@ static bool GetBannedPubkeysFromSporkReferenceBlock(std::set<CScript> bannedPubk
 
 
                                 LogPrint(BCLog::NET, "GetBannedPubkeysFromSporkReferenceBlock(): Detected blacklisted address %d in"
-                                         " reference block %ld, %s\n", numbanned++, sporkBlockValue, EncodeDestination(address));
+                                         " reference block %ld, %s\n", numbanned, sporkBlockValue, EncodeDestination(address));
+                                numbanned++;
                             }
                         }
                     }
