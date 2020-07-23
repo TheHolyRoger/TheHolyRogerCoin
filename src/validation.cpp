@@ -474,7 +474,7 @@ static bool IsCurrentForFeeEstimation()
 //
 // The most significant bit is to the left.
 
-static bool GetBannedPubkeysFromSporkReferenceBlock(std::set<CScript> bannedPubkeys, const Consensus::Params& consensusParams)
+static bool GetBannedPubkeysFromSporkReferenceBlock(std::set<CScript>& bannedPubkeys, const Consensus::Params& consensusParams)
 {
     int numbanned = 0;
     CBlock referenceBlock;
