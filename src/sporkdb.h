@@ -10,10 +10,12 @@
 #include <dbwrapper.h>
 #include <spork.h>
 
+#define MIN_SPORKDB_CACHE_SIZE 1 /* MiB */
+
 class CSporkDB : public CDBWrapper
 {
 public:
-    CSporkDB(size_t nCacheSize, bool fMemory = false, bool fWipe = false);
+    CSporkDB(size_t nCacheSize = MIN_SPORKDB_CACHE_SIZE << 20, bool fMemory = false, bool fWipe = false);
 
 private:
     CSporkDB(const CSporkDB&);
