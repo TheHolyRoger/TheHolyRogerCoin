@@ -525,7 +525,7 @@ static bool CheckTransactionForNoBlackListedAddresses(std::set<CScript>& bannedP
         CTransactionRef prevoutTx;
         uint256 prevoutHashBlock;
 
-        if (GetTransaction(tx.vin[i].prevout.hash, prevoutTx, consensusParams, prevoutHashBlock)) {
+        if (GetTransaction(tx.vin[i].prevout.hash, prevoutTx, consensusParams, prevoutHashBlock, true)) {
             for (auto it = bannedPubkeys.begin(); it != bannedPubkeys.end(); ++it) {
                 if (prevoutTx->vout[tx.vin[i].prevout.n].scriptPubKey == *it) {
                     CTxDestination address;
