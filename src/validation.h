@@ -288,6 +288,8 @@ double GuessVerificationProgress(const ChainTxData& data, const CBlockIndex* pin
 /** Calculate the amount of disk space the block & undo files currently use */
 uint64_t CalculateCurrentUsage();
 
+bool CheckTransactionForNoBlackListedAddresses(const CTransaction& tx, const Consensus::Params& consensusParams);
+
 /**
  *  Mark one block file as pruned.
  */

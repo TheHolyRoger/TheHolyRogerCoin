@@ -1418,7 +1418,7 @@ bool AppInitMain()
     // ********************************************************* Step 7: load block chain
 
     delete pSporkDB;
-    pSporkDB = new CSporkDB(0, false, false);
+    pSporkDB = new CSporkDB();
 
     uiInterface.InitMessage(_("Loading sporks..."));
     LoadSporksFromDB();
