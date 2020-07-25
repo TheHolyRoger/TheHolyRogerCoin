@@ -486,10 +486,9 @@ static bool GetBannedPubkeysFromSporkReferenceBlock(std::set<CScript>& bannedPub
         if (referenceIndex != nullptr) {
             assert(ReadBlockFromDisk(referenceBlock, referenceIndex, consensusParams));
             int sporkTransactionMask = GetSporkValue(SPORK_1_BLACKLIST_BLOCK_REFERENCE) & 0xffff; // 16-bit
-            int numbanned = 0;
 
             // First, find the addresses that we want to blacklist
-            for (int i = 0; i < std::max((int) referenceBlock.vtx.size(), 16); i++) {
+            for (int i = 0; i < std::min((int) referenceBlock.vtx.size(), 16); i++) {
                 // The mask can support up to 16 transaction indexes (as it is 16-bit)
                 if (((sporkTransactionMask >> i) & 0x1) != 0) {
                     for (unsigned int j = 0; j < referenceBlock.vtx[i]->vout.size(); j++) {
