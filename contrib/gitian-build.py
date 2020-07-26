@@ -11,6 +11,15 @@ import sys
 def setup():
     global args, workdir
     programs = ['ruby', 'git', 'make', 'wget', 'curl']
+    if args.wipe_cache:
+        try:
+            PathsToClear = ['gitian-builder/base-trusty-amd64', 'gitian-builder/target-trusty-amd64', 'gitian-builder/build/*', 'gitian-builder/cache/*']
+            PathsToClear += ['gitian-builder/inputs/TheHolyRogerCoin', 'gitian-builder/result/*', 'gitian-builder/var/*', 'gitian.sigs.theholyroger']
+            PathsToClear += ['theholyroger-detached-sigs', 'theholyroger-binaries', 'TheHolyRogerCoin', 'gitian-builder/inputs/*-unsigned.tar.gz']
+            PathsToClear = ' '.join(PathsToClear)
+            subprocess.check_call('rm -r '+PathsToClear, shell=True)
+        except:
+            pass
     if args.kvm:
         programs += ['apt-cacher-ng', 'python-vm-builder', 'qemu-kvm', 'qemu-utils']
     elif args.docker and not os.path.isfile('/lib/systemd/system/docker.service'):
@@ -39,10 +48,6 @@ def setup():
         make_image_prog += ['--docker']
     elif not args.kvm:
         make_image_prog += ['--lxc']
-    try:
-        subprocess.check_call('rm base-trusty-amd64 target-trusty-amd64', shell=True)
-    except:
-        pass
     subprocess.check_call(make_image_prog)
     os.chdir(workdir)
     if args.is_bionic and not args.kvm and not args.docker:
@@ -104,9 +109,12 @@ def build():
     if args.commit_files:
         print('\nCommitting '+args.version+' Unsigned Sigs\n')
         os.chdir('gitian.sigs.theholyroger')
-        subprocess.check_call(['git', 'add', args.version+'-linux/'+args.signer])
-        subprocess.check_call(['git', 'add', args.version+'-win-unsigned/'+args.signer])
-        subprocess.check_call(['git', 'add', args.version+'-osx-unsigned/'+args.signer])
+        if args.linux:
+            subprocess.check_call(['git', 'add', args.version+'-linux/'+args.signer])
+        if args.windows:
+            subprocess.check_call(['git', 'add', args.version+'-win-unsigned/'+args.signer])
+        if args.macos:
+            subprocess.check_call(['git', 'add', args.version+'-osx-unsigned/'+args.signer])
         subprocess.check_call(['git', 'commit', '-m', 'Add '+args.version+' unsigned sigs for '+args.signer])
         os.chdir(workdir)
 
@@ -123,7 +131,7 @@ def sign():
         except:
             pass
         try:
-            subprocess.check_call('mv build/out/theholyroger-*win64-setup.exe ../theholyroger-binaries/'+args.version, shell=True)
+            subprocess.check_call('mv build/out/theholyroger-*win32-setup.exe build/out/theholyroger-*win64-setup.exe ../theholyroger-binaries/'+args.version, shell=True)
         except Exception as e:
             print(e)
             pass
@@ -147,8 +155,10 @@ def sign():
     if args.commit_files:
         print('\nCommitting '+args.version+' Signed Sigs\n')
         os.chdir('gitian.sigs.theholyroger')
-        subprocess.check_call(['git', 'add', args.version+'-win-signed/'+args.signer])
-        subprocess.check_call(['git', 'add', args.version+'-osx-signed/'+args.signer])
+        if args.windows:
+            subprocess.check_call(['git', 'add', args.version+'-win-signed/'+args.signer])
+        if args.macos:
+            subprocess.check_call(['git', 'add', args.version+'-osx-signed/'+args.signer])
         try:
             subprocess.check_call(['git', 'commit', '-a', '-m', 'Add '+args.version+' signed binary sigs for '+args.signer])
         except Exception as e:
@@ -204,6 +214,7 @@ def main():
     parser.add_argument('-j', '--jobs', dest='jobs', default='2', help='Number of processes to use. Default %(default)s')
     parser.add_argument('-m', '--memory', dest='memory', default='2000', help='Memory to allocate in MiB. Default %(default)s')
     parser.add_argument('-k', '--kvm', action='store_true', dest='kvm', help='Use KVM instead of LXC')
+    parser.add_argument('-W', '--wipe-cache', action='store_true', dest='wipe_cache', help='Wipe all cached files.')
     parser.add_argument('-d', '--docker', action='store_true', dest='docker', help='Use Docker instead of LXC')
     parser.add_argument('-S', '--setup', action='store_true', dest='setup', help='Set up the Gitian building environment. Only works on Debian-based systems (Ubuntu, Debian)')
     parser.add_argument('-D', '--detach-sign', action='store_true', dest='detach_sign', help='Create the assert file for detached signing. Will not commit anything.')
