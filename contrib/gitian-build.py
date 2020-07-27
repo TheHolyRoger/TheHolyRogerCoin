@@ -167,6 +167,24 @@ def sign():
             pass
         os.chdir(workdir)
 
+def make_shasums():
+    global args, workdir
+    print('\nMaking SHA256SUMs for ' + args.version)
+    os.chdir('theholyroger-binaries/'+args.version)
+    subprocess.check_call('sha256sum * > SHA256SUMS', shell=True)
+    with open("SHA256SUMS", "r") as sum_file:
+        lines = sum_file.readlines()
+    new_lines = []
+    for line in lines:
+        if 'debug' not in line and 'unsigned' not in line and 'SHA256SUMS' not in line:
+            new_lines.append(line);
+    with open("SHA256SUMS.new", "w") as sum_file:
+        for line in new_lines:
+            sum_file.write(line)
+    subprocess.check_call('mv SHA256SUMS SHA256SUMS.full', shell=True)
+    subprocess.check_call('mv SHA256SUMS.new SHA256SUMS', shell=True)
+    subprocess.check_call(['gpg --digest-algo sha256 --clearsign SHA256SUMS'], shell=True)
+
 def verify():
     global args, workdir
     rc = 0
@@ -216,6 +234,7 @@ def main():
     parser.add_argument('-m', '--memory', dest='memory', default='2000', help='Memory to allocate in MiB. Default %(default)s')
     parser.add_argument('-k', '--kvm', action='store_true', dest='kvm', help='Use KVM instead of LXC')
     parser.add_argument('-W', '--wipe-cache', action='store_true', dest='wipe_cache', help='Wipe all cached files.')
+    parser.add_argument('--make-shasums', action='store_true', dest='make_shasums', help='Make SHA256 SUMs.')
     parser.add_argument('-d', '--docker', action='store_true', dest='docker', help='Use Docker instead of LXC')
     parser.add_argument('-S', '--setup', action='store_true', dest='setup', help='Set up the Gitian building environment. Only works on Debian-based systems (Ubuntu, Debian)')
     parser.add_argument('-D', '--detach-sign', action='store_true', dest='detach_sign', help='Create the assert file for detached signing. Will not commit anything.')
@@ -247,6 +266,9 @@ def main():
 
     if args.setup:
         setup()
+
+    if args.make_shasums:
+        make_shasums()
 
     if args.buildsign:
         args.build = True
