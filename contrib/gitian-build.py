@@ -52,6 +52,20 @@ def InstallGitianLXC():
         print('Reboot is required')
         sys.exit(0)
 
+def InstallVMBuilder():
+    vmbuilder_fileName = 'vm-builder_0.12.4+bzr494'
+    vmbuilder_fileNameTar = '%s.orig.tar.gz' % (vmbuilder_fileName)
+    vmbuilder_url = 'http://archive.ubuntu.com/ubuntu/pool/universe/v/vm-builder/%s' % (vmbuilder_fileNameTar)
+    vmbuilder_hash = '76cbf8c52c391160b2641e7120dbade5afded713afaa6032f733a261f13e6a8e'
+
+    previousDir = os.getcwd()
+    os.chdir(os.path.expanduser("~"))
+    subprocess.call(['wget', vmbuilder_url])
+    subprocess.check_call('echo "%s %s" | sha256sum -c' % (vmbuilder_hash, vmbuilder_fileNameTar), shell=True)
+    subprocess.call(['tar', '-zxvf', vmbuilder_fileNameTar])
+    os.chdir(vmbuilder_fileName.replace("_","-"))
+    subprocess.call(['echo', 'sudo', 'python3', 'setup.py', 'install'])
+    os.chdir(previousDir)
 
 def setup():
     global args, workdir
@@ -284,6 +298,7 @@ def main():
     parser.add_argument('-k', '--kvm', action='store_true', dest='kvm', help='Use KVM instead of LXC')
     parser.add_argument('-W', '--wipe-cache', action='store_true', dest='wipe_cache', help='Wipe all cached files.')
     parser.add_argument('--make-shasums', action='store_true', dest='make_shasums', help='Make SHA256 SUMs.')
+    parser.add_argument('--install-vmbuilder', action='store_true', dest='install_vmbuilder', help='Install VM Builder.')
     parser.add_argument('-d', '--docker', action='store_true', dest='docker', help='Use Docker instead of LXC')
     parser.add_argument('-S', '--setup', action='store_true', dest='setup', help='Set up the Gitian building environment. Only works on Debian-based systems (Ubuntu, Debian)')
     parser.add_argument('-D', '--detach-sign', action='store_true', dest='detach_sign', help='Create the assert file for detached signing. Will not commit anything.')
@@ -318,6 +333,9 @@ def main():
 
     if args.make_shasums:
         make_shasums()
+
+    if args.install_vmbuilder:
+        InstallVMBuilder()
 
     if args.buildsign:
         args.build = True
