@@ -15,7 +15,8 @@ def InstallGitianLXC():
         "lines": [
             "%%sudo ALL=NOPASSWD: /usr/bin/lxc-start",
             "%%sudo ALL=NOPASSWD: /usr/bin/lxc-execute"
-    ]}, {
+        ]
+    }, {
         "path": "/etc/rc.local",
         "lines": [
             "#!/bin/sh -e",
@@ -29,25 +30,23 @@ def InstallGitianLXC():
     NeedsReboot = False
 
     for one_file in writeFiles:
-        FilePath = one_file["path"]
-        FileLines = one_file["lines"]
         FileNeedsWrite = True
         FileExists = False
-        if os.path.exists(FilePath):
+        if os.path.exists(one_file["path"]):
             FileExists = True
-            with open(FilePath, "r") as fHandle:
+            with open(one_file["path"], "r") as fHandle:
                 CurLines = fHandle.readlines()
             for line in CurLines:
-                if FileLines[1] in line or (len(FileLines) > 2 and FileLines[3] in line):
+                if one_file["lines"][1] in line or (len(one_file["lines"]) > 2 and one_file["lines"][3] in line):
                     FileNeedsWrite = False
                     break
         if FileNeedsWrite is True:
             NeedsReboot = True
-            print("Updating %s" % (FilePath))
-            with open(FilePath, "a+") as fHandle:
+            print("Updating %s" % (one_file["path"]))
+            with open(one_file["path"], "a+") as fHandle:
                 if FileExists is True:
                     fHandle.write("\n")
-                for line in FileLines:
+                for line in one_file["lines"]:
                     fHandle.write("%s\n" % (line))
     if NeedsReboot is True:
         print('Reboot is required')
