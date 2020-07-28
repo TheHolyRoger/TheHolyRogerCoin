@@ -1,9 +1,16 @@
 TheHolyRoger Core v.3r integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/TheHolyRoger/TheHolyRogerCoin.svg?branch=master)](https://travis-ci.org/TheHolyRoger/TheHolyRogerCoin)
+[![Build Status](https://travis-ci.org/TheHolyRogerCoin/TheHolyRogerCoin.svg?branch=master)](https://travis-ci.org/TheHolyRogerCoin/TheHolyRogerCoin)
 
-https://theholyroger.com
+<p align="center">
+  <a href="https://theholyroger.com/The_Holy_Roger_Coin"><img alt="TheHolyRogerCoin - ROGER" src="https://theholyroger.com/resources/assets/roger.png" width="200"/></a>
+</p>
+
+Known Issues
+----------------
+
+[Stuck on "Loading Wallet..." after open](https://github.com/TheHolyRogerCoin/TheHolyRogerCoin/issues/15)
 
 What is TheHolyRoger?
 ----------------

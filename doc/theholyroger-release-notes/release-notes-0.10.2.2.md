@@ -7,7 +7,7 @@ updates. It is recommended to upgrade to this version.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/TheHolyRoger/TheHolyRogerCoin/issues>
+  <https://github.com/TheHolyRogerCoin/TheHolyRogerCoin/issues>
 
 Upgrading and downgrading
 =========================

@@ -7,7 +7,7 @@ and performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/TheHolyRoger/TheHolyRogerCoin/issues>
+  <https://github.com/TheHolyRogerCoin/TheHolyRogerCoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
@@ -56,7 +56,7 @@ Testnet faucets can be located at:
 - http://testnet.litecointools.com
 - http://testnet.thrasher.io
 
-Developers who require the new testnet blockchain paramaters can find them [here](https://github.com/TheHolyRoger/TheHolyRogerCoin/blob/master/src/chainparams.cpp#L220).
+Developers who require the new testnet blockchain paramaters can find them [here](https://github.com/TheHolyRogerCoin/TheHolyRogerCoin/blob/master/src/chainparams.cpp#L220).
 
 Performance Improvements
 --------------
@@ -124,7 +124,7 @@ ZMQ On Windows
 
 Previously the ZeroMQ notification system was unavailable on Windows
 due to various issues with ZMQ. These have been fixed upstream and
-now ZMQ can be used on Windows. Please see [this document](https://github.com/TheHolyRoger/TheHolyRogerCoin/blob/master/doc/zmq.md) for
+now ZMQ can be used on Windows. Please see [this document](https://github.com/TheHolyRogerCoin/TheHolyRogerCoin/blob/master/doc/zmq.md) for
 help with using ZMQ in general.
 
 Nested RPC Commands in Debug Console
