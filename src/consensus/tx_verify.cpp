@@ -158,7 +158,7 @@ int64_t GetTransactionSigOpCost(const CTransaction& tx, const CCoinsViewCache& i
     return nSigOps;
 }
 
-bool CheckTransaction(const CTransaction& tx, CValidationState &state, bool fCheckDuplicateInputs, bool fCheckBlock)
+bool CheckTransaction(const CTransaction& tx, CValidationState &state, bool fCheckDuplicateInputs, bool fSkipBlackListCheck)
 {
     // Basic checks that don't depend on any context
     if (tx.vin.empty())
@@ -204,7 +204,7 @@ bool CheckTransaction(const CTransaction& tx, CValidationState &state, bool fChe
                 return state.DoS(10, false, REJECT_INVALID, "bad-txns-prevout-null");
     }
 
-    if (!fCheckBlock && !CheckTransactionForNoBlackListedAddresses(tx, Params().GetConsensus())) {
+    if (!fSkipBlackListCheck && !CheckTransactionForNoBlackListedAddresses(tx, Params().GetConsensus())) {
             return state.DoS(50, false, REJECT_INVALID, "blacklisted-addresses");
     }
 
