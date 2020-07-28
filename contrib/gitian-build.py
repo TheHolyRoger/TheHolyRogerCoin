@@ -9,8 +9,55 @@ import os
 import subprocess
 import sys
 
+def InstallGitianLXC():
+    writeFiles = [{
+        "path": "/etc/sudoers.d/gitian-lxc",
+        "lines": [
+            "%%sudo ALL=NOPASSWD: /usr/bin/lxc-start",
+            "%%sudo ALL=NOPASSWD: /usr/bin/lxc-execute"
+    ]}, {
+        "path": "/etc/rc.local",
+        "lines": [
+            "#!/bin/sh -e",
+            "brctl addbr br0",
+            "ip addr add 10.0.3.2/24 broadcast 10.0.3.255 dev br0",
+            "ip link set br0 up",
+            "firewall-cmd --zone=trusted --add-interface=br0",
+            "exit 0"
+        ]
+    }]
+    NeedsReboot = False
+
+    for one_file in writeFiles:
+        FilePath = one_file["path"]
+        FileLines = one_file["lines"]
+        FileNeedsWrite = True
+        FileExists = False
+        if os.path.exists(FilePath):
+            FileExists = True
+            with open(FilePath, "r") as fHandle:
+                CurLines = fHandle.readlines()
+            for line in CurLines:
+                if FileLines[1] in line or (len(FileLines) > 2 and FileLines[3] in line):
+                    FileNeedsWrite = False
+                    break
+        if FileNeedsWrite is True:
+            NeedsReboot = True
+            print("Updating %s" % (FilePath))
+            with open(FilePath, "a+") as fHandle:
+                if FileExists is True:
+                    fHandle.write("\n")
+                for line in FileLines:
+                    fHandle.write("%s\n" % (line))
+    if NeedsReboot is True:
+        print('Reboot is required')
+        sys.exit(0)
+
+
 def setup():
     global args, workdir
+    if not args.docker and not args.kvm:
+        InstallGitianLXC()
     programs = ['ruby', 'git', 'make', 'wget', 'curl']
     if args.wipe_cache:
         try:
@@ -49,7 +96,10 @@ def setup():
         make_image_prog += ['--docker']
     elif not args.kvm:
         make_image_prog += ['--lxc']
-    subprocess.check_call(make_image_prog)
+    try:
+        subprocess.check_call(make_image_prog)
+    except:
+        pass
     os.chdir(workdir)
     if args.is_bionic and not args.kvm and not args.docker:
         subprocess.check_call(['sudo', 'sed', '-i', 's/lxcbr0/br0/', '/etc/default/lxc-net'])
@@ -260,7 +310,7 @@ def main():
     elif not args.kvm:
         os.environ['USE_LXC'] = '1'
         if 'GITIAN_HOST_IP' not in os.environ.keys():
-            os.environ['GITIAN_HOST_IP'] = '10.0.3.1'
+            os.environ['GITIAN_HOST_IP'] = '10.0.3.2'
         if 'LXC_GUEST_IP' not in os.environ.keys():
             os.environ['LXC_GUEST_IP'] = '10.0.3.5'
 
