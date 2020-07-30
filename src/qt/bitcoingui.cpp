@@ -157,6 +157,7 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *_platformStyle, const NetworkStyle *
     {
         /** Create wallet frame and make it the central widget */
         walletFrame = new WalletFrame(_platformStyle, this);
+        walletFrame->setStyleSheet(QString::fromUtf8("QFrame {background-color:#222; color:#fff;}\n"));
         setCentralWidget(walletFrame);
     } else
 #endif // ENABLE_WALLET
@@ -247,6 +248,7 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *_platformStyle, const NetworkStyle *
     connect(connectionsControl, SIGNAL(clicked(QPoint)), this, SLOT(toggleNetworkActive()));
 
     modalOverlay = new ModalOverlay(this->centralWidget());
+    modalOverlay->setStyleSheet(QString::fromUtf8("QWidget {background:none;}\n"));
 #ifdef ENABLE_WALLET
     if(enableWallet) {
         connect(walletFrame, SIGNAL(requestedSyncWarningInfo()), this, SLOT(showModalOverlay()));
@@ -682,35 +684,53 @@ void BitcoinGUI::openClicked()
 void BitcoinGUI::gotoOverviewPage()
 {
     overviewAction->setChecked(true);
-    if (walletFrame) walletFrame->gotoOverviewPage();
+    if (walletFrame) {
+        walletFrame->gotoOverviewPage();
+        walletFrame->setStyleSheet(QString::fromUtf8("QFrame {background-color:#222; color:#fff;}\n"));
+    }
 }
 
 void BitcoinGUI::gotoHistoryPage()
 {
     historyAction->setChecked(true);
-    if (walletFrame) walletFrame->gotoHistoryPage();
+    if (walletFrame) {
+        walletFrame->gotoHistoryPage();
+        walletFrame->setStyleSheet(QString::fromUtf8(""));
+    }
 }
 
 void BitcoinGUI::gotoReceiveCoinsPage()
 {
     receiveCoinsAction->setChecked(true);
-    if (walletFrame) walletFrame->gotoReceiveCoinsPage();
+    if (walletFrame) {
+        walletFrame->gotoReceiveCoinsPage();
+        walletFrame->setStyleSheet(QString::fromUtf8(""));
+    }
 }
 
 void BitcoinGUI::gotoSendCoinsPage(QString addr)
 {
     sendCoinsAction->setChecked(true);
-    if (walletFrame) walletFrame->gotoSendCoinsPage(addr);
+    if (walletFrame) {
+        walletFrame->gotoSendCoinsPage(addr);
+        walletFrame->setStyleSheet(QString::fromUtf8(""));
+    }
 }
 
 void BitcoinGUI::gotoSignMessageTab(QString addr)
 {
-    if (walletFrame) walletFrame->gotoSignMessageTab(addr);
+    if (walletFrame) {
+        walletFrame->gotoSignMessageTab(addr);
+        walletFrame->setStyleSheet(QString::fromUtf8(""));
+    }
 }
 
 void BitcoinGUI::gotoVerifyMessageTab(QString addr)
 {
-    if (walletFrame) walletFrame->gotoVerifyMessageTab(addr);
+    if (walletFrame) {
+        walletFrame->gotoVerifyMessageTab(addr);
+        walletFrame->setStyleSheet(QString::fromUtf8(""));
+    }
 }
 #endif // ENABLE_WALLET
 
