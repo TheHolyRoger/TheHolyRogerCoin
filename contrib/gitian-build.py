@@ -13,8 +13,8 @@ def InstallGitianLXC():
     writeFiles = [{
         "path": "/etc/sudoers.d/gitian-lxc",
         "lines": [
-            "%%sudo ALL=NOPASSWD: /usr/bin/lxc-start",
-            "%%sudo ALL=NOPASSWD: /usr/bin/lxc-execute"
+            "%sudo ALL=NOPASSWD: /usr/bin/lxc-start",
+            "%sudo ALL=NOPASSWD: /usr/bin/lxc-execute"
         ]
     }, {
         "path": "/etc/rc.local",
