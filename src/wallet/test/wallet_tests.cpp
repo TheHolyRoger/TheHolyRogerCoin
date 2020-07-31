@@ -24,17 +24,6 @@ extern UniValue importmulti(const JSONRPCRequest& request);
 extern UniValue dumpwallet(const JSONRPCRequest& request);
 extern UniValue importwallet(const JSONRPCRequest& request);
 
-// how many times to run all the tests to have a chance to catch errors that only show up with particular random shuffles
-#define RUN_TESTS 100
-
-// some tests fail 1% of the time due to bad luck.
-// we repeat those tests this many times and only complain if all iterations of the test fail
-#define RANDOM_REPEATS 5
-
-std::vector<std::unique_ptr<CWalletTx>> wtxn;
-
-typedef std::set<CInputCoin> CoinSet;
-
 BOOST_FIXTURE_TEST_SUITE(wallet_tests, WalletTestingSetup)
 
 static const CWallet testWallet;
