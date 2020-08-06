@@ -94,6 +94,7 @@ def setup():
             sys.exit(1)
     else:
         programs += ['apt-cacher-ng', 'lxc', 'debootstrap']
+        programs += ['python-cheetah', 'parted', 'kpartx', 'bridge-utils', 'ubuntu-archive-keyring', 'firewalld' ]
     subprocess.check_call(['sudo', 'apt-get', 'install', '-qq'] + programs)
     if not os.path.isdir('gitian.sigs.theholyroger'):
         subprocess.check_call(['git', 'clone', 'https://github.com/TheHolyRogerCoin/gitian.sigs.theholyroger.git'])
@@ -102,7 +103,7 @@ def setup():
     if not os.path.isdir('gitian-builder'):
         subprocess.check_call(['git', 'clone', 'https://github.com/devrandom/gitian-builder.git'])
     if not os.path.isdir('TheHolyRogerCoin'):
-        subprocess.check_call(['git', 'clone', 'https://github.com/TheHolyRogerCoin/TheHolyRogerCoin.git'])
+        subprocess.check_call(['git', 'clone', "%s.git" % (args.url)])
     os.chdir('gitian-builder')
     make_image_prog = ['bin/make-base-vm', '--suite', 'trusty', '--arch', 'amd64']
     if args.docker:
