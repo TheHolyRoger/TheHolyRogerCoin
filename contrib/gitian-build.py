@@ -8,6 +8,7 @@ import argparse
 import os
 import subprocess
 import sys
+import fileinput
 
 def InstallGitianLXC():
     writeFiles = [{
@@ -48,6 +49,8 @@ def InstallGitianLXC():
                     fHandle.write("\n")
                 for line in one_file["lines"]:
                     fHandle.write("%s\n" % (line))
+            if "rc.local" in one_file["path"]:
+                subprocess.check_call(['chmod', '+x', one_file["path"]])
     if NeedsReboot is True:
         print('Reboot is required')
         sys.exit(0)
@@ -67,6 +70,12 @@ def InstallVMBuilder():
     subprocess.call(['echo', 'sudo', 'python3', 'setup.py', 'install'])
     os.chdir(previousDir)
 
+def UpgradeGit():
+    subprocess.check_call('sudo apt-get install python-software-properties', shell=True)
+    subprocess.check_call('sudo add-apt-repository ppa:git-core/ppa', shell=True)
+    subprocess.check_call('sudo apt-get update', shell=True)
+    subprocess.check_call('sudo apt-get install git', shell=True)
+
 def setup():
     global args, workdir
     if not args.docker and not args.kvm:
@@ -74,11 +83,13 @@ def setup():
     programs = ['ruby', 'git', 'make', 'wget', 'curl']
     if args.wipe_cache:
         try:
-            PathsToClear = ['gitian-builder/base-trusty-amd64', 'gitian-builder/target-trusty-amd64', 'gitian-builder/build/*', 'gitian-builder/cache/*']
+            PathsToClear = []
+            PathsToClear += ['gitian-builder/base-trusty-amd64']
+            PathsToClear += ['gitian-builder/target-trusty-amd64', 'gitian-builder/build/*', 'gitian-builder/cache/*']
             PathsToClear += ['gitian-builder/inputs/TheHolyRogerCoin', 'gitian-builder/result/*', 'gitian-builder/var/*', 'gitian.sigs.theholyroger']
             PathsToClear += ['theholyroger-detached-sigs', 'theholyroger-binaries', 'TheHolyRogerCoin', 'gitian-builder/inputs/*-unsigned.tar.gz']
             PathsToClear = ' '.join(PathsToClear)
-            subprocess.check_call('rm -r '+PathsToClear, shell=True)
+            subprocess.check_call('rm -rf '+PathsToClear, shell=True)
         except:
             pass
     if args.kvm:
@@ -94,16 +105,32 @@ def setup():
             sys.exit(1)
     else:
         programs += ['apt-cacher-ng', 'lxc', 'debootstrap']
-        programs += ['python-cheetah', 'parted', 'kpartx', 'bridge-utils', 'ubuntu-archive-keyring', 'firewalld' ]
+        programs += ['python-cheetah', 'parted', 'kpartx', 'bridge-utils', 'firewalld' ]
     subprocess.check_call(['sudo', 'apt-get', 'install', '-qq'] + programs)
+    try:
+        subprocess.check_call(['sudo', 'apt-get', 'install', '-qq', 'ubuntu-archive-keyring'])
+    except Exception as e:
+        pass
     if not os.path.isdir('gitian.sigs.theholyroger'):
         subprocess.check_call(['git', 'clone', 'https://github.com/TheHolyRogerCoin/gitian.sigs.theholyroger.git'])
     if not os.path.isdir('theholyroger-detached-sigs'):
         subprocess.check_call(['git', 'clone', 'https://github.com/TheHolyRogerCoin/theholyroger-detached-sigs.git'])
     if not os.path.isdir('gitian-builder'):
         subprocess.check_call(['git', 'clone', 'https://github.com/devrandom/gitian-builder.git'])
+    if args.no_apt_proxy:
+        GBuilderReplace = 'MIRROR_BASE=http://${MIRROR_HOST:-$MIRROR_DEFAULT}:3142'
+        GBuilderPatch = '\n\nif [ $MIRROR_HOST = "no-cache" ]; then\n  MIRROR_BASE=https:/\nfi'
+        with fileinput.FileInput('gitian-builder/bin/make-base-vm', inplace=True, backup='.bak') as file:
+            for line in file:
+                if line.strip() == GBuilderReplace:
+                    print(line.replace(GBuilderReplace, GBuilderReplace + ' ## Patched. '), end='')
+                    print(GBuilderPatch)
+                else:
+                    print(line, end='')
     if not os.path.isdir('TheHolyRogerCoin'):
         subprocess.check_call(['git', 'clone', "%s.git" % (args.url)])
+    if args.upgrade_git:
+        UpgradeGit()
     os.chdir('gitian-builder')
     make_image_prog = ['bin/make-base-vm', '--suite', 'trusty', '--arch', 'amd64']
     if args.docker:
@@ -123,7 +150,9 @@ def setup():
 def build():
     global args, workdir
 
-    os.makedirs('theholyroger-binaries/' + args.version, exist_ok=True)
+    os.makedirs('theholyroger-binaries/' + args.version + '/linux', exist_ok=True)
+    os.makedirs('theholyroger-binaries/' + args.version + '/win', exist_ok=True)
+    os.makedirs('theholyroger-binaries/' + args.version + '/mac', exist_ok=True)
     print('\nBuilding Dependencies\n')
     os.chdir('gitian-builder')
     os.makedirs('inputs', exist_ok=True)
@@ -138,7 +167,7 @@ def build():
         print('\nCompiling ' + args.version + ' Linux')
         subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'TheHolyRogerCoin='+args.commit, '--url', 'TheHolyRogerCoin='+args.url, '../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-linux.yml'])
         subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-linux', '--destination', '../gitian.sigs.theholyroger/', '../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-linux.yml'])
-        subprocess.check_call('mv build/out/theholyroger-*.tar.gz build/out/src/theholyroger-*.tar.gz ../theholyroger-binaries/'+args.version, shell=True)
+        subprocess.check_call('mv build/out/theholyroger-*.tar.gz build/out/src/theholyroger-*.tar.gz ../theholyroger-binaries/'+args.version + '/linux', shell=True)
         try:
             subprocess.check_call('mv var/install.log var/install_linux.log', shell=True)
             subprocess.check_call('mv var/build.log var/build_linux.log', shell=True)
@@ -150,7 +179,7 @@ def build():
         subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'TheHolyRogerCoin='+args.commit, '--url', 'TheHolyRogerCoin='+args.url, '../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-win.yml'])
         subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-win-unsigned', '--destination', '../gitian.sigs.theholyroger/', '../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-win.yml'])
         subprocess.check_call('mv build/out/theholyroger-*-win-unsigned.tar.gz inputs/theholyroger-win-unsigned.tar.gz', shell=True)
-        subprocess.check_call('mv build/out/theholyroger-*.zip build/out/theholyroger-*.exe build/out/src/theholyroger-*.tar.gz ../theholyroger-binaries/'+args.version, shell=True)
+        subprocess.check_call('mv build/out/theholyroger-*.zip build/out/theholyroger-*.exe build/out/src/theholyroger-*.tar.gz ../theholyroger-binaries/'+args.version + '/win', shell=True)
         try:
             subprocess.check_call('mv var/install.log var/install_win.log', shell=True)
             subprocess.check_call('mv var/build.log var/build_win.log', shell=True)
@@ -162,7 +191,7 @@ def build():
         subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'TheHolyRogerCoin='+args.commit, '--url', 'TheHolyRogerCoin='+args.url, '../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-osx.yml'])
         subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-osx-unsigned', '--destination', '../gitian.sigs.theholyroger/', '../TheHolyRogerCoin/contrib/gitian-descriptors/gitian-osx.yml'])
         subprocess.check_call('mv build/out/theholyroger-*-osx-unsigned.tar.gz inputs/theholyroger-osx-unsigned.tar.gz', shell=True)
-        subprocess.check_call('mv build/out/theholyroger-*.tar.gz build/out/theholyroger-*.dmg build/out/src/theholyroger-*.tar.gz ../theholyroger-binaries/'+args.version, shell=True)
+        subprocess.check_call('mv build/out/theholyroger-*.tar.gz build/out/theholyroger-*.dmg build/out/src/theholyroger-*.tar.gz ../theholyroger-binaries/'+args.version + '/mac', shell=True)
         try:
             subprocess.check_call('mv var/install.log var/install_mac.log', shell=True)
             subprocess.check_call('mv var/build.log var/build_mac.log', shell=True)
@@ -196,7 +225,7 @@ def sign():
         except:
             pass
         try:
-            subprocess.check_call('mv build/out/theholyroger-*win32-setup.exe build/out/theholyroger-*win64-setup.exe ../theholyroger-binaries/'+args.version, shell=True)
+            subprocess.check_call('mv build/out/theholyroger-*win32-setup.exe build/out/theholyroger-*win64-setup.exe ../theholyroger-binaries/'+args.version + '/win', shell=True)
         except Exception as e:
             print(e)
             pass
@@ -210,7 +239,7 @@ def sign():
         except:
             pass
         try:
-            subprocess.check_call('mv build/out/theholyroger-osx-signed.dmg ../theholyroger-binaries/'+args.version+'/theholyroger-'+args.version+'-osx.dmg', shell=True)
+            subprocess.check_call('mv build/out/theholyroger-osx-signed.dmg ../theholyroger-binaries/' + args.version + '/mac' + '/theholyroger-'+args.version+'-osx.dmg', shell=True)
         except Exception as e:
             print(e)
             pass
@@ -235,12 +264,25 @@ def make_shasums():
     global args, workdir
     print('\nMaking SHA256SUMs for ' + args.version)
     os.chdir('theholyroger-binaries/'+args.version)
-    subprocess.check_call('sha256sum * > SHA256SUMS', shell=True)
+    move_dirs = [
+        'mv linux/theholyroger-*.tar.gz ./',
+        'mv mac/theholyroger-*.dmg mac/theholyroger-*osx64.tar.gz ./',
+        'mv win/theholyroger-*setup.exe win/theholyroger-*.zip ./'
+    ]
+    for move_dir in move_dirs:
+        try:
+            subprocess.check_call(move_dir, shell=True)
+        except Exception as e:
+            pass
+    try:
+        subprocess.check_call('sha256sum * > SHA256SUMS', shell=True)
+    except Exception as e:
+        pass
     with open("SHA256SUMS", "r") as sum_file:
         lines = sum_file.readlines()
     new_lines = []
     for line in lines:
-        if 'debug' not in line and 'unsigned' not in line and 'SHA256SUMS' not in line:
+        if 'debug' not in line and 'unsigned' not in line and 'SHA256SUMS' not in line and 'shasum:' not in line and 'a directory' not in line:
             new_lines.append(line);
     with open("SHA256SUMS.new", "w") as sum_file:
         for line in new_lines:
@@ -300,6 +342,8 @@ def main():
     parser.add_argument('-W', '--wipe-cache', action='store_true', dest='wipe_cache', help='Wipe all cached files.')
     parser.add_argument('--make-shasums', action='store_true', dest='make_shasums', help='Make SHA256 SUMs.')
     parser.add_argument('--install-vmbuilder', action='store_true', dest='install_vmbuilder', help='Install VM Builder.')
+    parser.add_argument('--no-apt-proxy', action='store_true', dest='no_apt_proxy', help='Don\'t use apt cacher proxy inside gitian build.')
+    parser.add_argument('--upgrade-git', action='store_true', dest='upgrade_git', help='Upgrade Git.')
     parser.add_argument('-d', '--docker', action='store_true', dest='docker', help='Use Docker instead of LXC')
     parser.add_argument('-S', '--setup', action='store_true', dest='setup', help='Set up the Gitian building environment. Only works on Debian-based systems (Ubuntu, Debian)')
     parser.add_argument('-D', '--detach-sign', action='store_true', dest='detach_sign', help='Create the assert file for detached signing. Will not commit anything.')
@@ -322,6 +366,8 @@ def main():
     os.environ['USE_DOCKER'] = ''
     if args.docker:
         os.environ['USE_DOCKER'] = '1'
+        if args.no_apt_proxy:
+            os.environ['MIRROR_HOST'] = 'no-cache'
     elif not args.kvm:
         os.environ['USE_LXC'] = '1'
         if 'GITIAN_HOST_IP' not in os.environ.keys():
