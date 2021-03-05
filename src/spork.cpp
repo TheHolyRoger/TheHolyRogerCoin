@@ -67,11 +67,13 @@ void ProcessSpork(CNode* pfrom, const std::string& strCommand, CDataStream& vRec
         CSporkMessage spork;
         vRecv >> spork;
 
-        if (chainActive.Tip() == nullptr) return;
+        if (chainActive.Tip() == nullptr)
+	    return;
 
         // Ignore spork messages about unknown/deleted sporks
         std::string strSpork = sporkManager.GetSporkNameByID(spork.nSporkID);
-        if (strSpork == "Unknown") return;
+        if (strSpork == "Unknown")
+	    return;
 
         uint256 hash = spork.GetHash();
 
@@ -114,8 +116,13 @@ int64_t GetSporkValue(int nSporkID)
     if (mapSporksActive.count(nSporkID)) {
         r = mapSporksActive[nSporkID].nValue;
     } else {
-        if (nSporkID == SPORK_1_BLACKLIST_BLOCK_REFERENCE) r = SPORK_1_BLACKLIST_BLOCK_REFERENCE_DEFAULT;
-        if (r == -1) LogPrintf("%s : Unknown Spork %d\n", __func__, nSporkID);
+        if (nSporkID == SPORK_1_BLACKLIST_BLOCK_REFERENCE)
+            r = SPORK_1_BLACKLIST_BLOCK_REFERENCE_DEFAULT;
+	if (nSporkID == SPORK_2_ALLOWED_ALGO_MASK)
+            r = SPORK_2_ALLOWED_ALGO_MASK_DEFAULT;
+
+        if (r == -1)
+	    LogPrintf("%s : Unknown Spork %d\n", __func__, nSporkID);
     }
 
     return r;
@@ -134,6 +141,11 @@ bool IsSporkActive(int nSporkID)
             return true;
 
         return false;
+    } else if (nSporkID == SPORK_2_ALLOWED_ALGO_MASK) {
+        if ((r & 0xf) > 0)
+	    return true;
+
+        return false;
     }
 
     return r < GetTime();
@@ -141,7 +153,7 @@ bool IsSporkActive(int nSporkID)
 
 bool CSporkManager::CheckSignature(CSporkMessage& spork, bool fCheckSigner)
 {
-    //note: need to investigate why this is failing
+    // NOTE: Need to investigate why this is failing
     std::string strMessage = boost::lexical_cast<std::string>(spork.nSporkID) + boost::lexical_cast<std::string>(spork.nValue) +
                              boost::lexical_cast<std::string>(spork.nTimeSigned);
     CPubKey pubkey(ParseHex(Params().SporkKey()));
@@ -222,12 +234,22 @@ bool CSporkManager::SetPrivKey(std::string strPrivKey)
 
 int CSporkManager::GetSporkIDByName(std::string strName)
 {
-    if (strName == "SPORK_1_BLACKLIST_BLOCK_REFERENCE") return SPORK_1_BLACKLIST_BLOCK_REFERENCE;
+    if (strName == "SPORK_1_BLACKLIST_BLOCK_REFERENCE") {
+        return SPORK_1_BLACKLIST_BLOCK_REFERENCE;
+    } else if (strName == "SPORK_2_ALLOWED_ALGO_MASK") {
+        return SPORK_2_ALLOWED_ALGO_MASK;
+    }
+
     return -1;
 }
 
 std::string CSporkManager::GetSporkNameByID(int id)
 {
-    if (id == SPORK_1_BLACKLIST_BLOCK_REFERENCE) return "SPORK_1_BLACKLIST_BLOCK_REFERENCE";
+    if (id == SPORK_1_BLACKLIST_BLOCK_REFERENCE) {
+        return "SPORK_1_BLACKLIST_BLOCK_REFERENCE";
+    } else if (id == SPORK_2_ALLOWED_ALGO_MASK) {
+        return "SPORK_2_ALLOWED_ALGO_MASK";
+    }
+
     return "Unknown";
 }

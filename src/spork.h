@@ -1,6 +1,7 @@
 // Copyright (c) 2014-2016 The Dash developers
 // Copyright (c) 2016-2018 The PIVX developers
 // Copyright (c) 2018-2019 The UNIGRID organization
+// Copyright (c) 2020-2021 The Holy Roger developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -22,9 +23,10 @@ using namespace boost;
 
 // Never reuse sporks unless older ones are banned from the network
 #define SPORK_START 10001
-#define SPORK_END 10001
+#define SPORK_END 10002
 
-#define SPORK_1_BLACKLIST_BLOCK_REFERENCE_DEFAULT 0              //OFF
+#define SPORK_1_BLACKLIST_BLOCK_REFERENCE_DEFAULT 0              // OFF
+#define SPORK_2_ALLOWED_ALGO_MASK_DEFAULT         0b0001         // [RESERVER] [RESERVED] [ARSE] [SCRYPT]
 
 class CSporkMessage;
 class CSporkManager;
