@@ -20,6 +20,9 @@ class CScript;
 
 namespace Consensus { struct Params; };
 
+static const bool DEFAULT_GENERATE = false ;
+static const int DEFAULT_GENERATE_THREADS = 1 ;
+
 static const bool DEFAULT_PRINTPRIORITY = false;
 
 struct CBlockTemplate
@@ -118,6 +121,11 @@ struct update_for_parent_inclusion
 
     CTxMemPool::txiter iter;
 };
+
+size_t HowManyMiningThreads() ;
+
+/** Run the miner threads */
+void GenerateCoins( bool fGenerate, int nThreads, const CChainParams & chainparams ) ;
 
 /** Generate a new block, without valid proof-of-work */
 class BlockAssembler
