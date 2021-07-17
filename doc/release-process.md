@@ -273,7 +273,7 @@ Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spur
 
   - blog.theholyroger.com blog post
 
-  - Update title of #TheHolyRoger and #theholyroger-dev on Freenode IRC
+  - Update title of #TheHolyRoger and #theholyroger-dev on Libera IRC
 
   - Optionally twitter, reddit /r/TheHolyRoger, ... but this will usually sort out itself
 

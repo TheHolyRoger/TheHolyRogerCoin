@@ -30,8 +30,8 @@ Drag TheHolyRoger-Core to your applications folder, and then run TheHolyRoger-Co
 
 * See the documentation at the [TheHolyRoger Wiki](https://.info/)
 for help and more information.
-* Ask for help on [#](http://webchat.freenode.net?channels=) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=).
-* Ask for help on the [TheHolyRogerTalk](https://litecointalk.io/) forums.
+* Ask for help on [#](https://web.libera.chat/#theholyroger) on Libera IRC. If you don't have an IRC client use [webchat here](https://web.libera.chat/#theholyroger).
+* Ask for help on the [ROGER Discord](https://discord.gg/Eqntw95).
 
 Building
 ---------------------
@@ -61,8 +61,8 @@ The TheHolyRoger repo's [root README](/README.md) contains relevant information 
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [TheHolyRogerTalk](https://litecointalk.io/) forums.
-* Discuss general TheHolyRoger development on #theholyroger-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=theholyroger-dev).
+* Discuss on the [ROGER Discord](https://discord.gg/Eqntw95).
+* Discuss general TheHolyRoger development on #theholyroger-dev on Libera IRC. If you don't have an IRC client use [webchat here](https://web.libera.chat/#theholyroger-dev).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
